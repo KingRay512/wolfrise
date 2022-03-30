@@ -1,0 +1,123 @@
+class SmallAmmo : Ammo
+{
+	Default
+	{
+		//$Category Ammo
+		Radius 8;
+		Height 10;
+		Scale 1.28;
+		Inventory.Amount 12;
+		Inventory.MaxAmount 120;
+		Inventory.PickUpSound "PICKAMMO";
+		Inventory.Pickupmessage "You picked up a clip";
+	}
+	
+	States
+	{
+		Spawn:
+			CLIP A -1;
+			stop;
+	}
+}
+
+class MP50Upright : SmallAmmo
+{
+	Default
+	{
+		//$Category Ammo
+		Radius 8;
+		Height 48;
+		Inventory.Amount 16;
+		Inventory.PickUpSound "PICKAMMO";
+		Inventory.Pickupmessage "You picked up an MP50";
+	}
+	
+	States
+	{
+		Spawn:
+			MP55 Q -1;
+			stop;
+	}
+}
+
+class BoxAmmo : SmallAmmo
+{
+	Default
+	{
+		//$Category Ammo
+		Inventory.Amount 24;
+		Inventory.Pickupmessage "You picked up an ammo box";
+	}
+	
+	States
+	{
+		Spawn:
+			CLI4 A -1;
+			stop;
+	}
+}
+
+class HeavyAmmo : Ammo
+{
+	Default
+	{
+		//$Category Ammo
+		Inventory.Amount 50;
+		Inventory.MaxAmount 300;
+		Inventory.PickUpSound "PICKAMMO";
+		Inventory.Pickupmessage "You picked up Chaingun Ammo";
+	}
+	
+	States
+	{
+		Spawn:
+			CLI3 A -1;
+			stop;
+	}
+}
+
+class WolfRockets : Ammo
+{
+	Default
+	{
+		//$Category Ammo
+		Inventory.Amount 5;
+		Inventory.MaxAmount 20;
+		Inventory.Pickupmessage "You picked up a box of rockets";
+	}
+	
+	States
+	{
+		Spawn:
+			CLI3 A -1;
+			stop;
+	}
+}
+
+class RifleAmmo : Ammo
+{
+	Default
+	{
+		//$Category Ammo
+		Inventory.Amount 5;
+		Inventory.MaxAmount 50;
+		Inventory.Pickupmessage "You picked up a Rifle clip";
+	}
+	
+	States
+	{
+		Spawn:
+			CLI3 A -1;
+			stop;
+	}
+}
+
+class PulseAmmo : Ammo
+{
+	Default
+	{
+		Inventory.Amount 10;
+		Inventory.MaxAmount 300;
+		Inventory.PickupMessage "You picked up some Pulse cells";
+	}
+}

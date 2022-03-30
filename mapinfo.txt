@@ -1,0 +1,4 @@
+include "mapinfo/doomednums.txt"
+include "mapinfo/gameinfo.txt"
+include "mapinfo/maps.txt"
+include "mapinfo/skills.txt"

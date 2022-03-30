@@ -1,0 +1,80 @@
+//PATCHES AND STUFF
+
+// HUD ELEMENTS
+graphic AMMOBAR2, 220, 68 { XScale 2.0 YScale 2.0 }
+graphic HLTHARMR, 258, 80 { XScale 2.0 YScale 2.0 }
+graphic KEYBAR, 32, 50 { XScale 2.0 YScale 2.0 }
+graphic PORTBOX, 166, 40 { XScale 2.0 YScale 2.0 }
+graphic RATIOS, 224, 70 { XScale 2.0 YScale 2.0 }
+graphic SCORE, 156, 42 { XScale 1.0 YScale 1.0 }
+graphic STATREP, 232, 162 { XScale 1.0 YScale 1.0 }
+graphic STATREP, 249, 138 { XScale 1.0 YScale 1.0 }
+
+// HUD NUMBERS
+graphic HUDNUM0, 15, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM1, 14, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM2, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM3, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM4, 15, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM5, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM6, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM7, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM8, 13, 14 { XScale 2.0 YScale 2.0 }
+graphic HUDNUM9, 13, 14 { XScale 2.0 YScale 2.0 }
+
+graphic HUD2NUM0, 16, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM1, 9, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM2, 14, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM3, 13, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM4, 14, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM5, 13, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM6, 13, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM7, 13, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM8, 13, 14 { XScale 1.0 YScale 1.0 }
+graphic HUD2NUM9, 13, 14 { XScale 1.0 YScale 1.0 }
+
+// MENU
+graphic M_SKULL1, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL2, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL3, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL4, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL5, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL6, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_SKULL7, 25, 20 { XScale 2.0 YScale 2.0 }
+graphic M_DOOM, 211, 58 { XScale 2.0 YScale 2.0 }
+graphic M_EPISOD, 342, 30 { XScale 2.0 YScale 2.0 }
+graphic M_TOUGH, 684, 60 { XScale 4.0 YScale 4.0 }
+graphic M_NGAME, 412, 32 { XScale 2.0 YScale 2.0 }
+graphic M_LOADG, 412, 32 { XScale 2.0 YScale 2.0 }
+graphic M_SAVEG, 412, 32 { XScale 2.0 YScale 2.0 }
+graphic M_OPTION, 412, 32 { XScale 2.0 YScale 2.0 }
+graphic M_QUITG, 412, 32 { XScale 2.0 YScale 2.0 }
+
+// GAME INTERFACE
+graphic M_PAUSE, 236, 51 { XScale 4.0 YScale 4.0 }
+graphic FAILED, 464, 51 { XScale 4.0 YScale 4.0 }
+graphic PSYCHED, 426, 71 { XScale 2.0 YScale 2.0 }
+
+// INTERMISSION
+graphic WIENTER, 292, 48 { XScale 4.0 YScale 4.0 }
+graphic WIOSTK, 172, 48 { XScale 4.0 YScale 4.0 Offset -160, 0}
+graphic WIOSTI, 316, 48 { XScale 4.0 YScale 4.0 Offset -160, 0}
+graphic WISCRT2, 276, 48 { XScale 4.0 YScale 4.0 Offset -160, 0}
+graphic WIF, 528, 48 { XScale 4.0 YScale 4.0 }
+graphic WITIME, 140, 48 { XScale 4.0 YScale 4.0 }
+graphic WIPAR, 116, 48 { XScale 4.0 YScale 4.0 }
+graphic WINUM0, 30, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM1, 18, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM2, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM3, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM4, 30, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM5, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM6, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM7, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM8, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WINUM9, 26, 28 { XScale 3.0 YScale 3.0 }
+graphic WIPCNT, 40, 48 { XScale 4.0 YScale 4.0 Offset -8, 4 }
+graphic WICOLON, 16, 48 { XScale 4.0 YScale 4.0 Offset -4, 4 }
+
+// STAGES
+graphic M_CASTLE, 364, 48 { XScale 4.0 YScale 4.0 }

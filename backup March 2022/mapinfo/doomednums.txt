@@ -1,0 +1,88 @@
+DoomEdNums
+{
+	//	AMMO
+	20000 = SmallAmmo
+	20001 = BoxAmmo
+	20002 = WolfRockets
+	20003 = RifleAmmo
+	20004 = HeavyAmmo
+	// 20005 = CellAmmo
+	20006 = MP50Upright
+	
+	//	WEAPONS
+	20012 = Luger
+	20013 = MP50
+	20014 = WolfRifle
+	20015 = WolfRifle2
+	20016 = Tigerfaust
+	20017 = PulseCannon
+	20018 = GatlingGun
+	20020 = SpearOfDestiny
+	
+	//	ENEMIES
+	21000 = Dog
+	21001 = PatrolGuard
+	21002 = Machinegunner1
+	21003 = Ubersoldat1
+	21004 = BlackTurret
+	21005 = Gyropanzer
+	21006 = Robot1
+	21007 = Robot2
+	21008 = SS1
+	21009 = HeavyGuard
+	21010 = FlameGuard
+	21011 = LoperBoss
+	21013 = Officer
+	21020 = TransGrosse
+	21060 = MechaHitler
+	21061 = FakeHitler
+	21099 = JackStone
+	
+	//	HEALTH
+	21100 = DogFood
+	21101 = Food1
+	21102 = FirstAid1
+	21103 = BJSphere
+	21104 = WolfSphere
+	21105 = MiniFA
+	
+	//	KEYS
+	21110 = WolfGoldKey
+	21111 = WolfSilverKey
+	21112 = WolfBronzeKey
+	21113 = WolfElevatorKey
+	
+	//	ARMOUR
+	22000 = WolfSmallHelmet
+	22001 = WolfArmour
+	22002 = WolfRedArmour
+	22003 = WolfUltraArmour
+	
+	//	TREASURE
+	22004 = WolfCross
+	22005 = WolfChalice
+	22006 = WolfGoldChest
+	22007 = WolfCrown
+	
+	//	STATICS
+	22100 = FloorLamp1
+	22101 = PotPlant
+	22102 = CeilingLight1
+	22103 = CeilingLight2On
+	22104 = CeilingLight2Off
+	22105 = CeilingLight3On
+	22106 = CeilingLight3Off
+	22107 = TableAndChair1
+	22108 = SwingingCage1
+	22109 = SwingingCage2
+	22110 = MechProp
+	22111 = Achtung
+	22112 = SwastikaLight1
+	22113 = OSAEagle
+	22114 = Chair1
+	22115 = Klaxon
+	22116 = Barrel1
+	22117 = Barrel2
+	22118 = BrokenBarrel
+	22668 = SpearBeam
+}

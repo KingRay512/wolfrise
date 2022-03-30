@@ -1,0 +1,91 @@
+class WolfArmour : BasicArmorBonus
+{
+	Default
+	{
+		//$Category Armour
+		Radius 20;
+		Height 16;
+		Scale 0.5;
+		Inventory.Pickupmessage "You picked up an armoured jacket (+50 Armour)";
+		Armor.Savepercent 30;
+		Armor.Saveamount 50;
+		Armor.Maxsaveamount 100;
+	}
+	
+	States
+	{
+		Spawn:
+		ARMP A -1;
+		stop;
+	}
+}
+
+class WolfRedArmour : WolfArmour
+{
+	Default
+	{
+		//$Category Armour
+		Inventory.Pickupmessage "You picked up an Uber jacket (+100 Armour)";
+		Armor.Savepercent 50;
+		Armor.Saveamount 100;
+		Armor.Maxsaveamount 100;
+		Scale 0.5;
+	}
+	
+	States
+	{
+		Spawn:
+		ARMP B -1;
+		stop;
+	}
+}
+
+class WolfUltraArmour : WolfArmour
+{
+	Default
+	{
+		//$Category Armour
+		Radius 20;
+		Height 16;
+		Scale 0.64;
+		Inventory.Pickupmessage "You picked up some GROSSE armour! Tod ist dein leben! (+200 Armour)";
+		Armor.Savepercent 75;
+		Armor.Saveamount 200;
+		Armor.Maxsaveamount 200;
+		+INVENTORY.ALWAYSPICKUP
+	}
+	
+	States
+	{
+		Spawn:
+		ARMP B -1;
+		stop;
+	}
+}
+
+class WolfSmallHelmet : WolfArmour
+{
+	Default
+	{
+		//$Category Armour
+		Radius 6;
+		Height 6;
+		Inventory.Pickupmessage "You picked up a light helmet (+5 Armour)";
+		Armor.Savepercent 50;
+		Armor.Saveamount 5;
+		Armor.Maxsaveamount 100;
+		Inventory.PickupSound "pickups/armour";
+		Scale 0.44;
+		+INVENTORY.ALWAYSPICKUP
+		+COUNTITEM
+		+FLOATBOB
+		+NOGRAVITY
+	}
+	
+	States
+	{
+		Spawn:
+		ARMP C -1 BRIGHT;
+		stop;
+	}
+}

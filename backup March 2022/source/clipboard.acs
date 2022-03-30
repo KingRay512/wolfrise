@@ -1,0 +1,33 @@
+// THIS IS JUST A TEST
+// PAY NO ATTENTION TO THIS
+// THAT'S ABOUT IT... MOVE ALONG NOW... :-)
+
+#library "clipboard"
+#include "zcommon.acs"
+
+#define CLIPBOARD_OFF		404
+#define CLIPBOARD_GRAPHIC	405
+#define CLIPBOARD_STATUS	406
+
+int clipboard = 0;
+
+script "ViewClipboard" (void)
+{
+	if (clipboard == 0)
+	{
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: "Mission Objectives:"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
+		HudMessage(s: "* Infiltrate the Artic Base\n\n* Locate a new weapon\n\n* Acquire secret project documents\n\n* Eliminate the Nazis' super enforcer\n\n* Exfiltrate"; HUDMSG_PLAIN, CLIPBOARD_STATUS, CR_WHITE, 320.0, 150.0, 0);
+		clipboard = 1;
+	}
+	
+	else
+	{
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_STATUS, CR_UNTRANSLATED, 320.0, 200.0, 0);
+		clipboard = 0;
+	}
+}

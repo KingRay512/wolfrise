@@ -1,0 +1,65 @@
+class NaziBullet : FastProjectile
+{
+	Default
+	{
+		RenderStyle "Add";
+		Obituary "$OB_MPROCKET";
+		Radius 4;
+		Height 4;
+		Speed 72;	// 32
+		Damage 4;
+		Scale 0.32;
+		MissileType "BulletTrail";
+		//SeeSound "DSMG42";
+		Projectile;
+	}
+	
+	States
+	{
+		Spawn:
+			BULL A 1 BRIGHT;
+			Loop;
+		Death:
+			PUFF BCD 5 Bright A_SetScale(0.8, 0.8);
+			Stop;
+	}
+}
+
+class PlayerBullet : NaziBullet
+{
+	Default
+	{
+		Damage 4;
+		Speed 192;
+		Scale 0.32;	// 0.4
+		//MissileType "PlayerBulletTrail";
+	}
+}
+
+class BulletTrail : FastProjectile
+{ 
+	Default
+	{
+		Alpha 0.64; //.75
+		RenderStyle "Add";
+		Speed 0;
+		Height 4;
+		Radius 4;
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+NOTELEPORT
+		+CANNOTPUSH
+		+NODAMAGETHRUST
+		Scale 0.32;
+	}
+	
+	States
+	{
+	Spawn:
+		BULL A 1 BRIGHT A_FadeOut(0.072);
+		Loop;
+	}
+}
+
+
+

@@ -1,0 +1,26 @@
+clearplayerclasses
+addplayerclass BJ
+
+addkeysection "Wolfenstein Rising" WolfRise
+
+addmenukey "View Objectives" +viewobj
+addmenukey "Throw Grenade" tossgrenade
+addmenukey "Strafe Lean" +strafelean
+addmenukey "Portable Health" useporthealth
+
+alias +strafelean "set cl_strafelean true";
+alias -strafelean "set cl_strafelean false";
+alias +viewobj "pukename ViewClipboard";
+alias -viewobj "pukename ViewClipboard";
+alias useporthealth "pukename UsePortableHealth";
+alias tossgrenade "pukename TossGrenade";
+
+defaultbind o +viewobj
+defaultbind mouse3 tossgrenade
+defaultbind x useporthealth
+defaultbind ctrl +strafelean
+
+
+
+
+

@@ -1,0 +1,31 @@
+Lock 50
+{
+	WolfGoldKey
+	RemoteMessage "You need the Gold Key!"
+	LockedSound "movers/door/locked"
+	Mapcolor 255 255 0
+}
+
+Lock 51
+{
+	WolfSilverKey
+	RemoteMessage "You need the Silver Key!"
+	LockedSound "movers/door/locked"
+	Mapcolor 0 255 255
+}
+
+Lock 52
+{
+	WolfBronzeKey
+	RemoteMessage "You need the Bronze Key!"
+	LockedSound "movers/door/locked"
+	Mapcolor 128 64 0
+}
+
+Lock 53
+{
+	WolfElevatorKey
+	RemoteMessage "You need the Elevator Key!"
+	LockedSound "movers/door/locked"
+	Mapcolor 128 128 128
+}

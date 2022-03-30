@@ -1,0 +1,8 @@
+gameinfo
+{
+	dimcolor = "121212"
+	dimamount = 0.9
+	AddEventHandlers = "LeaningHandler"
+	AddEventHandlers = "BossHealthBars"
+	InfoPage = "CREDITS1", "CREDITS2"
+}

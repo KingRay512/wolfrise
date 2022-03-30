@@ -1,0 +1,587 @@
+class LightToggle : SwitchableDecoration
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 16;
+		Height 16;
+		Activation THINGSPEC_Activate;
+		+SOLID
+		+USESPECIAL
+	}
+	
+	States
+	{
+		Spawn:
+			BUL1 A -1;
+			Stop;
+		Active:
+			BUL1 A -1;
+			Stop;
+		Inactive:
+			BUL1 B -1;
+			Stop;
+	}
+}
+
+class SwastikaFlag1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 4;	// 48
+		Height 4;	// 128
+		+FLATSPRITE
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+		
+	States
+	{
+		Spawn:
+			FLAG A -1;
+			Stop;
+	}
+}
+
+class Vent1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Health 1;
+		Radius 32;
+		Height 96;
+		Scale 1.5;
+		Mass 999999;
+		DeathSound "scenaric/vent/break";
+		+SOLID
+		+SHOOTABLE
+		+FLATSPRITE
+		+NOBLOOD
+	}
+		
+	States
+	{
+		Spawn:
+			VENT A -1;
+			Stop;
+		Death:
+			VENT B -1
+			{
+				A_NoBlocking();
+				A_Scream();
+			}
+			Stop;
+	}
+}
+
+class SuitOfArmour : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 32;
+		Height 104;
+		Scale 1.6;
+		+SOLID
+	}
+		
+	States
+	{
+		Spawn:
+			SUIT A -1;
+			Stop;
+	}
+}
+
+class EagleDecal1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 4;
+		Height 4;
+		+FLATSPRITE
+		+NOGRAVITY
+	}
+		
+	States
+	{
+		Spawn:
+			EAGL A -1;
+			Stop;
+	}
+}
+
+class Bones1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 34;
+		Height 14;
+		Scale 1.28;
+	}
+		
+	States
+	{
+		Spawn:
+			BONE A -1;
+			Stop;
+	}
+}
+
+class Bones2 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 34;
+		Height 14;
+		Scale 1.28;
+	}
+		
+	States
+	{
+		Spawn:
+			BONE B -1;
+			Stop;
+	}
+}
+
+class HangingSkeleton : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 18;
+		Height 82;
+		Scale 1.28;
+		+SOLID
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+		
+	States
+	{
+		Spawn:
+			SKEL A -1;
+			Stop;
+	}
+}
+
+class LayingSkeleton : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 21;
+		Height 12;
+		Scale 1.28;
+	}
+		
+	States
+	{
+		Spawn:
+			SKEL B -1;
+			Stop;
+	}
+}
+
+class FloorLamp1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 18;
+		Height 56;
+		Scale 1.33;
+		+SOLID
+	}
+		
+	States
+	{
+		Spawn:
+			LAM2 A -1;
+			Stop;
+	}
+}
+
+class BrokenBarrel : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 20;
+		Height 48;
+		Scale 1.36;
+		+SOLID
+	}
+		
+	States
+	{
+		Spawn:
+			BARL A -1;
+			Stop;
+	}
+}
+
+class Barrel1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 20;
+		Height 48;
+		Scale 1.36;
+		+SOLID
+	}
+		
+	States
+	{
+		Spawn:
+			BARL B -1;
+			Stop;
+	}
+}
+
+class Barrel2 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 32;
+		Height 48;
+		Scale 1.36;
+		+SOLID
+	}
+		
+	States
+	{
+		Spawn:
+			BARL C -1;
+			Stop;
+	}
+}
+
+class KitchenUtensils : Actor
+{
+	Default
+	{
+		Radius 28;
+		Height 25;
+		Scale 1.2;
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+	
+	States
+	{
+		Spawn:
+			UTEN A -1;
+			Stop;
+	}
+}
+
+class KitchenUtensils2 : Actor
+{
+	Default
+	{
+		Radius 32;
+		Height 30;
+		Scale 1.2;
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+	
+	States
+	{
+		Spawn:
+			UTEN B -1;
+			Stop;
+	}
+}
+
+class Stove1 : Actor
+{
+	Default
+	{
+		Radius 36;
+		Height 112;
+		Scale 1.6;
+		+SOLID
+	}
+	
+	States
+	{
+		Spawn:
+			STOV ABCB 2;
+			Loop;
+	}
+}
+
+class PotPlant : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 16;
+		Height 48;
+		Scale 1.33;
+		+SOLID
+	}
+	
+	States
+	{
+		Spawn:
+			PLN3 A -1;
+			Stop;
+	}
+}
+
+class TableAndChair1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 24;
+		Height 36;
+		Scale 1.2;
+		+SOLID
+	}
+	
+	States
+	{
+		Spawn:
+			TAB2 A -1;
+			Stop;
+	}
+}
+
+class Chair1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 16;
+		Height 28;
+		Scale 1.12;
+		+SOLID
+	}
+	
+	States
+	{
+		Spawn:
+			POL1 A -1;
+			Stop;
+	}
+}
+
+
+class CeilingLight1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Height 13;
+		Radius 8;
+		Height 51;
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+
+	States
+	{
+		Spawn:
+			LAM3 A -1;
+			Stop;
+	}
+}
+
+class CeilingLight2 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 8;
+		Height 13;
+		+SOLID
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+	
+	States
+	{
+		Spawn:
+			BUL1 A 0 A_Jump(255, "On");
+		On:
+			BUL1 A -1;
+			Stop;
+		Off:
+			BUL1 B -1;
+			Stop;
+	}
+}
+
+class CeilingLight3 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 8;
+		Height 10;
+		+SOLID
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+	
+	States
+	{
+		Spawn:
+			BUL2 A 0 A_Jump(255, "On");
+		On:
+			BUL2 A -1;
+			Stop;
+		Off:
+			BUL2 B -1;
+			Stop;
+	}
+}
+
+class SwingingCage1 : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 20;
+		Height 144;
+		Scale 1.2;
+		+SOLID
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+
+	States
+	{
+		Spawn:
+			CAGE A 8;
+			CAGE BCDEFGH 3;
+			CAGE I 8;
+			CAGE HGFEDCB 3;
+			Loop;
+	}
+}
+
+class SwingingCage2 : SwingingCage1
+{
+	States
+	{
+		Spawn:
+			CAGE A 10;
+			CAGE BCDEFGH 5;
+			CAGE I 10;
+			CAGE HGFEDCB 5;
+			Loop;
+	}
+}
+
+class MechProp : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 48;
+		Height 96;
+		Scale 1.75;
+		+SOLID
+	}
+	
+	States
+	{
+		Spawn:
+			MECH Z -1;
+			Stop;
+	}
+}
+
+class SpearBeam : Actor
+{
+	Default
+	{
+		Radius 32;
+		Height 512;
+		-SOLID;
+	}
+	
+	States
+	{
+		Spawn:
+			BEAM A -1;
+			Stop;
+	}
+}
+
+class Achtung : Actor
+{
+	Default
+	{
+		Radius 0;
+		Height 0;
+		-SOLID;
+		+NOGRAVITY;
+		+FLATSPRITE;
+	}
+	
+	States
+	{
+		Spawn:
+			ACHT A -1;
+			Stop;
+	}
+}
+
+class SwastikaLight1 : Achtung
+{	
+	States
+	{
+		Spawn:
+			SWAS A -1;
+			Stop;
+	}
+}
+
+class OSAEagle : Achtung
+{
+	States
+	{
+		Spawn:
+			OSAH A -1;
+			Stop;
+	}
+}
+
+class Klaxon : Actor
+{
+	Default
+	{
+		//$Category Decoration / Objects
+		Radius 8;
+		Height 16;
+		+SOLID
+		+NOGRAVITY
+		+SPAWNCEILING
+	}
+	
+	states
+	{
+		Spawn:
+			TNT1 A 0 A_Jump(255, "Off");
+		Off:
+			KLAX C -1;
+			Stop;
+		On:
+			KLAX ABCD 2 BRIGHT;
+			Loop;
+	}
+}

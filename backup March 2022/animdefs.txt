@@ -1,0 +1,37 @@
+switch doom 3 ELEVUP on sound SWITCH1 pic ELEVDOWN tics 0
+
+switch doom 3 STEELSW1 on sound SWITCH1 pic STEELSW2 tics 0
+
+texture M_SKULL1
+	pic M_SKULL1 tics 3
+	pic M_SKULL2 tics 3
+	pic M_SKULL3 tics 3
+	pic M_SKULL4 tics 3
+	pic M_SKULL5 tics 3
+	pic M_SKULL6 tics 3
+	pic M_SKULL7 tics 3
+	pic M_SKULL6 tics 3
+	pic M_SKULL5 tics 3
+	pic M_SKULL4 tics 3
+	pic M_SKULL3 tics 3
+	pic M_SKULL2 tics 3
+
+warp flat GSLIME
+warp flat W_WATR1
+warp flat ICYWATER
+
+texture SLIMFAL1
+	pic SLIMFAL1 tics 3
+	pic SLIMFAL2 tics 3
+	pic SLIMFAL3 tics 3
+	pic SLIMFAL4 tics 3
+	
+texture WATRFAL1
+	pic WATRFAL1 tics 3
+	pic WATRFAL2 tics 3
+	pic WATRFAL3 tics 3
+	pic WATRFAL4 tics 3
+	
+texture INTERPIC
+	pic INTERPIC tics 5
+	pic INTERPI2 tics 5

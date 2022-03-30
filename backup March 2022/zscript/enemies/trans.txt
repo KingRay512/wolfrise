@@ -1,0 +1,71 @@
+class TransGrosse : Actor
+{
+	Default
+	{
+		//$Category Enemies
+		obituary "%o was killed by a Grosse brother";
+		Health 2400;
+		Radius 36;
+		Height 96;
+		Mass 500;
+		Speed 18;
+		DamageFactor "KnifeDamage", 0.048;
+		dropitem "BoxAmmo";
+		Maxtargetrange 1024;
+		DeathSound "bosses/trans/death";
+		SeeSound "bosses/trans/sight";
+		BloodType "BloodPuff1";
+		MinMissileChance 1;
+		Scale 1.44;
+		Monster;
+		+BOSS
+		+MISSILEMORE
+		+MISSILEEVENMORE
+	}
+	
+	States
+	{
+		Spawn:
+			TRAN A 10 A_Look;
+			Loop;
+		See:
+			TRAN BCD 3 A_Chase;
+			Loop;
+		Missile:
+			TRAN E 22
+			{
+				A_FaceTarget();
+				A_PlaySound("weapons/venom/spinup");
+			}
+		Firing:
+			TNT1 A 0 A_PlaySound("weapons/venom/fire");
+			TRAN F 2
+			{
+				A_SpawnProjectile("NaziBullet", 52, -32, random(8, 0));
+			}
+			TNT1 A 0 A_PlaySound("weapons/venom/fire");
+			TRAN G 2
+			{
+				A_SpawnProjectile("NaziBullet", 52, 32, random(-8, 0));
+			}
+			TNT1 A 0 A_CPosRefire;
+			Goto Firing;
+		Death:
+			TRAN H 6;
+			TRAN I 6 A_NoBlocking;
+			TRAN J 6 A_Scream;
+			TRAN K -1;
+			Stop;
+	}
+}
+
+class TransGrosse_Hard : TransGrosse
+{
+	Default
+	{
+		//$Category Enemies
+		Health 4800;
+		Speed 24;
+		Maxtargetrange 2048;
+	}
+}

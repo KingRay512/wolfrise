@@ -1,0 +1,15 @@
+NoAutoStartMap
+Background INTERPIC
+
+/*
+Spots
+{
+	INTERPIC 0 0
+}
+*/
+
+Animation 0 0 24
+{
+	INTERPIC
+	INTERPI2
+}

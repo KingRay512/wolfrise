@@ -1,0 +1,40 @@
+DEFAULTLISTMENU
+{
+	Font "BigFont", "Untranslated"
+	LineSpacing 20
+	Selector "M_SKULL1", 30, 3
+	Font "BigUpper", "Red"
+	LineSpacing 20
+}
+
+LISTMENU "MainMenu"
+{
+	Selector "M_SKULL1", 30, 3
+	LineSpacing 16
+	StaticPatch 110, 24, "M_DOOM"
+	//Position -24, 75
+	//Position 128, 75
+
+	Position 64, 64
+	PatchItem "M_NGAME", "n", "PlayerclassMenu"
+	PatchItem "M_LOADG", "l", "LoadGameMenu", 0
+	PatchItem "M_SAVEG", "s", "SaveGameMenu",0
+	PatchItem "M_OPTION","o", "OptionsMenu", 0
+	PatchItem "M_QUITG", "q", "QuitMenu", 0
+}
+
+LISTMENU "SkillMenu"
+{
+	Selector "M_SKULL1", 24, 3
+	StaticPatch 76, 32, "M_TOUGH"
+	Position 32, 64
+	LineSpacing 16
+}
+
+LISTMENU "EpisodeMenu"
+{
+	Selector "M_SKULL1", 24, 3
+	StaticPatch 76, 32, "M_EPISOD"
+	Position 32, 64
+	LineSpacing 16
+}

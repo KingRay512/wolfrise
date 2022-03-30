@@ -1,0 +1,42 @@
+class NaziLaserTarget : FastProjectile
+{
+	Default
+	{
+		Radius 4;
+		Height 5;
+		Speed 160;
+		Damage 0;
+		Scale 2.0;
+		MissileType "NaziLaserTrail";
+		//SeeSound "DSMG42";
+		Projectile;
+		+RANDOMIZE
+	}
+	
+	States
+	{
+		Spawn:
+			LASR A 1 BRIGHT;
+			Loop;
+		Death:
+			LASR AAAA 5 Bright A_SetScale(0.64, 0.64);
+			Stop;
+	}
+}
+
+class NaziLaserTrail : BulletTrail
+{
+	Default
+	{
+		Alpha 0.64; //.75
+		RenderStyle "Add";
+		Scale 2.0;
+	}
+	
+	States
+	{
+		Spawn:
+		LASR A 1 BRIGHT A_FadeOut(0.024);
+		Loop;
+	}
+}

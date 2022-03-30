@@ -1,0 +1,9 @@
+#library "getpsyched"
+#include "zcommon.acs"
+
+script "GetPsyched" ENTER
+{
+	SetHudSize(640, 400, 0);
+	SetFont("PSYCHED");
+	HudMessage(s: "A"; HUDMSG_FADEINOUT, 128, CR_UNTRANSLATED, 320.0, 200.0, 0.16, 0.16, 0.64);
+}

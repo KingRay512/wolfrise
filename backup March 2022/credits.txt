@@ -1,0 +1,64 @@
+Scripting:
+Raees Kamaar - Weapons/Enemies/Map Scripts
+Rip and Tear - Boss Health Bar
+Josh771 - Lean
+
+Sounds:
+Grey Matter Studios - Return to Castle Wolfenstein
+Raven Software - Wolfenstein 2009
+MOH - Allied Assault
+Quake
+Quake 2
+Quake 4 (BJ Sounds)
+
+Graphics:
+HUD Base:		Raees Kamaar
+Menu Design:	Raees Kamaar
+Logo:			Raees Kamaar
+Intermission:	Wolfenstein 3d (Id Software) / Raees Kamaar
+Intro:			Wolf3d / Raees Kamaar
+HUD Font: 		Wolf3d
+Font - Machines of Death / Shadows of Destiny
+
+Sprites/Textures:
+Raees Kamaar
+Knife:			Wolfenstein 3d (Id Software) / Raees Kamaar
+Pistol:			Wolfenstein 3d (Id Software) / Raees Kamaar
+STG55:			Wolfenstein 3d (Id Software) / Raees Kamaar
+Rifle:			WolfMissions (Executor); Raees Kamaar
+Tigerfaust:		Spear - End of Destiny
+Pulse Cannon:	Spear - End of Destiny
+Flats:			BAK_LEG
+Hexen/Heretic:	Raven Software
+Blake Stone:	JAM Software
+
+Spear - End of Destiny - MCS & AReyeP - Flats
+Realm667 (check specific artists)
+Duke Nukem 3D (3D Realms)
+Return to Castle Wolfenstein (Grey Matter Studios)
+CageTex - Check R667
+BTSX - Various Artists
+Wolfenstein3d / Raees Kamaar Edits
+
+ENEMIES:
+Patrol Guard:	Wolfenstein 3d (Id Software) / Raees Kamaar
+Kriegsland:		Gas Mask MG42 Soldier; Astro Machinegunner (REMOVE, ADD BETTER SPRITES)
+GyroPanzer:		Check Majik Monkee Image World / Raees Kamaar
+HK Tank:		Spear - Lost Missions / Duke Nukem 3d / Raees Kamaar
+Turret:			Duke Nukem 3d
+Ubersoldat:		Himmelfahrt (check MM image world) + Hans Grosse
+Heavy SS:		Heimzahlung (check credits)
+
+WEAPONS: (Edits - Raees Kamaar)
+Knife:			Wolfenstein 3d (Id Software) / Raees Kamaar
+Pistol:			Wolfenstein 3d (Id Software) / Raees Kamaar
+MP50:			Wolfenstein 3d (Id Software) / Raees Kamaar
+Sniper Rifle:	WolfMissions (Executor) / Raees Kamaar
+FG42:			Resurrection of Heimzahlung
+Tigerfaust:		WolfMissions (Executor) / Raees Kamaar
+Gatling Gun:	Wolfenstein Sextilogy (Executor) / Raees Kamaar / Kinnerokhn
+Pulse Cannon:	Spear - End of Destiny / MCS & AReyeP
+
+Music
+Davester2296
+Raees Kamaar

@@ -1,0 +1,59 @@
+// THIS IS JUST A TEST
+// PAY NO ATTENTION TO THIS
+// THAT'S ABOUT IT... MOVE ALONG NOW... :-)
+
+#library "clipboard"
+#include "zcommon.acs"
+
+#define CLIPBOARD_OFF		404
+#define CLIPBOARD_GRAPHIC	405
+#define CLIPBOARD_STATUS	406
+
+int totalObjectives;
+int completedObjectives;
+
+int clipboard = 0;
+
+script "ViewClipboard_test" (void)
+{
+	if (clipboard == 0)
+	{
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: "Mission Objectives:"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
+		HudMessage(s: "*"; HUDMSG_PLAIN, CLIPBOARD_STATUS, CR_WHITE, 320.0, 150.0, 0);
+		clipboard = 1;
+	}
+	
+	else
+	{
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
+		clipboard = 0;
+	}
+}
+
+script "ViewClipboard" (void)
+{
+	if (clipboard == 0)
+	{
+		clipboard = 1;
+		SetHudSize(640, 400, TRUE);
+		SetFont("STATREP");
+		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_UNTRANSLATED, 192.1, 144.1, 0.001);
+		SetFont("HUDNUM2");
+		HudMessage(i: GetLevelInfo(LEVELINFO_KILLED_MONSTERS); HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 372.2, 207.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_MONSTERS); HUDMSG_PLAIN, 2, CR_UNTRANSLATED, 395.1, 207.1, 0.001);
+	}
+	
+	else if (clipboard == 1)
+	{
+		clipboard = 0;
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 200.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 2, CR_RED, 393.0, 195.0, 0.001);
+	}
+}

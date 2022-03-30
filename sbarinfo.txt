@@ -1,0 +1,147 @@
+// base Doom;
+CompleteBorder true;
+height 0;	// 24
+LowerHealthCap true;
+resolution 640, 400;
+
+statusbar normal
+{
+	drawimage "RATIOS", 1, 1;
+	
+	drawnumber 3, SMALLFNT, untranslated, kills, 106, 6;
+	drawnumber 3, SMALLFNT, untranslated, secrets, 106, 15;
+	drawnumber 3, SMALLFNT, untranslated, items, 106, 24;
+	
+	drawimage "KEYBAR", 512, 374;
+	drawimage "HLTHARMR", 1, 359;
+	drawimage "AMMOBAR2", 529, 365;
+	drawimage "PORTBOX", 132, 379;
+	drawimage "SCORE", 244, 2;
+	
+	drawnumber 12, HUDNUM1, white, "WolfScore", alignment(center), 320, 26;
+	
+	InInventory "PortableFA", 1
+	{
+		drawimage "PORTHLTH", 134, 381;
+	}
+	InInventory "PortableFA", 2
+	{
+		drawimage "PORTHLTH", 134, 381;
+		drawimage "PORTHLTH", 155, 381;
+	}
+	InInventory "PortableFA", 3
+	{
+		drawimage "PORTHLTH", 134, 381;
+		drawimage "PORTHLTH", 155, 381;
+		drawimage "PORTHLTH", 176, 381;
+	}
+	InInventory "PortableFA", 4
+	{
+		drawimage "PORTHLTH", 134, 381;
+		drawimage "PORTHLTH", 155, 381;
+		drawimage "PORTHLTH", 176, 381;
+		drawimage "PORTHLTH", 197, 381;
+	}
+	
+	drawnumber 3, HUDNUM1, white, health, alignment(right), 64, 383;
+	drawnumber 3, HUDNUM1, white, armor, alignment(right), 112, 383;
+	drawnumber 3, HUDNUM1, white, ammo1, alignment(right), 560, 386;
+	// drawnumber 3, HUDNUM1, untranslated, ammo1capacity, alignment(right), 585, 386;
+	
+	drawswitchableimage keyslot 10, "NKEYICON", "GKEYICON", 514, 377;
+	drawswitchableimage keyslot 11, "NKEYICON", "SKEYICON", 514, 382;
+	drawswitchableimage keyslot 12, "NKEYICON", "BKEYICON", 514, 387;
+	drawswitchableimage keyslot 13, "NKEYICON", "EKEYICON", 514, 392;
+	
+	DrawMugshot 5, disablepain, disableouch, disablerampage, disablegrin, 5, 362; 
+	
+	IsSelected Knife 			{ drawimage "KNIFICON", 584, 376; }
+	IsSelected Luger			{ drawimage "PISTICON", 592, 374; }
+	IsSelected MP50				{ drawimage "MACHICON", 584, 375; }
+	IsSelected WolfRifle		{ drawimage "RIFLICON", 577, 375; }
+	IsSelected WolfRailgun		{ drawimage "RAILICON", 581, 373; }
+	IsSelected FG42				{ drawimage "FG42ICON", 582, 375; }
+	IsSelected GatlingGun		{ drawimage "GATLICON", 579, 373; }
+	IsSelected SteelGrenades	{ drawimage "GRENICON", 582, 375; }
+	IsSelected Tigerfaust		{ drawimage "RCKTICON", 581, 375; drawimage "FIVECROS", 300, 180; }
+	IsSelected PulseCannon		{ drawimage "PULSICON", 581, 373; }
+}
+
+
+
+statusbar fullscreen, forcescaled
+{
+	//	NOTHING YET
+	drawimage "ALTHUD_2", 0, 0;
+	drawnumber 3, HUDNUM1, untranslated, health, alignment(left), 22, 379;
+	InInventory "PortableFA", 1
+	{
+		drawimage "PORTHLTH", 179, 377;
+	}
+	InInventory "PortableFA", 2
+	{
+		drawimage "PORTHLTH", 179, 377;
+		drawimage "PORTHLTH", 207, 377;
+	}
+	InInventory "PortableFA", 3
+	{
+		drawimage "PORTHLTH", 179, 377;
+		drawimage "PORTHLTH", 207, 377;
+		drawimage "PORTHLTH", 235, 377;
+	}
+	InInventory "PortableFA", 4
+	{
+		drawimage "PORTHLTH", 179, 377;
+		drawimage "PORTHLTH", 207, 377;
+		drawimage "PORTHLTH", 235, 377;
+		drawimage "PORTHLTH", 263, 377;
+	}
+}
+
+
+
+statusbar automap {}
+
+Mugshot "Normal", Health2
+{
+	ST00 30;
+	ST02 35;
+	ST00 35;
+	ST01 35;
+    ST00 35;
+}
+
+Mugshot "Pain", Health2
+{
+	ST00 0;
+}
+
+Mugshot "Rampage", Health2
+{
+	ST00 0;
+}
+
+Mugshot "Ouch"
+{
+	SCRM 15;
+}
+
+Mugshot "Grin"
+{
+	GRIN 70;
+}
+
+Mugshot "Glare"
+{
+	GLAR 70;
+}
+
+Mugshot "God" 
+{
+	GODD -1;	
+}
+
+Mugshot "Death"
+{
+	DEAD -1;
+}

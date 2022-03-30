@@ -1,0 +1,49 @@
+clearepisodes
+
+defaultmap
+{
+	exitpic = "$WOLFINT"
+	enterpic = "$WOLFINT"
+	fallingdamage
+	SmoothLighting
+	AirControl = 0.048
+}
+
+episode MAP00
+{
+	picname = "M_PART0"
+	key = "1"
+}
+
+episode MAP01
+{
+	picname = "M_PART1"
+	key = "k"
+}
+
+episode MAP10
+{
+	picname = "M_PART2"
+	key = "o"
+}
+
+episode MAP20
+{
+	picname = "M_PART3"
+	key = "l"
+}
+
+map MAP01 "The Castle (Demo)"
+{
+	music = "DAR_INFI"
+	sky1 = "CLOUDY"
+	next = MAP02
+	par = 300
+	fade = "151515"
+}
+
+map MAP02 "Stage 2"
+{
+	music = "DAR_DESC"
+	next = MAP03
+}

@@ -1,0 +1,132 @@
+class KnifePuff1 : BulletPuff
+{
+	Default
+	{
+		AttackSound "weapons/knife/impact";
+		Gravity 3.2;
+		Speed 4;
+		VSpeed 4;
+		Mass 32;
+		Projectile;
+		+NOBLOCKMAP
+		+NOEXTREMEDEATH 
+		+FORCEXYBILLBOARD
+		+DONTSPLASH
+		-NOGRAVITY
+	}
+	
+	States
+	{
+		Spawn:
+			TNT1 A 0 A_PlaySound("weapons/knife/impact");
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		Melee:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		Death:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		XDeath:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+	}
+}
+
+class BulletPuff1 : KnifePuff1
+{
+	Default
+	{
+		RenderStyle "Add";
+		AttackSound "RICOCHET";
+		Scale 1.5;
+		Gravity 1.2;
+		Speed 4;
+		VSpeed 4;
+		Mass 8;
+	}
+	
+	States
+	{
+		Spawn:
+			TNT1 A 0 A_PlaySound("RICOCHET");
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		Melee:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		Death:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+		XDeath:
+			PUFF ABCD 1 BRIGHT;
+			Stop;
+	}
+}
+
+class SpacePuff1 : BulletPuff1
+{
+	Default
+	{
+		AttackSound "projectiles/pulsedeath";
+		DeathSound "projectiles/pulsedeath";
+	}
+}
+
+class BloodPuff1 : KnifePuff1
+{
+	Default
+	{
+		Mass 96;	// 12
+		AttackSound "HITFLESH";
+		Scale 1.44;	// 1.12
+		Gravity 0.72;
+		Speed 4;
+		VSpeed 4;
+		-NOGRAVITY
+		+RANDOMIZE
+		+DONTSPLASH
+	}
+	
+	States
+	{
+		Spawn:
+			TNT1 A 0 A_PlaySound("HITFLESH");
+			BPUF ABCDEGH 2 BRIGHT;
+			Stop;
+		Melee:
+			BPUF ABCDEGH 2 BRIGHT;
+			Stop;
+		Death:
+			BPUF ABCDEGH 2 BRIGHT;
+			Stop;
+		XDeath:
+			BPUF ABCDEGH 2 BRIGHT;
+			Stop;
+	}
+}
+
+Class TerminatorShoulder : Actor
+{
+  Default
+  {
+    Radius 8;
+    Height 8;
+    Speed 8;
+    Mass 1000;
+    scale 1.2;
+    +DOOMBOUNCE
+    +DROPOFF
+    +Missile
+  }
+
+  States
+  {
+  Spawn:
+    TSHO ABCDEFGH 2;
+    loop;
+  Death:
+    TSHO I -1;
+    loop;
+  }
+}
