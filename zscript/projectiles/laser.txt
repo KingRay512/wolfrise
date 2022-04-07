@@ -2,11 +2,12 @@ class NaziLaserTarget : FastProjectile
 {
 	Default
 	{
+		RenderStyle "Add";
 		Radius 4;
 		Height 5;
 		Speed 160;
 		Damage 0;
-		Scale 2.0;
+		Scale 2.4;
 		MissileType "NaziLaserTrail";
 		//SeeSound "DSMG42";
 		Projectile;
@@ -28,9 +29,9 @@ class NaziLaserTrail : BulletTrail
 {
 	Default
 	{
-		Alpha 0.64; //.75
+		Alpha 0.8; //.75
 		RenderStyle "Add";
-		Scale 2.0;
+		Scale 2.24;
 	}
 	
 	States

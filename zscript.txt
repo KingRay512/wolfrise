@@ -1,8 +1,10 @@
 version "3.3"
 
+#include "zscript/ash.txt"
 #include "zscript/bossbar.txt"
 #include "zscript/lean.txt"
 #include "zscript/player.txt"
+#include "zscript/rain.txt"
 #include "zscript/statics.txt"
 
 #include "zscript/enemies/dog.txt"

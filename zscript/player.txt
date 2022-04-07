@@ -9,6 +9,7 @@ class BJ : PlayerPawn
 		Mass 100;
 		Scale 1.24;
 		PainChance 255;
+		DamageFactor "PlayerZap", 0;
 		Player.ViewHeight 56;	// 48
 		Player.Face "TWO";
 		BloodType "BloodPuff1";
@@ -24,8 +25,9 @@ class BJ : PlayerPawn
 		Player.WeaponSlot 5, "FG42";
 		Player.WeaponSlot 6, "Tigerfaust", "SteelGrenades";
 		Player.WeaponSlot 7, "PulseCannon";
-		Player.WeaponSlot 8, "GatlingGun", "SuperWeapon";
-		Player.WeaponSlot 9, "SpearOfDestiny";
+		Player.WeaponSlot 8, "GatlingGun";
+		Player.WeaponSlot 9, "SuperWeapon";
+		Player.WeaponSlot 0, "SpearOfDestiny";
 		Player.ForwardMove 0.88, 1.0;
 		Player.SideMove 0.88, 1.0;
 		Player.JumpZ 12;	// 16

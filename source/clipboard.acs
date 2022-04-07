@@ -43,8 +43,17 @@ script "ViewClipboard" (void)
 		SetFont("STATREP");
 		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_UNTRANSLATED, 192.1, 144.1, 0.001);
 		SetFont("HUDNUM2");
-		HudMessage(i: GetLevelInfo(LEVELINFO_KILLED_MONSTERS); HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 372.2, 207.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_KILLED_MONSTERS); HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 370.2, 207.1, 0.001);
 		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_MONSTERS); HUDMSG_PLAIN, 2, CR_UNTRANSLATED, 395.1, 207.1, 0.001);
+		
+		HudMessage(i: GetLevelInfo(LEVELINFO_FOUND_SECRETS); HUDMSG_PLAIN, 3, CR_UNTRANSLATED, 370.2, 223.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_SECRETS); HUDMSG_PLAIN, 4, CR_UNTRANSLATED, 395.1, 223.1, 0.001);
+		
+		HudMessage(i: GetLevelInfo(LEVELINFO_FOUND_ITEMS); HUDMSG_PLAIN, 5, CR_UNTRANSLATED, 370.2, 239.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_ITEMS); HUDMSG_PLAIN, 6, CR_UNTRANSLATED, 395.1, 239.1, 0.001);
+		
+		HudMessage(i: completedObjectives; HUDMSG_PLAIN, 7, CR_UNTRANSLATED, 370.2, 255.1, 0.001);
+		HudMessage(i: totalObjectives; HUDMSG_PLAIN, 8, CR_UNTRANSLATED, 395.1, 255.1, 0.001);
 	}
 	
 	else if (clipboard == 1)
@@ -55,5 +64,11 @@ script "ViewClipboard" (void)
 		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 200.0, 0.001);
 		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_RED, 329.0, 195.0, 0.001);
 		HudMessage(s: ""; HUDMSG_PLAIN, 2, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 3, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 4, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 5, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 6, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 7, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 8, CR_RED, 393.0, 195.0, 0.001);
 	}
 }

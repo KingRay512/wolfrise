@@ -3,6 +3,10 @@ switch doom 3 ELEVSW_1 on sound SWITCH1 pic ELEVSW_2 tics 0
 switch doom 3 STEELSW1 on sound SWITCH1 pic STEELSW2 tics 0
 switch doom 3 WLFELEV2 on sound SWITCH1 pic WLFELEV3 tics 0
 
+texture BREATHE1
+	pic	BREATHE1 tics 16
+	pic BREATHE2 tics 16
+
 texture M_PIST1
 	pic M_PIST1 tics 2
 	pic M_PIST2 tics 2

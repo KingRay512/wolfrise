@@ -3,6 +3,7 @@
 ambient/prison1			PRISON1
 ambient/prison2			PRISON2
 ambient/klaxon			KLAXON
+ambient/rain			AMBRAIN
 
 $random ambient/prisoners { ambient/prison1 ambient/prison2 }
 $ambient 1 ambient/prisoners point periodic 5.0 1.0
@@ -44,6 +45,8 @@ weapons/tiger/equip		RKTSELCT
 weapons/tiger/explode	ROCKETEX
 weapons/charge			CHARGE
 weapons/pulse/fire		BLASTER1
+weapons/venom/overheat	OVERHEAT
+weapons/venom/equip		VENEQUIP
 weapons/venom/fire		MGUN1
 weapons/venom/spinup	SPINUP
 weapons/venom/spindown	SPINDOWN
@@ -59,6 +62,8 @@ weapons/turret/fire		DSMG42
 weapons/flame/fire		FLAMFIRE
 weapons/grenade/bounce1	GBOUNCE1
 weapons/grenade/bounce2	GBOUNCE2
+weapons/uber/fire		uberfire
+weapons/uber/altfire	lg_fire
 
 
 $random weapons/knife/swing { weapons/knife/swing1 weapons/knife/swing2 }
@@ -108,19 +113,10 @@ projectiles/pulsedeath4	ximpact4
 projectiles/pulsedeath5	ximpact5
 $random projectiles/pulsedeath { projectiles/pulsedeath1 projectiles/pulsedeath2 projectiles/pulsedeath3 projectiles/pulsedeath4 projectiles/pulsedeath5}
 
-PAIN100		PAIN100
-PAIN75		PAIN75
-PAIN50		PAIN50
-PAIN25		PAIN25
-
-PAIN1001	PAIN1001
-PAIN1002	PAIN1002
-PAIN75_1	PAIN75_1
-PAIN75_2	PAIN75_2
-PAIN50_1	PAIN50_1
-PAIN50_2	PAIN50_2
-PAIN25_1	PAIN25_1
-PAIN25_2	PAIN25_2
+player/pain100		PAIN100
+player/pain75		PAIN75
+player/pain50		PAIN50
+player/pain25		PAIN25
 
 player/grunt	DSNOWAY
 player/jump		JUMP1
@@ -128,13 +124,10 @@ player/falling	DSFALL
 
 enemies/gibbed			HITLGIBD
 
-$playercompat	player	male	*pain100	PAIN1001
-$playercompat	player	male	*pain100	PAIN1002
-$playercompat	player	male	*pain75		PAIN75_1
-$playercompat	player	male	*pain75		PAIN75_2
-$playercompat	player	male	*pain50		PAIN50_1
-$playercompat	player	male	*pain50		PAIN50_2
-$playercompat	player	male	*pain25		player/pain25
+$playeralias	player	male	*pain100	player/pain100
+$playeralias	player	male	*pain75		player/pain75
+$playeralias	player	male	*pain50		player/pain50
+$playeralias	player	male	*pain25		player/pain25
 $playeralias	player	male	*jump		player/jump
 $playeralias	player	male	*land		player/grunt
 $playersound	player	male	*falling	DSFALL

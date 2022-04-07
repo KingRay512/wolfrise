@@ -4,11 +4,11 @@ class EliteSS : Actor
 	{
 		//$Category Enemies
 		obituary "%o was nailed to the ground by an Elite SS";
-		Health 600;
+		Health 450;
 		Radius 30;
 		Height 96;
 		Mass 900;
-		Speed 26;
+		Speed 24;
 		dropitem "FG42";
 		Painchance 0;
 		Maxtargetrange 2048;
@@ -96,5 +96,16 @@ class EliteSS : Actor
 		ENF2 LM 4;
 		ENF2 N -1;
 		Stop;
+	}
+}
+
+class EliteSS_Hard : EliteSS
+{
+	Default
+	{
+		Health 700;
+		Speed 32;
+		Maxtargetrange 3500;
+		ReactionTime 1;
 	}
 }

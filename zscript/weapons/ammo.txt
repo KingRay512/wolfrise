@@ -63,7 +63,7 @@ class HeavyAmmo : Ammo
 	{
 		//$Category Ammo
 		Inventory.Amount 50;
-		Inventory.MaxAmount 300;
+		Inventory.MaxAmount 500;
 		Inventory.PickUpSound "PICKAMMO";
 		Inventory.Pickupmessage "You picked up Chaingun Ammo";
 	}

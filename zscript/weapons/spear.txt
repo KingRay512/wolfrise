@@ -2,8 +2,8 @@ class SpearOfDestiny : Weapon
 {
 	action void A_SpearStrike()
 	{
-		A_DamageSelf(6, "SpearDrain");
-		A_Saw("eapons/spear/attack", "eapons/spear/attack", 666, "Explosion");
+		A_DamageSelf(4, "SpearDrain");
+		A_Saw("weapons/spear/attack", "weapons/spear/attack", 1800);
 		A_PlaySound("weapons/spear/attack");
 	}
 	
@@ -38,7 +38,7 @@ class SpearOfDestiny : Weapon
 		Fire:
 			DEST BCDEF 1
 			{
-				A_Recoil(-16.0);
+				A_Recoil(-10.0);
 				A_SpearStrike();
 			}
 			DEST G 4 A_SpearStrike();
@@ -52,11 +52,6 @@ class SpearOfDestiny : Weapon
 			{
 				A_DamageSelf(10, "SpearDrain");
 				A_Playsound("weapons/spear/attack2", 0, 4.0);
-				A_FireProjectile("SpearBall", -21, 1, 0, 0);
-				A_FireProjectile("SpearBall", -20, 1, 0, 0);
-				A_FireProjectile("SpearBall", -19, 1, 0, 0);
-				A_FireProjectile("SpearBall", -18, 1, 0, 0);
-				A_FireProjectile("SpearBall", -17, 1, 0, 0);
 				A_FireProjectile("SpearBall", -16, 1, 0, 0);
 				A_FireProjectile("SpearBall", -15, 1, 0, 0);
 				A_FireProjectile("SpearBall", -14, 1, 0, 0);
@@ -90,11 +85,6 @@ class SpearOfDestiny : Weapon
 				A_FireProjectile("SpearBall", 14, 1, 0, 0);
 				A_FireProjectile("SpearBall", 15, 1, 0, 0);
 				A_FireProjectile("SpearBall", 16, 1, 0, 0);
-				A_FireProjectile("SpearBall", 17, 1, 0, 0);
-				A_FireProjectile("SpearBall", 18, 1, 0, 0);
-				A_FireProjectile("SpearBall", 19, 1, 0, 0);
-				A_FireProjectile("SpearBall", 20, 1, 0, 0);
-				A_FireProjectile("SpearBall", 21, 1, 0, 0);
 			}
 			DEST FDCB 1;
 			DEST A 6;

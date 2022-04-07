@@ -95,5 +95,17 @@ DoomEdNums
 	22126 = Vent1
 	22127 = SwastikaFlag1
 	22178 = LightToggle
-	22668 = SpearBeam
+	22179 = EagleFlag1
+	22180 = WinterTree1
+	22181 = WinterTree2
+	22182 = WinterTree3
+	22183 = WinterTree4
+	22184 = WinterTree5
+	22185 = WinterTree6
+	22186 = WinterTree7
+	28006 = SpearBeam
+	
+	// EFFECTS
+	// Snow
+	23500 = RainSpawner
 }

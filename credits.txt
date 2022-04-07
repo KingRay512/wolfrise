@@ -13,11 +13,12 @@ Boss Health Bar:				Rip and Tear
 Lean:							Josh771
 
 ==SOUNDS==
-Return to Castle Wolfenstein:	Grey Matter Studios / Nerve Software
+Doom 3							Id Software
 MOH - Allied Assault:			2015 Games
 Quake:							Id Software
 Quake 2:						Id Software
 Quake 4:						Raven Software
+Return to Castle Wolfenstein:	Grey Matter Studios / Nerve Software
 Wolfenstein 2009:				Raven Software
 Wolfenstein - The New Order:	Machinegames
 
@@ -42,11 +43,14 @@ FG42:							Resurrection of Heimzahlung / Edited by Raees Kamaar
 Tigerfaust:						Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
 Grenades:						Wolfenstein Missions (Executor)
 Pulse Cannon:					Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
-Venom Chaingun:					Spear - End of Destiny (AReyeP & MCS) / Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Venom Chaingun:					Chiseled / Edited by Raees Kamaar
 BFG1000:						Blake Stone (JAM Software) / Edited by Raees Kamaar
 Spear of Destiny				Kinnerokhn / Edited by Raees Kamaar
 
-==STATIC SPRITES==
+==STATIC SPRITES/EFFECTS==
+Flag Debris:					Realm667 (The_Funktasm)
+Rain:							Realm667 (Ghastly_dragon; Tormentor667)
+
 
 ==TEXTURES/FLATS==
 Flats:							BAK_LEG

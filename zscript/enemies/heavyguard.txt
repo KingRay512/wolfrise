@@ -49,7 +49,7 @@ class HeavyGuard : Actor
 		TNT1 A 0 A_CPosRefire;
 		Goto Firing;
 	AltFiring:
-		HEAV F 12
+		HEAV F 18
 		{
 			A_PlaySound("weapons/warning");
 			A_SpawnProjectile("NaziLaserTarget", 32, 24, -3);
@@ -70,7 +70,7 @@ class HeavyGuard : Actor
 		}
 		HEAV F 2
 		{
-			A_PlaySound("weapons/mp50/altfire");
+			A_PlaySound("weapons/mp50/shotgun");
 			A_SpawnProjectile("NaziBullet", 32, 24, -3);
 			A_SpawnProjectile("NaziBullet", 32, 24, -2);
 			A_SpawnProjectile("NaziBullet", 32, 24, -1);
@@ -92,15 +92,17 @@ class HeavyGuard : Actor
 		HEAV A 1 A_Pain;
 		Goto See;
 	Death:
-		TNT1 A 0 A_GiveInventory("WolfScore", 2500, AAPTR_PLAYER1);
-		HEAV H 6
+		TNT1 A 0
 		{
-			A_SpawnDebris("BloodPuff1", false, 0.8, 0.8);
+			A_GiveInventory("WolfScore", 2500, AAPTR_PLAYER1);
 			A_Scream();
 			A_NoBlocking();
-			A_DropItem("BloodPuff1", -1, 256);
 		}
-		HEAV I 6 A_DropItem("BloodPuff1", -1, 256);
+		HEAV H 6
+		{
+			A_SpawnDebris("BloodPuff3", true, random(0.32, 0.75), random(0.32, 0.75));
+		}
+		HEAV I 6;
 		HEAV J 6;
 		HEAV K -1;
 		Stop;
