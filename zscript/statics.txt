@@ -30,8 +30,9 @@ class SwastikaFlag1 : Actor
 	{
 		//$Category Decoration / Objects
 		Health 1;
-		Radius 16;	// 4
+		Radius 32;	// 4
 		Height 128;	// 4
+		Mass 9999;
 		+FLATSPRITE
 		+NOBLOOD
 		+NOGRAVITY
@@ -130,7 +131,7 @@ class EagleFlag1 : SwastikaFlag1
 	Default
 	{
 		//$Category Decoration / Objects
-		
+		Mass 9999;
 	}
 		
 	States

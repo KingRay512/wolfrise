@@ -21,6 +21,12 @@ movers/door3/open		door3opn
 movers/door3/close 		door3cls
 movers/door3/end		door3end
 
+switches/paper1			paper1
+switches/paper2			paper2
+switches/paper3			paper3
+
+$random switches/paper { switches/paper1 switches/paper2 switches/paper3 }
+
 // WEAPONS
 
 weapons/knife/impact	KNIFEHIT
@@ -122,7 +128,7 @@ player/grunt	DSNOWAY
 player/jump		JUMP1
 player/falling	DSFALL
 
-enemies/gibbed			HITLGIBD
+enemies/gibbed			gibsplt1
 
 $playeralias	player	male	*pain100	player/pain100
 $playeralias	player	male	*pain75		player/pain75

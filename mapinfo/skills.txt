@@ -9,7 +9,7 @@ skill easy
 	SpawnFilter = 1
 	picname = "M_DADDY"
 	NoInfighting
-	MustConfirm = "Easy difficulty for the casual gamer.\nContinue?"
+	MustConfirm = "Easy difficulty for the inexperienced gamer. Continue?"
 }
 
 //	DON'T HURT ME
@@ -20,7 +20,7 @@ skill normal
 	SpawnFilter = 2
 	picname = "M_DHURTM"
 	NoInfighting
-	MustConfirm = "Standard difficulty for the skilled gamer.\nContinue?"
+	MustConfirm = "Standard difficulty for the casual gamer. Continue?"
 }
 
 //	BRING 'EM ON
@@ -31,19 +31,19 @@ skill hard
 	SpawnFilter = 3
 	picname = "M_BRING"
 	NoInfighting
-	MustConfirm = "Hard difficulty for the tough gamer.\nContinue?"
+	MustConfirm = "Hard difficulty for the tough gamer. Continue?"
 }
 
 //	I AM DEATH INCARNATE
 skill death
 {
 	Aggressiveness = 0.0
+	AmmoFactor = 1.2
 	DamageFactor = 2.0
-	AmmoFactor = 2.0
 	SpawnFilter = 4
 	picname = "M_DEATH"
 	NoInfighting
-	MustConfirm = "Deadly difficulty for the masochistic gamer. The true Wolfenstein experience. Seriously, do you really wish to put yourself through this?"
+	MustConfirm = "Sadistic difficulty for the masochistic ones. The true Wolfenstein Rising experience. Do you REALLY think that you are ready for the coming storm?"
 	
 	ReplaceActor = "Dog", "Dog_Hard"
 	ReplaceActor = "PatrolGuard", "PatrolGuard_Hard"

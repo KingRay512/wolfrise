@@ -49,8 +49,10 @@ class GatlingGun : Weapon
 		Weapon.BobRangeX 0.16;
 		Weapon.BobRangeY 0.64;
 		Weapon.BobSpeed 0.48;
+		Scale 1.44;
 		Tag "Venom";
 		+WEAPON.NOAUTOAIM;
+		+WEAPON.NOALERT;
 	}
 	
 	States
@@ -92,6 +94,7 @@ class GatlingGun : Weapon
 				A_FireProjectile("PlayerBullet", random(-1, 1), 1, 0, 12, 0, 0);
 				A_FireProjectile("PlayerBullet", random(-1, 1), 1, 0, 12, 0, 0);
 				A_Playsound("weapons/venom/fire");
+				A_AlertMonsters(2048);
 				A_Recoil(0.96);
 				A_SetPitch(pitch - 1.12, SPF_INTERPOLATE);
 				A_GiveInventory("VenomOverheat", 6);
@@ -107,6 +110,7 @@ class GatlingGun : Weapon
 				A_FireProjectile("PlayerBullet", random(0, 1), 1, -12, 12, 0, 0);
 				A_FireProjectile("PlayerBullet", random(0, 1), 1, -12, 12, 0, 0);
 				A_Playsound("weapons/venom/fire");
+				A_AlertMonsters(2048);
 				A_Recoil(1.76);
 				A_SetPitch(pitch - 1.44, SPF_INTERPOLATE);
 				A_GiveInventory("VenomOverheat", 10);

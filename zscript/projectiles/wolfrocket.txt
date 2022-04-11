@@ -8,6 +8,7 @@ class WolfRocket : FastProjectile
 		Damage 64;	// 48
 		Projectile;
 		Scale 1.2;
+		DamageType "ExplosiveDamage";
 		MissileType "WolfRocketTrail";
 		SeeSound "weapons/tiger/fire";
 		DeathSound "weapons/tiger/explode";

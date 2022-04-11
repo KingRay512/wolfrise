@@ -20,26 +20,6 @@ class SmallAmmo : Ammo
 	}
 }
 
-class MP50Upright : SmallAmmo
-{
-	Default
-	{
-		//$Category Ammo
-		Radius 8;
-		Height 48;
-		Inventory.Amount 16;
-		Inventory.PickUpSound "PICKAMMO";
-		Inventory.Pickupmessage "You picked up an MP50";
-	}
-	
-	States
-	{
-		Spawn:
-			MP55 Q -1;
-			stop;
-	}
-}
-
 class BoxAmmo : SmallAmmo
 {
 	Default
@@ -82,14 +62,15 @@ class WolfRockets : Ammo
 	{
 		//$Category Ammo
 		Inventory.Amount 5;
-		Inventory.MaxAmount 20;
+		Inventory.MaxAmount 25;
 		Inventory.Pickupmessage "You picked up a box of rockets";
+		Scale 1.36;
 	}
 	
 	States
 	{
 		Spawn:
-			CLI3 A -1;
+			BOXR A -1;
 			stop;
 	}
 }

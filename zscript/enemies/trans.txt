@@ -10,13 +10,15 @@ class TransGrosse : Actor
 		Mass 500;
 		Speed 18;
 		DamageFactor "KnifeDamage", 0.048;
-		dropitem "BoxAmmo";
+		DamageFactor "ExplosiveDamage", 1.2;
+		dropitem "GatlingGun";
+		dropitem "GatlingGun";
 		Maxtargetrange 1024;
 		DeathSound "bosses/trans/death";
 		SeeSound "bosses/trans/sight";
 		BloodType "BloodPuff1";
 		MinMissileChance 1;
-		Scale 1.44;
+		Scale 1.6;
 		Monster;
 		+BOSS
 		+MISSILEMORE

@@ -24,7 +24,7 @@ class WolfRifle : Weapon
 		A_AlertMonsters();
 		A_Recoil(4.0);
 		A_SetPitch(pitch - 0.8, SPF_INTERPOLATE);
-		A_FireBullets(0.0, 0.0, -1, 56, "BulletPuff1");
+		A_FireBullets(0.0, 0.0, -1, 32, "BulletPuff1");
 	}
 	
 	action void A_RifleLoad1()
@@ -86,7 +86,7 @@ class WolfRifle : Weapon
 			RIF4 BCDE 1 A_RifleLoad1();
 			RIF4 F 2 A_PlaySound("weapons/rifle/bolt");
 			RIF4 EDB 1 A_RifleLoad2();
-			RIF4 A 10;
+			RIF4 A 6;
 			Goto Ready;
 		FireZoomed:
 			RIF4 U 1
@@ -94,7 +94,6 @@ class WolfRifle : Weapon
 				A_PlaySound("weapons/rifle/fire");
 				A_AlertMonsters();
 				A_Recoil(1.0);
-				//A_SetPitch(pitch - 0.8, SPF_INTERPOLATE);
 				A_FireBullets(0.0, 0.0, -1, 32, "BulletPuff1");
 			}
 			RIF4 TU 1;

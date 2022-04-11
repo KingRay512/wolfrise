@@ -41,7 +41,6 @@ class PatrolGuard : Actor
 			WHIT U 2 
 			{
 				A_Pain();
-				A_SpawnDebris("BloodPuff1", false, random(0.32, 0.75), random(0.32, 0.75));
 			}
 			Goto See;
 		Death:
@@ -51,6 +50,20 @@ class PatrolGuard : Actor
 			WHIT W 4 A_NoBlocking;
 			WHIT WXY 4;
 			WHIT Z -1;
+			Stop;
+		Death.ExplosiveDamage:
+			TNT1 A 0
+			{
+				A_GiveInventory("WolfScore", 1000, AAPTR_PLAYER1);
+				A_Scream();
+				A_NoBlocking();
+				A_SpawnDebris("BloodPuff3", false, random(1.5, 2.0), random(1.5, 2.0));
+				A_SpawnDebris("BoneDebris", false, random(0.25, 0.5), random(0.25, 0.5));
+				A_SpawnDebris("BoneDebris2", false, random(0.75, 1.25), random(0.75, 1.25));
+				A_SpawnDebris("BoneDebris3", false, random(2.0, 4.0), random(2.0, 4.0));
+				A_SpawnDebris("BoneDebris4", false, random(1.0, 2.0), random(1.0, 2.0));
+				A_PlaySound("enemies/gibbed");
+			}
 			Stop;
 	}
 }

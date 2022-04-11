@@ -12,6 +12,7 @@ class HeavyGuard : Actor
 		Speed 17;
 		dropitem "MP50";
 		dropitem "MP50";
+		dropitem "WolfSmallHelmet2";
 		Painchance 0;
 		Maxtargetrange 1024;
 		DeathSound "enemies/gibbed";

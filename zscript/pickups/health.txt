@@ -85,6 +85,8 @@ class PortableFA : Ammo
 		//$Category Health
 		Inventory.Amount 1;
 		Inventory.MaxAmount 4;
+		Inventory.PickupMessage "You picked up a Portable First Aid Kit (+25 Health)";
+		Inventory.pickupsound "GRABHLTH";
 	}
 	
 	States

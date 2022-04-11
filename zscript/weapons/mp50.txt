@@ -77,7 +77,13 @@ class MP50 : Weapon
 			MP50 A 4;
 			Goto Ready;
 		Spawn:
+			TNT1 A 0 A_JumpIf(Args[0] == 0, "SpawnStandard");
+			TNT1 A 0 A_JumpIf(Args[0] == 1, "SpawnUpright");
+		SpawnStandard:
 			MP50 P -1;
+			Stop;
+		SpawnUpright:
+			MP55 Q -1;
 			Stop;
 	}
 }

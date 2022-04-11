@@ -101,7 +101,7 @@ class GrenadeThrow : Actor
 		BounceCount 3;
 		BounceFactor 0.75;	//0.64
 		WallBounceFactor 0.48;
-		DamageType "GrenadeDamage";
+		DamageType "ExplosiveDamage";
 		SeeSound "weapons/grenade/bounce";
 		ActiveSound "weapons/grenade/bounce";
 		DeathSound "weapons/tiger/explode";

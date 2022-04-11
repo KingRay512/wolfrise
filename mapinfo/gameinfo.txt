@@ -1,8 +1,9 @@
 gameinfo
 {
-	dimcolor = "121212"
-	dimamount = 0.9
+	dimcolor = "080808"
+	dimamount = 0.95
 	AddEventHandlers = "LeaningHandler"
 	AddEventHandlers = "BossHealthBars"
 	InfoPage = "CREDITS1", "CREDITS2"
+	FullscreenAutoaspect = 1
 }

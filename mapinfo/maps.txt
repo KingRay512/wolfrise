@@ -1,53 +1,16 @@
-clearepisodes
-
 defaultmap
 {
 	exitpic = "$WOLFINT"
 	enterpic = "$WOLFINT"
 	fallingdamage
-	AirControl = 0.064
+	AirControl = 0.088
 }
 
-/*
-episode MAP00
-{
-	picname = "M_PART0"
-	key = "1"
-}
-*/
-
-episode MAP01
-{
-	picname = "M_PART1"
-	key = "k"
-}
-
-/*
-episode MAP10
-{
-	picname = "M_PART2"
-	key = "o"
-}
-
-episode MAP20
-{
-	picname = "M_PART3"
-	key = "l"
-}
-*/
-
-map MAP01 lookup "M_CASTLE"
+map MAP01 "The Castle"
 {
 	music = "DAR_INFI"
-	sky1 = "SKYFOG"
+	sky1 = "SKYFOG2"
 	next = MAP02
 	par = 300
-	F1 = "HELP1"
-}
-
-map MAP02 "Stage 2"
-{
-	music = "DAR_PSYC"
-	next = MAP03
-	sky1 = "SKYFOG"
+	F1 = "MISSION1"
 }
