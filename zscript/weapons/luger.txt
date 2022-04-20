@@ -16,7 +16,7 @@ class PistolSilenced : Inventory
 	}
 }
 
-class Luger : Weapon
+class Luger : WolfWeapon
 {
 	action void A_LugerFire()
 	{
@@ -36,20 +36,18 @@ class Luger : Weapon
 
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 8;
 		Weapon.AmmoType "SmallAmmo";
 		Weapon.AmmoType2 "SmallAmmo";
-		Weapon.BobStyle "InverseSmooth";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Weapon.BobRangeX 0.25;
 		Weapon.BobRangeY 0.25;
 		Tag "Luger";
 		Weapon.BobSpeed 3.0;
-		+WEAPON.NOAUTOAIM;
 		+WEAPON.NOALERT;
+		// +WEAPON.NOAUTOFIRE;
 	}
 	
 	States
@@ -75,7 +73,7 @@ class Luger : Weapon
 			LUG2 D 1 A_LugerFire();
 			TNT1 A 0 A_SetPitch(pitch - 0.64, SPF_INTERPOLATE);
 			LUG2 EFGH 1;
-			LUG2 A 5;
+			LUG2 A 5;	// 5
 			Goto Ready;
 		FireSilenced:
 			LUG3 BC 1;
@@ -122,51 +120,48 @@ class Luger : Weapon
 
 
 
-class SpaceLuger : Weapon
+class SpaceLuger : WolfWeapon
 {
 	action void A_SpaceLugerFire()
 	{
-		A_PlaySound("BLASTER1");
+		A_PlaySound("weapons/moonluger/fire");
 		// A_FireBullets(1, 1, -1, 10, "BulletPuff1");
-		A_FireProjectile("SMGBall", 0, 1, 0, 8, 0, 0);
+		A_FireProjectile("SpaceBullet", 0, 1, 0, 8, 0, 0);
 	}
 
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 8;
 		Weapon.AmmoType "SmallAmmo";
 		Weapon.AmmoType2 "SmallAmmo";
-		Weapon.BobStyle "InverseSmooth";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Weapon.BobRangeX 0.25;
 		Weapon.BobRangeY 0.25;
 		Tag "Luger";
 		Weapon.BobSpeed 3.0;
-		+WEAPON.NOAUTOAIM;
+		+WEAPON.NOAUTOFIRE;
 	}
 	
 	States
 	{
 		Ready:
-			SPIS A 1 A_WeaponReady;
+			MLGR A 1 A_WeaponReady;
 			Loop;
 		Select:
 			TNT1 A 0 A_PlaySound("weapons/luger/equip");
 		Selecting:
-			SPIS A 1 A_Raise(25);
+			MLGR A 1 A_Raise(25);
 			Loop;
 		Deselect:
-			SPIS A 1 A_Lower(25);
+			MLGR A 1 A_Lower(25);
 			Loop;
 		Fire:
-			SPIS BC 1;
-			SPIS D 2 A_SpaceLugerFire();
+			MLGR C 1;
+			MLGR D 1 A_SpaceLugerFire();
 			TNT1 A 0 A_SetPitch(pitch - 0.8, SPF_INTERPOLATE);
-			SPIS EDB 1;
-			SPIS A 5;
+			MLGR E 1;
 			Goto Ready;
 		Spawn:
 			PIST P -1;

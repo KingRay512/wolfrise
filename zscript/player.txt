@@ -5,12 +5,12 @@ class BJ : PlayerPawn
 		Speed 1;
 		Health 100;
 		Radius 16;
-		Height 60;
+		Height 88;	//64
 		Mass 100;
 		Scale 1.24;
 		PainChance 255;
 		DamageFactor "PlayerZap", 0;
-		Player.ViewHeight 56;	// 48
+		Player.ViewHeight 64;	// 56
 		Player.Face "TWO";
 		BloodType "BloodPuff1";
 		Player.DisplayName "BJ Blazkowicz";
@@ -18,9 +18,10 @@ class BJ : PlayerPawn
 		Player.StartItem "Knife";
 		Player.StartItem "KnifeExtras", 5;
 		Player.StartItem "SmallAmmo", 32;
+		Player.StartItem "SteelGrenades";
 		Player.WeaponSlot 1, "Knife";
-		Player.WeaponSlot 2, "Luger";
-		Player.WeaponSlot 3, "SMPX", "MP50";
+		Player.WeaponSlot 2, "Luger", "SpaceLuger";
+		Player.WeaponSlot 3, "MarksmanRifle", "MP50";
 		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle";
 		Player.WeaponSlot 5, "FG42";
 		Player.WeaponSlot 6, "Tigerfaust", "SteelGrenades";

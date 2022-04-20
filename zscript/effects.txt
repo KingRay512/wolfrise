@@ -64,12 +64,60 @@ class BulletPuff1 : KnifePuff1
 	}
 }
 
+/*
 class SpacePuff1 : BulletPuff1
 {
 	Default
 	{
 		AttackSound "projectiles/pulsedeath";
 		DeathSound "projectiles/pulsedeath";
+	}
+}
+*/
+
+class SpacePuff2 : BulletPuff1
+{
+	Default
+	{
+		Health 24;	// 24
+		RenderStyle "Add";
+		Alpha 1.0;
+		Scale 1.2;	// 0.56
+		Gravity 0.96;
+		Speed 1;
+		VSpeed 1;
+		ReactionTime 250;
+		BounceFactor 1.75;
+		WallBounceFactor 0.9;
+		BounceCount 1;
+		+NOBLOCKMAP
+		-NOTELEPORT
+		-NODAMAGETHRUST
+		-RANDOMIZE
+		+Missile
+		-SOLID
+		+DOOMBOUNCE
+	}
+	
+	States
+	{
+		Spawn:
+			TNT1 A 0 A_Jump(255, "Spawn2");
+		Spawn2:
+			SPRK AAAAAAAA 4 A_CountDown;
+			Loop;
+		Death:
+			SPRK AAAAAA 2 BRIGHT A_FadeOut(0.024);
+			Stop;
+		XDeath:
+			SPRK AAAAAA 2 BRIGHT A_FadeOut(0.024);
+			Stop;
+		Melee:
+			SPRK AAAAAA 2 BRIGHT A_FadeOut(0.024);
+			Stop;
+		Crash:
+			SPRK AAAAAA 2 BRIGHT A_FadeOut(0.024);
+			Stop;
 	}
 }
 

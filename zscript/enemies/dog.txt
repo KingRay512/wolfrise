@@ -33,10 +33,9 @@ class Dog : Actor
 			DOG1 AABBCCDD 3 A_Chase;
 			Loop;
 		Melee:
-			DOG1 I 2 A_FaceTarget;
-			DOG1 J 3;
-			TNT1 A 0 A_CustomMeleeAttack(10, "DOG1BITE");
-			DOG1 K 3;
+			DOG1 I 4 A_FaceTarget;
+			DOG1 J 4;
+			DOG1 K 4 A_CustomMeleeAttack(8, "DOG1BITE");
 			Goto See;
 		Death:
 			TNT1 A 0 A_GiveInventory("WolfScore", 200, AAPTR_PLAYER1);

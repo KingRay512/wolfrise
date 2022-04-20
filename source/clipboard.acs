@@ -9,28 +9,41 @@
 #define CLIPBOARD_GRAPHIC	405
 #define CLIPBOARD_STATUS	406
 
+#define JOURNAL_OFF			404
+#define JOURNAL_GRAPHIC		405
+#define JOURNAL_STATUS		406
+
 int totalObjectives;
 int completedObjectives;
 
 int clipboard = 0;
+int journal = 0;
 
-script "ViewClipboard_test" (void)
+script "ViewJournal" (void)
 {
-	if (clipboard == 0)
+	if (journal == 0)
 	{
-		SetHudSize(640, 400, 0);
+		journal = 1;
+		SetHudSize(640, 400, TRUE);
+		SetFont("CLIPBRD");
+		HudMessage(s: "A"; HUDMSG_PLAIN, JOURNAL_GRAPHIC, CR_UNTRANSLATED, 0.1, 0.1, 0.001);
+		
+		SetHudSize(640, 400, TRUE);
 		SetFont("SMALLFNT");
-		HudMessage(s: "Mission Objectives:"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
-		HudMessage(s: "*"; HUDMSG_PLAIN, CLIPBOARD_STATUS, CR_WHITE, 320.0, 150.0, 0);
-		clipboard = 1;
+		HudMessage(s: "Intel indicates that the Nazis are\npreparing secret cargo to an unknown\nbase.\n\nAgent Blazkowicz, it is up to you\nto locate the maps that will lead\nyou to the base.\n\nBe careful though, there's no telling\nwhat sort of resistance awaits you.";
+		HUDMSG_PLAIN, 1, CR_WHITE, 333.1, 111.1, 0.001);
 	}
 	
-	else
+	else if (journal == 1)
 	{
-		SetHudSize(640, 400, 0);
+		journal = 0;
+		SetHudSize(640, 400, TRUE);
+		SetFont("CLIPBRD");
+		HudMessage(s: ""; HUDMSG_PLAIN, JOURNAL_GRAPHIC, CR_UNTRANSLATED, 0.1, 0.1, 0.001);
+		
+		SetHudSize(640, 400, TRUE);
 		SetFont("SMALLFNT");
-		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 100.0, 0);
-		clipboard = 0;
+		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_WHITE, 333.1, 111.1, 0.001);
 	}
 }
 

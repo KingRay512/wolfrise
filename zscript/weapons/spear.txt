@@ -1,4 +1,4 @@
-class SpearOfDestiny : Weapon
+class SpearOfDestiny : WolfWeapon
 {
 	action void A_SpearStrike()
 	{
@@ -9,17 +9,14 @@ class SpearOfDestiny : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		DamageType "SpearDrain";
 		Obituary "%o became power-drunk for the Spear";
-		Weapon.BobStyle "InverseSmooth";
 		Weapon.BobRangeX 0.5;
 		Weapon.BobRangeY 0.5;
 		Weapon.BobSpeed 1.0;
 		Tag "The Spear of Destiny";
 		+WEAPON.NOAUTOFIRE;
 		+WEAPON.NOALERT;
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

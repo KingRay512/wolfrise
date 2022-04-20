@@ -11,7 +11,7 @@ class WolfCross : CustomInventory
 {
 	Default
 	{
-		//$Category Treasure
+		//$Category Wolfenstein / Treasure
 		Inventory.PickupMessage "You picked up a Gold Cross (+100 points)";
 		inventory.pickupsound "FINDGOLD";
 		+INVENTORY.ALWAYSPICKUP;

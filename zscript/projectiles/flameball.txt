@@ -24,7 +24,7 @@ class FlameTrail : BulletTrail
 { 
 	Default
 	{
-		Alpha 0.56; //.75
+		Alpha 0.32; //.75
 		RenderStyle "Add";
 		Speed 0;
 		MissileType "FlameTrail";
@@ -39,10 +39,10 @@ class FlameTrail : BulletTrail
 	States
 	{
 		Spawn:
-			FBOL AB 3 BRIGHT A_FadeOut(0.48);
+			FBOL A 3 BRIGHT A_FadeOut(0.32);
 			Loop;
 		Death:
-			EBO2 CDE 5 Bright;
+			FLAM BCDEFGH 5 Bright;
 			Stop;
 	}
 }

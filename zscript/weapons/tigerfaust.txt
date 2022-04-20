@@ -1,4 +1,4 @@
-class Tigerfaust : Weapon
+class Tigerfaust : WolfWeapon
 {
 	action void A_TigerFistFire()
 	{
@@ -21,21 +21,17 @@ class Tigerfaust : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 5;
 		Weapon.AmmoGive 2;
 		Weapon.AmmoType "WolfRockets";
 		Weapon.AmmoType2 "WolfRockets";
-		Weapon.BobStyle "InverseSmooth";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Inventory.Pickupmessage "You picked up a Tigerfaust (Panzerfaust's big bro)";
 		Weapon.BobRangeX 0.0;
 		Weapon.BobRangeY 0.33;
 		Weapon.BobSpeed 2.0;
-		Scale 1.44;
 		Tag "Tigerfaust";
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

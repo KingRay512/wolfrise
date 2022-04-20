@@ -3,7 +3,7 @@ defaultmap
 	exitpic = "$WOLFINT"
 	enterpic = "$WOLFINT"
 	fallingdamage
-	AirControl = 0.088
+	AirControl = 0.4	// 0.088
 }
 
 map MAP01 "The Castle"
@@ -11,6 +11,6 @@ map MAP01 "The Castle"
 	music = "DAR_INFI"
 	sky1 = "SKYFOG2"
 	next = MAP02
-	par = 300
+	par = 420
 	F1 = "MISSION1"
 }

@@ -1,4 +1,4 @@
-class WolfRailgun : Weapon
+class WolfRailgun : WolfWeapon
 {
 	action void A_RailFire()
 	{
@@ -9,7 +9,6 @@ class WolfRailgun : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 50;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 16;
@@ -17,13 +16,10 @@ class WolfRailgun : Weapon
 		Weapon.AmmoType2 "PulseAmmo";
 		Inventory.Pickupmessage "You got a Pulse Cannon";
 		Inventory.PickUpSound "pickups/weapongrab";
-		Weapon.BobStyle "InverseSmooth";
-		Scale 1.44;
 		Tag "Railgun";
 		Weapon.BobRangeX 0.1;
 		Weapon.BobRangeY 0.75;
 		Weapon.BobSpeed 1.5;
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

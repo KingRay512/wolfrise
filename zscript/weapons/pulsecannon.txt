@@ -1,4 +1,4 @@
-class PulseCannon : Weapon
+class PulseCannon : WolfWeapon
 {
 	action void A_PulseFire()
 	{
@@ -20,7 +20,6 @@ class PulseCannon : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 16;
@@ -28,12 +27,10 @@ class PulseCannon : Weapon
 		Weapon.AmmoType2 "PulseAmmo";
 		Inventory.Pickupmessage "You got a Pulse Cannon";
 		Inventory.PickUpSound "pickups/weapongrab";
-		Weapon.BobStyle "InverseSmooth";
 		Tag "Pulse Cannon";
 		Weapon.BobRangeX 0.1;
 		Weapon.BobRangeY 0.75;
 		Weapon.BobSpeed 1.5;
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

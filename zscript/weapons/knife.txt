@@ -1,4 +1,4 @@
-class Knife : Weapon
+class Knife : WolfWeapon
 {
 	action void A_KnifeSlash()
 	{
@@ -8,7 +8,6 @@ class Knife : Weapon
 
 	Default
 	{
-		Weapon.BobStyle "InverseSmooth";
 		Weapon.BobRangeX 0.25;
 		Weapon.BobRangeY 0.25;
 		Weapon.BobSpeed 3.0;
@@ -17,7 +16,6 @@ class Knife : Weapon
 		Tag "Knife";
 		+WEAPON.NOAUTOFIRE;
 		+WEAPON.NOALERT;
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

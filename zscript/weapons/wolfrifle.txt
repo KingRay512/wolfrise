@@ -16,7 +16,7 @@ class WolfRifleZoomed : Inventory
 	}
 }
 
-class WolfRifle : Weapon
+class WolfRifle : WolfWeapon
 {
 	action void A_FireRifle()
 	{
@@ -24,7 +24,7 @@ class WolfRifle : Weapon
 		A_AlertMonsters();
 		A_Recoil(4.0);
 		A_SetPitch(pitch - 0.8, SPF_INTERPOLATE);
-		A_FireBullets(0.0, 0.0, -1, 32, "BulletPuff1");
+		A_FireBullets(0.0, 0.0, -1, 75, "BulletPuff1");
 	}
 	
 	action void A_RifleLoad1()
@@ -39,20 +39,17 @@ class WolfRifle : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 8;
 		Weapon.AmmoType "RifleAmmo";
 		Weapon.AmmoType2 "RifleAmmo";
-		Weapon.BobStyle "InverseSmooth";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Inventory.Pickupmessage "You grabbed a rifle";
 		Weapon.BobRangeX 0.24;
 		Weapon.BobRangeY 0.64;
 		Weapon.BobSpeed 2.5;
 		Tag "Rifle";
-		+WEAPON.NOAUTOAIM
 		+WEAPON.NOALERT
 		+WEAPON.NOAUTOFIRE
 	}
@@ -94,7 +91,7 @@ class WolfRifle : Weapon
 				A_PlaySound("weapons/rifle/fire");
 				A_AlertMonsters();
 				A_Recoil(1.0);
-				A_FireBullets(0.0, 0.0, -1, 32, "BulletPuff1");
+				A_FireBullets(0.0, 0.0, -1, 100, "BulletPuff1");
 			}
 			RIF4 TU 1;
 			RIF4 Z 4;
@@ -138,25 +135,21 @@ class WolfRifle : Weapon
 // FG 42
 ////////////////////
 
-class FG42 : Weapon
+class FG42 : WolfWeapon
 {	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 8;
 		Weapon.AmmoType "RifleAmmo";
 		Weapon.AmmoType2 "RifleAmmo";
-		Weapon.BobStyle "InverseSmooth";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Inventory.Pickupmessage "You picked up an FG42";
 		Weapon.BobRangeX 0.24;
 		Weapon.BobRangeY 0.64;
 		Weapon.BobSpeed 2.5;
 		Tag "FG42";
-		Scale 1.6;
-		+WEAPON.NOAUTOAIM
 		+WEAPON.NOALERT
 		+WEAPON.NOAUTOFIRE
 	}

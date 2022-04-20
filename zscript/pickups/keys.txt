@@ -1,12 +1,19 @@
-class WolfGoldKey : Key
+class WolfKey : Key
 {
 	Default
 	{
-		//$Category Keys
-		Inventory.PickupMessage "You got the Gold Key!";
-		Inventory.Icon "GKEYICON";
+		//$Category Wolfenstein / Keys
 		Inventory.PickUpSound "PICKKEY";
 		Scale 1.6;
+	}
+}
+
+class WolfGoldKey : WolfKey
+{
+	Default
+	{
+		Inventory.PickupMessage "You got the Gold Key!";
+		Inventory.Icon "GKEYICON";
 	}
 	
 	States
@@ -18,15 +25,12 @@ class WolfGoldKey : Key
 	}
 }
 
-class WolfSilverKey : Key
+class WolfSilverKey : WolfKey
 {
 	Default
 	{
-		//$Category Keys
 		Inventory.PickupMessage "You got the Silver Key!";
 		Inventory.Icon "SKEYICON";
-		Inventory.PickUpSound "PICKKEY";
-		Scale 1.6;
 	}
 	
 	States
@@ -38,15 +42,12 @@ class WolfSilverKey : Key
 	}
 }
 
-class WolfBronzeKey : Key
+class WolfBronzeKey : WolfKey
 {
 	Default
 	{
-		//$Category Keys
 		Inventory.PickupMessage "You got the Bronze Key!";
 		Inventory.Icon "BKEYICON";
-		Inventory.PickUpSound "PICKKEY";
-		Scale 1.6;
 	}
 	
 	States
@@ -58,15 +59,12 @@ class WolfBronzeKey : Key
 	}
 }
 
-class WolfElevatorKey : Key
+class WolfElevatorKey : WolfKey
 {
 	Default
 	{
-		//$Category Keys
 		Inventory.PickupMessage "You got the Elevator Key!";
 		Inventory.Icon "IKEYICON";
-		Inventory.PickUpSound "PICKKEY";
-		Scale 1.6;
 	}
 	
 	States

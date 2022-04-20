@@ -35,7 +35,6 @@ class GatlingGun : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 25;
@@ -43,15 +42,10 @@ class GatlingGun : Weapon
 		Weapon.AmmoType2 "HeavyAmmo";
 		Inventory.Pickupmessage "You got the Venom Chaingun!";
 		Inventory.PickUpSound "WEAPPICK";
-		Weapon.BobStyle "InverseSmooth";
-		//Weapon.BobRangeX 0.5;
-		//Weapon.BobRangeY 0.75;
 		Weapon.BobRangeX 0.16;
 		Weapon.BobRangeY 0.64;
 		Weapon.BobSpeed 0.48;
-		Scale 1.44;
 		Tag "Venom";
-		+WEAPON.NOAUTOAIM;
 		+WEAPON.NOALERT;
 	}
 	
@@ -172,7 +166,6 @@ class SuperWeapon : Weapon
 	
 	Default
 	{
-		//$Category Weapons
 		Weapon.AmmoUse 1;
 		Weapon.AmmoUse2 1;
 		Weapon.AmmoGive 25;
@@ -180,14 +173,10 @@ class SuperWeapon : Weapon
 		Weapon.AmmoType2 "HeavyAmmo";
 		Inventory.Pickupmessage "You got the Blut-Faust Gewehr 1000!";
 		Inventory.PickUpSound "WEAPPICK";
-		Weapon.BobStyle "InverseSmooth";
-		//Weapon.BobRangeX 0.5;
-		//Weapon.BobRangeY 0.75;
-		Weapon.BobRangeX 0.16;
-		Weapon.BobRangeY 0.64;
-		Weapon.BobSpeed 0.48;
+		Weapon.BobRangeX 0.1;
+		Weapon.BobRangeY 0.72;
+		Weapon.BobSpeed 0.32;
 		Tag "Blut-Faust Gewehr 1000";
-		+WEAPON.NOAUTOAIM;
 	}
 	
 	States

@@ -37,6 +37,7 @@ weapons/luger/burst		DSLUGR2
 weapons/luger/softfire	DSLUGR3		
 weapons/luger/equip		LUGERUP
 weapons/luger/silence	silence
+weapons/moonluger/fire	BLASTER2
 weapons/pistol/fire		DSPISTOL
 weapons/mp50/altfire	MPALTFR
 weapons/mp50/fire		DSMP40
@@ -60,6 +61,8 @@ weapons/railgun/fire	RAILFIRE
 weapons/spear/attack	SPEAR
 weapons/spear/attack2	SPEARALT
 weapons/switch			CHANGE
+weapons/marksman/fire	laser4
+weapons/marksman/fire2	laser2
 weapons/smpx/fire1		SMPX1
 weapons/smpx/fire2		SMPX2
 weapons/smpx/select		SMPXSEL

@@ -1,0 +1,10 @@
+class WolfWeapon : Weapon
+{
+	Default
+	{
+		//$Category Wolfenstein / Weapons
+		Weapon.BobStyle "InverseSmooth";
+		Scale 1.5;
+		+WEAPON.NOAUTOAIM;
+	}
+}

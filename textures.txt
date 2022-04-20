@@ -6,9 +6,9 @@ graphic HLTHARMR, 258, 80 { XScale 2.0 YScale 2.0 }
 graphic KEYBAR, 32, 50 { XScale 2.0 YScale 2.0 }
 graphic PORTBOX, 166, 40 { XScale 2.0 YScale 2.0 }
 graphic RATIOS, 224, 70 { XScale 2.0 YScale 2.0 }
-graphic SCORE, 156, 42 { XScale 1.0 YScale 1.0 }
-graphic STATREP, 232, 162 { XScale 1.0 YScale 1.0 }
+graphic SCORE, 208, 35 { XScale 2.0 YScale 2.0 }
 graphic STATREP, 249, 138 { XScale 1.0 YScale 1.0 }
+graphic CLIPBRD, 640, 400 { XScale 1.0 YScale 1.0 }
 
 // HUD NUMBERS
 graphic HUDNUM0, 15, 14 { XScale 2.0 YScale 2.0 }

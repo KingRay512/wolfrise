@@ -53,8 +53,9 @@ class SpearBall : Electrobolt
 {
 	Default
 	{
-		Speed 192;	// 66
+		Speed 24;	// 66
 		Damage 66;	//66
+		Scale 0.2;
 		MissileType "SpearBallTrail";
 		SeeSound "weapons/spear/attack2";
 	}
@@ -62,7 +63,7 @@ class SpearBall : Electrobolt
 	States
 	{
 		Spawn:
-			EBO2 AB 3 BRIGHT;
+			SPB1 AB 3 BRIGHT;
 			Loop;
 		Death:
 			EBO2 CDE 5 Bright;
@@ -72,10 +73,17 @@ class SpearBall : Electrobolt
 
 class SpearBallTrail : PulseTrail
 {
+	Default
+	{
+		RenderStyle "Add";
+		Alpha 0.4;
+		Scale 0.2;
+	}
+	
 	States
 	{
 	Spawn:
-		EBO2 A 1 BRIGHT A_FadeOut(0.048);
+		SPB1 A 1 BRIGHT A_FadeOut(0.072);
 		Loop;
 	}
 }

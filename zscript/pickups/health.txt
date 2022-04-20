@@ -2,7 +2,7 @@ class DogFood : Health
 {
 	Default
 	{
-		//$Category Health
+		//$Category Wolfenstein / Health
 		Inventory.Amount 5;
 		Inventory.PickupMessage "You ate some dog food (+5 Health)";
 		Inventory.pickupsound "EATFOOD";
@@ -22,7 +22,7 @@ class Food1 : Health
 {
 	Default
 	{
-		//$Category Health
+		//$Category Wolfenstein / Health
 		Inventory.Amount 10;
 		Inventory.PickupMessage "You ate some food (+10 Health)";
 		Inventory.pickupsound "EATFOOD";
@@ -42,7 +42,7 @@ class MiniFA : Health
 {
 	Default
 	{
-		//$Category Health
+		//$Category Wolfenstein / Health
 		Inventory.Amount 10;
 		Inventory.PickupMessage "You picked up a stimpack (+10 Health)";
 		Inventory.pickupsound "GRABHLTH";
@@ -62,7 +62,7 @@ class FirstAid1 : Health
 {
 	Default
 	{
-		//$Category Health
+		//$Category Wolfenstein / Health
 		Inventory.Amount 25;
 		Inventory.PickupMessage "You picked up a First Aid Kit (+25 Health)";
 		Inventory.pickupsound "GRABHLTH";
@@ -82,7 +82,7 @@ class PortableFA : Ammo
 {
 	Default
 	{
-		//$Category Health
+		//$Category Wolfenstein / Health
 		Inventory.Amount 1;
 		Inventory.MaxAmount 4;
 		Inventory.PickupMessage "You picked up a Portable First Aid Kit (+25 Health)";

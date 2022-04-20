@@ -9,21 +9,23 @@ DoomEdNums
 	// 20005 = CellAmmo
 	
 	//	WEAPONS
-	20012 = Luger
-	20013 = MP50
+	20010 = Luger
+	20011 = SpaceLuger
+	20012 = MP50
+	20013 = MarksmanRifle
 	20014 = WolfRifle
-	20015 = FG42
-	20021 = SteelGrenades
-	20016 = Tigerfaust
-	20017 = PulseCannon
-	20018 = GatlingGun
-	20020 = SpearOfDestiny
+	20015 = WolfRailgun
+	20016 = FG42
+	20017 = GrenadeAmmo
+	20018 = Tigerfaust
+	20019 = PulseCannon
+	20020 = GatlingGun
+	20021 = SpearOfDestiny
 	
 	//	ENEMIES
 	21000 = Dog
 	21001 = PatrolGuard
 	21002 = Machinegunner1
-	21003 = Ubersoldat1
 	21004 = BlackTurret
 	21005 = Gyropanzer
 	21006 = Robot1
@@ -36,6 +38,7 @@ DoomEdNums
 	21014 = SniperGuard
 	21015 = EliteSS
 	21020 = TransGrosse
+	21021 = UberMutant
 	21060 = MechaHitler
 	21061 = FakeHitler
 	21099 = JackStone
@@ -44,8 +47,7 @@ DoomEdNums
 	21100 = DogFood
 	21101 = Food1
 	21102 = PortableFA
-	21103 = BJSphere
-	21104 = BJSphere2
+	21104 = BJSphere
 	21105 = MiniFA
 	
 	//	KEYS
@@ -104,6 +106,9 @@ DoomEdNums
 	22185 = WinterTree6
 	22186 = WinterTree7
 	28006 = SpearBeam
+	
+	//	CLASSIC STATICS
+	30000 = SteelColumn
 	
 	// EFFECTS
 	// Snow

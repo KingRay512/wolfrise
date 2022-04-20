@@ -2,12 +2,13 @@ class FloatingAsh : Actor
 {
 	Default
 	{
+		Health 1600;
 		Radius 1;
 		Height 1;
 		RenderStyle "Add";
 		Scale 0.096;
 		ReactionTime 250;
-		Gravity 0.48;
+		Gravity 0.32;
 		Speed 1;
 		VSpeed 1;
 		Mass 1;

@@ -1,6 +1,6 @@
 class LeaningHandler : EventHandler
 {
-	const LEAN_FORCE = 18.0;	// 16
+	const LEAN_FORCE = 28.0;	// 16
 	
 	bool last_strafelean;
 	

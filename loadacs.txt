@@ -1,6 +1,6 @@
 clipboard
 deathroom
-//getpsyched
+getpsyched
 playerdeath
 porthealth
 tossgrenade

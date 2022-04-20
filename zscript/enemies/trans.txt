@@ -3,17 +3,17 @@ class TransGrosse : Actor
 	Default
 	{
 		//$Category Enemies
-		obituary "%o was killed by a Grosse brother";
-		Health 2400;
+		obituary "%o was caught by the warden";
+		Health 3500;
 		Radius 36;
 		Height 96;
 		Mass 500;
-		Speed 18;
+		Speed 24;
 		DamageFactor "KnifeDamage", 0.048;
 		DamageFactor "ExplosiveDamage", 1.2;
 		dropitem "GatlingGun";
 		dropitem "GatlingGun";
-		Maxtargetrange 1024;
+		Maxtargetrange 2048;
 		DeathSound "bosses/trans/death";
 		SeeSound "bosses/trans/sight";
 		BloodType "BloodPuff1";
@@ -55,7 +55,7 @@ class TransGrosse : Actor
 			Goto Firing;
 		Death:
 			TNT1 A 0 A_GiveInventory("WolfScore", 5000, AAPTR_PLAYER1);
-			TRAN H 6;
+			TRAN H 6 A_SpawnDebris("BloodPuff2", false, random(0.75, 1.25), random(0.75, 1.25));
 			TRAN I 6 A_NoBlocking;
 			TRAN J 6 A_Scream;
 			TRAN K -1;
@@ -68,8 +68,8 @@ class TransGrosse_Hard : TransGrosse
 	Default
 	{
 		//$Category Enemies
-		Health 4800;
-		Speed 24;
-		Maxtargetrange 2048;
+		Health 5000;
+		Speed 30;
+		Maxtargetrange 4096;
 	}
 }

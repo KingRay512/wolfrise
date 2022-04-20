@@ -35,8 +35,9 @@ Other Menu Font:				Machines of Death / Shadows of Destiny
 ==WEAPON SPRITES==
 Knife:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
 Pistol:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Space Pistol:					Chiseled / Edited by Raees Kamaar
 MP50:							Chiseled / Edited by Raees Kamaar
-Space MP50:						Blake Stone (JAM Software) / Edited by Raees Kamaar
+Marksman Rifle:					Chiseled / Edited by Raees Kamaar
 Rifle:							Wolfenstein - Machines of Death / Edited by Raees Kamaar
 Railgun:						Blake Stone (JAM Software) / Edited by Raees Kamaar
 FG42:							Resurrection of Heimzahlung / Edited by Raees Kamaar
@@ -44,7 +45,7 @@ Tigerfaust:						Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
 Grenades:						Wolfenstein Missions (Executor)
 Pulse Cannon:					Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
 Venom Chaingun:					Chiseled / Edited by Raees Kamaar
-BFG1000:						Blake Stone (JAM Software) / Edited by Raees Kamaar
+BFG1000:						Chiseled / Edited by Raees Kamaar
 Spear of Destiny				Kinnerokhn / Edited by Raees Kamaar
 
 ==STATIC SPRITES/EFFECTS==
@@ -63,7 +64,7 @@ BTSX - Various Artists
 
 ENEMIES:
 Patrol Guard:					Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
-Kriegsland:		Gas Mask MG42 Soldier; Astro Machinegunner (REMOVE, ADD BETTER SPRITES)
+Kriegsland:						Gas Mask MG42 Soldier; Astro Machinegunner (REMOVE, ADD BETTER SPRITES)
 GyroPanzer:						Check Majik Monkee Image World / Edited by Raees Kamaar
 HK Tank:						Spear - Lost Missions / Duke Nukem 3d / Raees Kamaar
 Turret:							Duke Nukem 3d (3D Realms) / Edited by Raees Kamaar
