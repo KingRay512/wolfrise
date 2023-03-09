@@ -1,0 +1,77 @@
+class SniperGuard : WolfGuard
+{
+	Default
+	{
+		//$Category Enemies
+		obituary "%o was caught in the sights by a sniper.";
+		Health 60;
+		Radius 21;
+		Height 72;
+		Mass 300;
+		Speed 12;
+		dropitem "WolfRifle";
+		Painchance 100;
+		Maxtargetrange 8192;
+		MinMissileChance 2;
+		DeathSound "enemies/death2";
+		SeeSound "enemies/swein";
+		PainSound "UBERPAIN";
+		BloodType "BloodPuff1";
+		Scale 1.5;
+		Monster;
+		+MISSILEMORE
+		+MISSILEEVENMORE
+	}
+	
+	States
+	{
+		Spawn:
+			GRD2 A 2 A_Look;
+			Loop;
+		See:
+			GRD2 BCDE 4 A_Chase;
+			Loop;
+		Missile:
+			GRD2 F 4 A_FaceTarget;
+			GRD2 G 4 A_PlaySound("weapons/warning");
+			GRD2 G 24 A_SpawnProjectile("NaziLaserTarget", 48, 0, 0);
+			TNT1 A 0 A_PlaySound("weapons/rifle/fire");
+			GRD2 H 4 A_CustomBulletAttack(0,0,1,15, "BulletPuff", 51200);
+			Goto See;
+		Pain:
+			GRD2 I 2 A_Pain;
+			Goto See;
+		Death:
+			TNT1 A 0 A_GiveInventory("WolfScore", 1250, AAPTR_PLAYER1);
+			GRD2 J 4 A_SpawnDebris("BloodPuff2", false, random(0.75, 1.25), random(0.75, 1.25));
+			GRD2 K 4 A_Scream;
+			GRD2 L 4 A_NoBlocking;
+			GRD2 M 4;
+			GRD2 N -1;
+			Stop;
+		Death.ExplosiveDamage:
+			TNT1 A 0
+			{
+				A_GiveInventory("WolfScore", 1250, AAPTR_PLAYER1);
+				A_NoBlocking();
+				A_Scream();
+				A_SpawnDebris("BloodPuff3", false, random(1.5, 2.0), random(1.5, 2.0));
+				A_SpawnDebris("BoneDebris", false, random(0.25, 0.5), random(0.25, 0.5));
+				A_SpawnDebris("BoneDebris2", false, random(0.75, 1.25), random(0.75, 1.25));
+				A_SpawnDebris("BoneDebris3", false, random(2.0, 4.0), random(2.0, 4.0));
+				A_SpawnDebris("BoneDebris4", false, random(1.0, 2.0), random(1.0, 2.0));
+				A_PlaySound("enemies/gibbed");
+			}
+			Stop;
+	}
+}
+
+class SniperGuard_Hard : SniperGuard
+{
+	Default
+	{
+		Health 100;
+		Speed 18;
+		Painchance 80;
+	}
+}
