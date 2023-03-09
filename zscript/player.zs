@@ -26,9 +26,9 @@ class BJ : DoomPlayer
 		Player.WeaponSlot 3, "MarksmanRifle", "MP50";
 		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle";
 		Player.WeaponSlot 5, "FG42";
-		Player.WeaponSlot 6, "Tigerfaust", "SteelGrenades";
-		Player.WeaponSlot 7, "PulseCannon";
-		Player.WeaponSlot 8, "GatlingGun";
+		Player.WeaponSlot 6, "SteelGrenades";
+		Player.WeaponSlot 7, "Tigerfaust";
+		Player.WeaponSlot 8, "GatlingGun", "PulseCannon";
 		Player.WeaponSlot 9, "SuperWeapon", "WolfFlameThrower";
 		Player.WeaponSlot 0, "SpearOfDestiny";
 		Player.ForwardMove 0.64, 0.85;	// OLD SPEED 0.88, 1.0

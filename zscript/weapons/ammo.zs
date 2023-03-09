@@ -69,7 +69,7 @@ class WolfRockets : Ammo
 		//$Category Ammo
 		Inventory.Amount 5;
 		Inventory.MaxAmount 25;
-		Inventory.Pickupmessage "You picked up a box of rockets (+5 Rockets)";
+		Inventory.Pickupmessage "You picked up a box of rockets";
 		Scale 1.36;
 	}
 	
@@ -88,7 +88,7 @@ class RifleAmmo : Ammo
 		//$Category Ammo
 		Inventory.Amount 5;
 		Inventory.MaxAmount 50;
-		Inventory.Pickupmessage "You picked up a Rifle clip (+5 Rounds)";
+		Inventory.Pickupmessage "You picked up a Rifle clip";
 	}
 	
 	States
@@ -118,7 +118,7 @@ class GasCan : Ammo
 		Height 24;
 		Inventory.Amount 20;
 		Inventory.MaxAmount 500;
-		Inventory.PickupMessage "You picked up a gas can (+20 Flame Ammo)";
+		Inventory.PickupMessage "You picked up a gas can";
 	}
 	
 	States
