@@ -1,0 +1,124 @@
+#library "deathroom"
+#include "zcommon.acs"
+
+#define LOG_KILLS 		400
+#define LOG_SECRETS 	401
+#define LOG_TREASURE 	402
+#define LOG_BONUSROOM	403
+#define LOG_NOTWORTHY	404
+
+int fullClear;
+bool bLevelHasBonus = false;
+
+script "LevelHasBonus" ENTER
+{
+	delay(4);
+	
+	if (bLevelHasBonus == true)
+	{
+		ACS_NamedExecute("FullKill", 0);
+		ACS_NamedExecute("FullSecret", 0);
+		ACS_NamedExecute("FullTreasure", 0);
+		ACS_NamedExecute("FullClear", 0);
+	}
+	
+	else
+	{
+		SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "\c[WolfRed]This mission does not have a bonus trial."; HUDMSG_PLAIN | HUDMSG_LOG, LOG_KILLS, CR_GOLD, 640.0, 700.0, 2.0);
+	}
+}
+
+script "FullKill" (void)
+{
+	delay(1);
+	
+	int killedEnemies = GetLevelInfo(LEVELINFO_KILLED_MONSTERS);
+	int totalEnemies = GetLevelInfo(LEVELINFO_TOTAL_MONSTERS);
+
+	if (killedEnemies == totalEnemies)
+    {
+        SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "\c[WolfMidRed]100% Kill Bonus\n\c[WolfWhite]10000 points"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_KILLS, CR_UNTRANSLATED, 640.0, 200.0, 2.0);
+		GiveInventory("WolfScore", 10000);
+		fullClear++;
+		Terminate;
+    }
+
+	Restart;
+}
+
+script "FullSecret" (void)
+{
+	delay(1);
+	
+	int foundSecrets = GetLevelInfo(LEVELINFO_FOUND_SECRETS);
+	int totalSecrets = GetLevelInfo(LEVELINFO_TOTAL_SECRETS);
+
+	if (foundSecrets == totalSecrets)
+    {
+        SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "\c[WolfPurple]100% Secret Bonus\n\c[WolfWhite]10000 points"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_SECRETS, CR_UNTRANSLATED, 640.0, 250.0, 2.0);
+		GiveInventory("WolfScore", 10000);
+		fullClear++;
+		Terminate;
+    }
+
+	Restart;
+}
+
+script "FullTreasure" (void)
+{
+	delay(1);
+	
+	int foundTreasure = GetLevelInfo(LEVELINFO_FOUND_ITEMS);
+	int totalTreasure = GetLevelInfo(LEVELINFO_TOTAL_ITEMS);
+
+	if (foundTreasure == totalTreasure)
+    {
+        SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "\c[WolfYellow]100% Treasure Bonus\n\c[WolfWhite]+10000 points"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_TREASURE, CR_UNTRANSLATED, 640.0, 300.0, 2.0);
+		GiveInventory("WolfScore", 10000);
+		fullClear++;
+		Terminate;
+    }
+
+	Restart;
+}
+
+script "FullClear" (void)
+{
+	delay(1);
+	
+	if (fullClear >= 3)
+	{
+		ActivatorSound("game/bonus",255);
+		SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "\c[WolfMidRed]BONUS ROOM AVAILABLE"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_BONUSROOM, CR_UNTRANSLATED, 640.0, 448.0, 2.0);
+		Log(s:"Full level clear");
+		Terminate;
+	}
+	
+	Restart;
+}
+
+script "NotWorthy" (void)
+{
+	if (fullClear < 3)
+	{
+		SetHudSize(1280, 800, 1);
+		SetFont("WOLFFONT");
+		HudMessage(s: "KILL ALL ENEMIES\nLOOT ALL TREASURE\nDISCOVER ALL SECRET AREAS"; HUDMSG_PLAIN, LOG_NOTWORTHY, CR_UNTRANSLATED, 640.0, 240.0, 2.0);
+	}
+	
+	else
+	{
+		SetHudSize(1280, 800, 1);
+		ACS_Execute(60, 0);
+	}
+}

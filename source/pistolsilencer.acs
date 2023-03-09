@@ -1,0 +1,14 @@
+#library "pistolsilencer"
+#include "zcommon.acs"
+
+#define LOG_NOSILENCER		112
+
+script "LackingSilencer" (void)
+{
+	if (CheckInventory("PlayerHasSilencer") < 1)
+	{
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFONT");
+		HudMessage(s: "Silencer Not Acquired"; HUDMSG_PLAIN, LOG_NOSILENCER, CR_WHITE, 320.0, 275.0, 1.0);
+	}
+}

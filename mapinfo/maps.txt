@@ -1,0 +1,210 @@
+clearepisodes
+
+defaultmap
+{
+	exitpic = "$WOLFINT"
+	enterpic = "$WOLFINT"
+	fallingdamage
+	AirControl = 0.4	// 0.088
+	allowjump
+	allowcrouch
+	allowfreelook
+	Grinding_Polyobj
+	EnableShadowMap
+	EnableSkyboxAO
+}
+
+map TITLEMAP "Title Map"
+{
+	levelnum = 0
+}
+
+episode MAP01
+{
+	picname = M_PART1
+}
+
+episode MAP02
+{
+	picname = M_PART2
+}
+
+// episode MAP03
+// {
+// 	picname = M_PART3
+// }
+
+episode OSAHUB
+{
+	picname = M_CLAS01
+}
+
+//////////////////
+// EPISODE 1
+//////////////////
+
+map NAFRICA1 "North Africa - Outer Compound"
+{
+	music = "DAR_INFI"
+	sky1 = "SKYFOG1"
+	next = MAP02
+	par = 420
+	levelnum = 64
+}
+
+map MAP02 "North Africa - Inner Compound"
+{
+	music = "DAR_LNGR"
+	sky1 = "SKYFOG2"
+	next = MAP03
+	par = 420
+	levelnum = 2
+}
+
+map MAP03 "Untitled Mission"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP03
+	par = 420
+	levelnum = 3
+}
+
+map MAP04 "Untitled Mission"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP04
+	par = 420
+	levelnum = 4
+}
+
+map MAP05 "Sniper Serenade"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP05
+	par = 420
+	levelnum = 5
+}
+
+map MAP06 "Sisters of Persecution"
+{
+	music = "DAR_LNGR"
+	sky1 = "SKYFOG2"
+	par = 420
+	levelnum = 6
+}
+
+//////////////////
+// EPISODE 2
+//////////////////
+
+map MAP11 "Untitled Mission"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP12
+	par = 420
+	levelnum = 11
+}
+
+map MAP12 "Untitled Mission"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP13
+	par = 420
+	levelnum = 12
+}
+
+map MAP13 "Untitled Mission"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP14
+	par = 420
+	levelnum = 13
+}
+
+map MAP14 "Venomous"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP15
+	par = 420
+	levelnum = 14
+}
+
+map MAP15 "Boss Level 2"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	par = 420
+	levelnum = 5
+}
+
+//////////////////
+// EPISODE 3
+//////////////////
+
+map MAP25 "BJ Clone Boss" // MANO A BJ-O
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	par = 420
+	levelnum = 5
+}
+
+//////////////////
+// BONUS EPISODE
+//////////////////
+
+map OSAHUB "O.S.A Headquarters"
+{
+	music = "DAR_OSAH"
+	levelnum = 200
+}
+
+map MAP50 "The Village"
+{
+	music = "DAR_SOLD"
+	sky1 = "SKYFOG2"
+	next = MAP51
+	par = 420
+	levelnum = 50
+}
+
+map SKYNET "Skynet"
+{
+	music = "DAR_TERM"
+	levelnum = 100
+}
+
+map BONUS01 "Bonus Map 01"
+{
+	next = BONUS02
+	nofreelook
+	nojump
+	nocrouch
+	levelnum = 61
+}
+
+map BONUS02 "Bonus Map 02"
+{
+	next = BONUS03
+	sky1 = ESKY1
+	nofreelook
+	nojump
+	nocrouch
+	levelnum = 62
+}
+
+map BONUS03 "Bonus Map 03"
+{
+	nofreelook
+	nojump
+	nocrouch
+	levelnum = 63
+}
+

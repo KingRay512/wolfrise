@@ -1,0 +1,63 @@
+clearskills
+
+//	CAN I PLAY, DADDY?
+skill easy
+{
+	DamageFactor = 0.75
+	AmmoFactor = 2.0
+	Aggressiveness = 0.8
+	SpawnFilter = 1
+	picname = "M_DADDY"
+	NoInfighting
+	MustConfirm = "Easy difficulty for the inexperienced gamer. Continue?"
+}
+
+//	DON'T HURT ME
+skill normal
+{
+	DamageFactor = 1.36
+	Aggressiveness = 0.5
+	SpawnFilter = 2
+	picname = "M_DHURTM"
+	NoInfighting
+	MustConfirm = "Standard difficulty for the casual gamer. Continue?"
+}
+
+//	BRING 'EM ON
+skill hard
+{
+	DamageFactor = 1.76
+	Aggressiveness = 0.25
+	SpawnFilter = 3
+	picname = "M_BRING"
+	NoInfighting
+	MustConfirm = "Hard difficulty for the tough gamer. Continue?"
+}
+
+//	I AM DEATH INCARNATE
+skill death
+{
+	Aggressiveness = 0.0
+	DamageFactor = 2.0
+	SpawnFilter = 4
+	picname = "M_DEATH"
+	NoInfighting
+	MustConfirm = "Sadistic difficulty for the masochist. The true Wolfenstein Rising experience. Continue?"
+	
+	ReplaceActor = "Dog", "Dog_Hard"
+	ReplaceActor = "PatrolGuard", "PatrolGuard_Hard"
+	ReplaceActor = "SS1", "SS1_Hard"
+	ReplaceActor = "Officer", "Officer_Hard"
+	ReplaceActor = "Machinegunner1", "Machinegunner1_Hard"
+	ReplaceActor = "BlackTurret", "BlackTurret_Hard"
+	ReplaceActor = "Robot1", "Robot1_Hard"
+	ReplaceActor = "Robot2", "Robot2_Hard"
+	ReplaceActor = "NaziBullet", "NaziBullet_Hard"
+	ReplaceActor = "NaziRocket", "NaziRocket_Hard"
+	ReplaceActor = "HeavyGuard", "HeavyGuard_Hard"
+	ReplaceActor = "FlameGuard", "FlameGuard_Hard"
+	ReplaceActor = "TransGrosse", "TransGrosse_Hard"
+	ReplaceActor = "BulletSister", "BulletSister_Hard"
+	ReplaceActor = "PyroSister", "PyroSister_Hard"
+	ReplaceActor = "Ubermutant", "Ubermutant_Hard"
+}

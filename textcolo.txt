@@ -1,0 +1,34 @@
+WolfWhite
+{
+	#FFFFFF		#FFFFFF
+}
+
+WolfBlack
+{
+	#000000		#000000
+}
+
+WolfRed
+{
+	#FF0000		#FF0000
+}
+
+WolfMidRed
+{
+	#AA0000		#AA0000
+}
+
+WolfDarkRed
+{
+	#640000		#640000
+}
+
+WolfYellow
+{
+	#F3A82A  	#FCD043
+}
+
+WolfPurple
+{
+	#b800e0		#b800e0
+}

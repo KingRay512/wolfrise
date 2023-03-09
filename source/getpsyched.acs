@@ -1,0 +1,63 @@
+#library "getpsyched"
+#include "zcommon.acs"
+
+#define LOG_GETPSYCHED	131
+#define LOG_ENTERING	129
+#define LOG_MAPTITLE	130
+
+script "DisplayMapname" OPEN
+{
+	SetHudSize(1280, 800, 0);
+	SetFont("SLANTBOX");
+	HudMessage(s: "A"; HUDMSG_FADEOUT, LOG_GETPSYCHED, CR_UNTRANSLATED, 640.0, 200.0, 1.75);
+	
+	SetHudSize(1280, 800, 0);
+	SetFont("WOLFFONT");
+	switch (GetLevelInfo(LEVELINFO_LEVELNUM))
+	{
+		case 1:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Outer Compound"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 2:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Inner Compound"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 3:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Third Mission"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 4:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Sniper Serenade"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 5:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Sisters of Persecution"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 14:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "Venomous"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 100:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "\c[WolfWhite]SKYNET"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		case 200:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
+			HudMessage(s: "\c[WolfWhite]O.S.A Headquarters"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			break;
+		default:
+			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_RED, 640.0, 185.0, 1.0);
+			HudMessage(s: "\c[WolfWhite]Unnamed Mission"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_WHITE, 640.0, 210.5, 1.75);
+			break;
+	}
+}
+
+script "CheckpointReached" (void)
+{
+	AutoSave();
+	SetHudSize(640, 400, 0);
+	SetFont("CHKPNT");
+	HudMessage(s: "A"; HUDMSG_FADEOUT, LOG_GETPSYCHED, CR_UNTRANSLATED, 320.0, 256.0, 1.75);
+}

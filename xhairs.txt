@@ -1,0 +1,7 @@
+1 "Knife"
+2 "MP50"
+3 "Tigerfaust"
+7 "Pulse Cannon"
+8 "Venom"
+9 "Railgun"
+11 "BlutFaust Gewehr"

@@ -1,0 +1,33 @@
+#library "venomoverheat"
+#include "zcommon.acs"
+
+#define LOG_OVERHEAT		113
+
+script "CoolDown" ENTER
+{
+	TakeInventory("VenomOverheat", 1);
+	delay(1);
+	Restart;
+}
+
+script "VenomOverheat" ENTER
+{
+	if (CheckInventory("VenomOverheat") == 200)
+	{
+		DamageThing(1);
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFONT");
+		HudMessage(s: "OVERHEAT"; HUDMSG_PLAIN, LOG_OVERHEAT, CR_RED, 320.0, 275.0, 0.2);
+		FadeTo(192, 0, 0, 0.72, 0.1);
+		ActivatorSound("weapons/venom/overheat", 255);
+	}
+	
+	else
+	{
+		ACS_NamedTerminate("VenomOverheat", 0);
+		FadeTo(255, 255, 255, 0.0, 0.1);
+	}
+	
+	delay(1);
+	Restart;
+}

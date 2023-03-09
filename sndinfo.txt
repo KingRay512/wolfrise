@@ -1,0 +1,253 @@
+// AMBIENT
+
+ambient/prison1			PRISON1
+ambient/prison2			PRISON2
+ambient/klaxon			KLAXON
+ambient/rain			AMBRAIN
+
+$random ambient/prisoners { ambient/prison1 ambient/prison2 }
+$ambient 1 ambient/prisoners point periodic 5.0 1.0
+$ambient 2 ambient/klaxon point continuous 2.5
+
+// DOORS, SWITCHES, ELEVATORS
+
+movers/door/locked		DOORLOCK
+movers/switch1			SWITCH1
+movers/door2/open		D2OPEN
+movers/door2/end		D2END
+movers/door2/close		D2CLOSE
+movers/lift/loop		W_LIFTL
+movers/door3/open		door3opn
+movers/door3/close 		door3cls
+movers/door3/end		door3end
+
+switches/paper1			paper1
+switches/paper2			paper2
+switches/paper3			paper3
+
+$random switches/paper { switches/paper1 switches/paper2 switches/paper3 }
+
+// WEAPONS
+
+weapons/knife/impact	KNIFEHIT
+weapons/knife/swing1	SLASH1
+weapons/knife/swing2	SLASH2
+weapons/luger/fire		DSLUGER
+weapons/luger/burst		DSLUGR2
+weapons/luger/softfire	DSLUGR3		
+weapons/luger/equip		LUGERUP
+weapons/luger/silence	silence
+weapons/moonluger/fire	LASER2
+weapons/pistol/fire		DSPISTOL
+weapons/mp50/altfire	MPALTFR
+weapons/mp50/fire		DSMP40
+weapons/mp50/shotgun	shotgun1
+weapons/rifle/fire		RIFLFIRE
+weapons/rifle/bolt		BOLTLOAD
+weapons/fg42/fire		DSFG42
+weapons/fg42/equip		FG42UP
+weapons/tiger/fire		WLFRCKET
+weapons/tiger/altfire	SUPRRCK2
+weapons/tiger/equip		RKTSELCT
+weapons/tiger/explode	ROCKETEX
+weapons/charge			CHARGE
+weapons/pulse/fire		BLASTER1
+weapons/pulse/fire2		BLASTER2
+weapons/pulse/fire3		BLASTER3
+weapons/pulse/equip		PLSSELCT
+weapons/venom/overheat	OVERHEAT
+weapons/venom/equip		VENEQUIP
+weapons/venom/fire		MGUN1
+weapons/venom/spinup	SPINUP
+weapons/venom/spindown	SPINDOWN
+weapons/railgun/fire	RAILFIRE
+weapons/spear/attack	SPEAR
+weapons/spear/attack2	SPEARALT
+weapons/switch			CHANGE
+weapons/marksman/fire	laser4
+weapons/marksman/fire2	laser2
+weapons/smpx/fire1		SMPX1
+weapons/smpx/fire2		SMPX2
+weapons/smpx/select		SMPXSEL
+weapons/warning			warning
+weapons/turret/fire		DSMG42
+weapons/flame/fire		FLAMFIRE
+weapons/grenade/bounce1	GBOUNCE1
+weapons/grenade/bounce2	GBOUNCE2
+weapons/uber/fire		uberfire
+weapons/uber/altfire	lg_fire
+weapons/uber/equip		uberslct
+
+weapons/classic/pistol		CW_LUGER
+weapons/classic/colt		CW_COLT
+weapons/classic/machinegun	CW_MGUN
+weapons/classic/thompson	CW_THOM
+weapons/classic/chaingun	CW_CGUN
+weapons/classic/mg42		CW_MG42
+weapons/classic/rlauncher	CW_RLNCH
+
+
+$random weapons/knife/swing { weapons/knife/swing1 weapons/knife/swing2 }
+$random weapons/grenade/bounce { weapons/grenade/bounce1 weapons/grenade/bounce2 }
+$random weapons/smpx/fire	{ weapons/smpx/fire1 weapons/smpx/fire2 }
+$random pickups/weapongrab { pickups/weapon1 pickups/weapon2 pickups/weapon3 }
+
+enemies/loper/zap2		ZAP2
+enemies/loper/zap3		ZAP3
+
+// PICKUPS
+
+pickups/armour			ARMRPICK
+pickups/weapon1			GUNPICK2
+pickups/weapon2			GUNPICK3
+pickups/weapon3			GUNPICK4
+
+GUTENTAG	GUTENTAG
+
+BLASTER1	BLASTER1
+BLASTHIT	BLASTHIT
+
+FLESH1		FLESH1
+FLESH2		FLESH2
+FLESH3		FLESH3
+$random HITFLESH { FLESH1 FLESH2 FLESH3 }
+	
+RIC1		RIC1
+RIC2		RIC2
+RIC3		RIC3
+RIC4		RIC4
+$random RICOCHET { RIC1 RIC2 RIC3 RIC4 }
+
+projectiles/pulsedeath1	ximpact1
+projectiles/pulsedeath2	ximpact2
+projectiles/pulsedeath3	ximpact3
+projectiles/pulsedeath4	ximpact4
+projectiles/pulsedeath5	ximpact5
+$random projectiles/pulsedeath { projectiles/pulsedeath1 projectiles/pulsedeath2 projectiles/pulsedeath3 projectiles/pulsedeath4 projectiles/pulsedeath5}
+
+player/pain100		PAIN100
+player/pain75		PAIN75
+player/pain50		PAIN50
+player/pain25		PAIN25
+
+player/usefail	DSNOWAY
+player/grunt	ALNOITEM
+player/jump		JUMP1
+player/falling	DSFALL
+player/land1	LAND1
+player/land2	LAND2
+player/land3	LAND3
+player/land4	LAND4
+
+$random player/land { player/land1 player/land2 player/land3 player/land4 }
+
+enemies/gibbed			gibsplt1
+
+$playeralias	player	male	*pain100	player/pain100
+$playeralias	player	male	*pain75		player/pain75
+$playeralias	player	male	*pain50		player/pain50
+$playeralias	player	male	*pain25		player/pain25
+$playeralias	player	male	*jump		player/jump
+$playeralias	player	male	*usefail	player/usefail
+$playeralias	player	male	*land		player/land
+$playeralias	player	male	*grunt		player/land
+$playersound	player	male	*falling	DSFALL
+$playersound	player	male	*splat		enemies/gibbed
+
+// ENEMIES
+
+enemies/guard/see	guard_s1
+enemies/guard/die1	guard_d1
+enemies/guard/die2	guard_d2
+enemies/guard/die3	guard_d3
+enemies/guard/die4	guard_d4
+enemies/guard/die5	guard_d5
+enemies/guard/die6	guard_d6
+enemies/guard/die7	guard_d7
+$random enemies/guard/die { enemies/guard/die1 enemies/guard/die2 enemies/guard/die3 enemies/guard/die4 enemies/guard/die5 enemies/guard/die6 enemies/guard/die7 }
+
+enemies/ss/see		ss_s1
+enemies/ss/die		ss_d1
+
+enemies/swein		SWEIN
+enemies/angreif		ANGREIF
+enemies/kook		KOOK
+enemies/death2		death2
+enemies/death3		death3
+enemies/death1		heifer
+enemies/halt		HALT
+enemies/burning1	burnnazi
+enemies/burning2	burnnazx
+enemies/burning3	burnnaz3
+
+$random enemies/burning { enemies/burning1 enemies/burning2 enemies/burning3 }
+
+enemies/elite1/see	angrobo1
+
+enemies/loper/see	LOPRSEE
+enemies/loper/death	LOPRDED
+
+bosses/trans/sight	DSTRNSIT
+bosses/trans/death	DSTRNDTH
+
+// NEW DOG SOUNDS
+
+DOG1BARK	DOG1BARK
+DOG1BITE	DOG1BITE
+DOG1DETH	DOG1DETH
+
+growl1		growl1
+growl2		growl2
+growl3		growl3
+growl4		growl4
+growl5		growl5
+
+$random DOGGRWL { growl1 growl2 growl3 growl4 growl5}
+
+TOTHUND1	TOTHUND1
+HAHAHAHA	HAHAHAHA
+
+MECHASEE	MECHASEE
+MECHSTEP	MECHSTEP
+MECHSHIT	MECHSHIT
+HITLGIB2	HITLGIB2
+HITLGIB3	HITLGIB3
+HITLGIB4	HITLGIB4
+HITLDETH	HITLDETH
+
+ROBODETH	ROBODETH
+ROBO1SEE	ROBO1SEE
+ROBO2SEE	ROBO2SEE
+ROBOSTEP	ROBOSTEP
+
+UBRNZPN1	UBRNZPN1
+UBRNZPN2	UBRNZPN2
+UBRNZDED	UBRNZDED
+UBRNZSEE	UBRNZSEE
+$random UBERPAIN { UBRNZPN1 UBRNZPN2 }
+
+//PICKUPS
+
+POWRPICK	POWRPICK
+EATFOOD		EATFOOD
+GRABHLTH	GRABHLTH
+PICKAMMO	PICKAMMO
+
+
+LETLOOSE	LETLOOSE
+
+// WORLD / GAME
+
+game/missionfail	MISSFAIL
+game/bonus			ALPRC100
+scenaric/intruder	a_intrud
+scenaric/vent/break	VENTDETH
+
+// ADLIB WAV
+
+adlib/getkey		ALGETKEY
+adlib/bonus1		ALBONUS1
+adlib/bonus2		ALBONUS2
+adlib/bonus3		ALBONUS3
+adlib/bonus4		ALBONUS4
+misc/secret			ALBNS1UP

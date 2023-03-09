@@ -1,0 +1,26 @@
+DONE
+=====
+
+Redo High-res graphics for intermission and in-game. (DONE)
+See if FlameGuard can be immune/resistant to FlameImpact's explosion Radius (DONE)
+Shorten any lengthy Adlib.WAV sounds (DONE)
+
+
+
+PENDING
+========
+Remove Railgun (Marksman Rifle 2ndary fire to become rail attack) --- Possibly to be moved to 'withdrawn'
+Remove WolfScore
+After creating new M_DOOM graphic for menu, game's intro logo got messed up. To be fixed.
+Create crosshairs for:
+	Pistols
+	Marksman Rifle
+	Sniper Rifle
+	FG42
+	Flamethrower
+
+
+
+WITHDRAWN
+==========
+Remove FG42 (decision withdrawn)

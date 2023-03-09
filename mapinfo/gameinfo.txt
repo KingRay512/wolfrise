@@ -1,0 +1,8 @@
+gameinfo
+{
+	AddEventHandlers = "LeaningHandler"
+	AddEventHandlers = "BossHealthBars"
+	InfoPage = "README01"
+	FullscreenAutoaspect = 1
+	CursorPic = "wolfcurs"
+}

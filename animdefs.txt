@@ -1,0 +1,69 @@
+switch doom 3 ELEVUP on sound SWITCH1 pic ELEVDOWN tics 0
+switch doom 3 ELEVSW_1 on sound SWITCH1 pic ELEVSW_2 tics 0
+switch doom 3 STEELSW1 on sound SWITCH1 pic STEELSW2 tics 0
+switch doom 3 WLFELEV2 on sound SWITCH1 pic WLFELEV3 tics 0
+switch doom 3 WSTEELS1 on sound SWITCH1 pic WSTEELS2 tics 0
+switch doom 3 WSTEELS3 on sound SWITCH1 pic WSTEELS4 tics 0
+switch doom 3 BOARD1 on sound switches/paper pic BOARD0 tics 0
+
+texture COMP11
+	pic COMP11 tics 14
+	pic COMP12 tics 1
+	pic COMP13 tics 1
+	pic COMP14 tics 1
+	pic COMP15 tics 14
+	pic COMP14 tics 1
+	pic COMP13 tics 1
+	pic COMP12 tics 1
+
+texture BREATHE1
+	pic	BREATHE1 tics 16
+	pic BREATHE2 tics 16
+
+texture M_PIST1
+	pic M_PIST1 tics 2
+	pic M_PIST2 tics 2
+	pic M_PIST3 tics 2
+	pic M_PIST4 tics 2
+	pic M_PIST5 tics 2
+	pic M_PIST6 tics 2
+	pic M_PIST7 tics 2
+	pic M_PIST8 tics 2
+
+texture M_SKULL1
+	pic M_SKULL1 tics 3
+	pic M_SKULL2 tics 3
+	pic M_SKULL3 tics 3
+	pic M_SKULL4 tics 3
+	pic M_SKULL5 tics 3
+	pic M_SKULL6 tics 3
+	pic M_SKULL7 tics 3
+	pic M_SKULL6 tics 3
+	pic M_SKULL5 tics 3
+	pic M_SKULL4 tics 3
+	pic M_SKULL3 tics 3
+	pic M_SKULL2 tics 3
+	
+texture INTTEST1
+	pic INTTEST1 tics 21
+	pic INTTEST2 tics 21
+
+warp flat GSLIME
+warp flat W_WATR1
+warp flat ICYWATER
+
+texture SLIMFAL1
+	pic SLIMFAL1 tics 3
+	pic SLIMFAL2 tics 3
+	pic SLIMFAL3 tics 3
+	pic SLIMFAL4 tics 3
+	
+texture WATRFAL1
+	pic WATRFAL1 tics 3
+	pic WATRFAL2 tics 3
+	pic WATRFAL3 tics 3
+	pic WATRFAL4 tics 3
+	
+texture INTERPIC
+	pic INTERPIC tics 5
+	pic INTERPI2 tics 5

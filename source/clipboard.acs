@@ -1,0 +1,194 @@
+#library "clipboard"
+#include "zcommon.acs"
+
+#define CLIPBOARD_OFF		404
+#define CLIPBOARD_GRAPHIC	405
+#define CLIPBOARD_STATUS	406
+#define CLIPBOARD_MISSBRF1	407
+#define CLIPBOARD_MISSBRF2	408
+
+#define JOURNAL_OFF			404
+#define JOURNAL_GRAPHIC		405
+#define JOURNAL_STATUS		406
+
+int totalObjectives;
+int completedObjectives;
+
+int clipboard = 0;
+int journal_missioninfo = 0;
+int journal_objectives = 0;
+
+// int KillRatio;
+// int TreasureRatio;
+// int SecretRatio;
+
+// script "CalculateRatios" (void)
+// {
+// 	KillRatio = (GetLevelInfo(LEVELINFO_KILLED_MONSTERS) / GetLevelInfo(LEVELINFO_TOTAL_MONSTERS)) * 100;
+// 	TreasureRatio = (GetLevelInfo(LEVELINFO_FOUND_ITEMS) / GetLevelInfo(LEVELINFO_TOTAL_ITEMS)) * 100;
+// 	SecretRatio = (GetLevelInfo(LEVELINFO_FOUND_SECRETS) / GetLevelInfo(LEVELINFO_TOTAL_SECRETS)) * 100;
+// 	delay(1);
+// 	Restart;
+// }
+
+//////////////////////
+// GET LEVEL NUMBER
+//////////////////////
+
+script "MissionMapNum" (void)
+{
+	SetHudSize(1280, 800, TRUE);
+	SetHUDClipRect(0, 0, 1280, 800, 800, true);
+	SetFont("WOLFFONT");
+	switch(GetLevelInfo(LEVELINFO_LEVELNUM))
+	{
+		case 1:
+			HudMessage(s: "\c[WolfWhite]--- UNDER CONSTRUCTION ---"; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
+			break;
+		case 2:
+			HudMessage(s: "\c[WolfWhite]Location:	\c[WolfMidRed]Ras El Hadid - North Africa\n\c[WolfWhite]Time:								\c[WolfMidRed]07h30\n\n\c[WolfWhite]You've entered the inner compound at Ras El Hadid, where more foes await your arrival. The documents related to \c[WolfRed]REDACTED \c[WolfWhite]should be located in the deeper section of the base. The enemy will not let you acquire those documents without an intense fight.\n\n\c[WolfWhite]Then again... intense fights are specifically what you're looking for, aren't they?"; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
+			break;
+		case 101:
+			HudMessage(s: "Now that you've infiltrated the laboratory, it is imperative that you acquire documents relating to Operation: Mankind. It may give us some insight of what the Nazi's are up to.\n\nAcquiring them is of paramount importance.\n\nThe fate of the world lies in your hands, B.J.\n\nBest of luck, Agent Blazkowicz"; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
+			break;
+		case 2:
+			SetFont("M2_INFO");
+			break;
+		case 100:
+			HudMessage(s: "Where am I?, The Portal I entered has brought me to an unknown destination. As outlandish as it may seem, I believe I'm in the future...\n\nTime to find the portal that will return me to the present. Hang in there, twentieth century...\n\nI'll be back..."; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
+		default:
+			HudMessage(s: "\c[WolfWhite]This mission has no information."; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
+			break;
+	}
+	SetHUDClipRect(0, 0, 0, 0, 0, true);
+}
+
+//////////////////////
+// VIEW JOURNAL
+//////////////////////
+
+script "ViewJournal" (void)
+{
+	if(GetLevelInfo(LEVELINFO_LEVELNUM) == 0)
+	{
+		// DO NOTHING
+		delay(1);
+	}
+	
+	else if (journal_missioninfo == 0)
+	{
+		journal_missioninfo = 1;
+
+		SetHudSize(640, 400, TRUE);
+		SetFont("MISSBRF");
+		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
+		
+// 		SetHudSize(640, 400, TRUE);
+// 		SetFont("MISSBR2");
+// 		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
+		
+		ACS_NamedExecute("MissionMapNum", 0);
+	}
+	
+	else if (journal_missioninfo == 1)
+	{
+		journal_missioninfo = 0;
+		
+		SetHudSize(640, 400, TRUE);
+		SetFont("MISSBRF");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
+		
+// 		SetHudSize(640, 400, TRUE);
+// 		SetFont("MISSBR2");
+// 		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
+		
+		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 320.0, 80.0, 0.01);
+		
+		ACS_NamedTerminate("ViewJournal", 0);
+	}
+}
+
+//////////////////////
+// VIEW OBJECTIVES
+//////////////////////
+
+script "ViewObjectives" (void)
+{
+	if(GetLevelInfo(LEVELINFO_LEVELNUM) == 0)
+	{
+		// DO NOTHING
+		delay(1);
+	}
+	
+	else if (journal_objectives == 0)
+	{
+		journal_objectives = 1;
+		SetHudSize(640, 400, TRUE);
+		SetFont("MISSOBJ");
+		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
+		
+// 		SetHudSize(640, 400, TRUE);
+// 		SetFont("MISSBR2");
+// 		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
+	}
+	
+	else if (journal_objectives == 1)
+	{
+		journal_objectives = 0;
+		SetHudSize(640, 400, TRUE);
+		SetFont("MISSOBJ");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
+		
+// 		SetHudSize(640, 400, TRUE);
+// 		SetFont("MISSBR2");
+// 		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
+	}
+}
+
+//////////////////////
+// VIEW LEVEL STATS
+//////////////////////
+
+script "ViewClipboard" (void)
+{
+	if (clipboard == 0)
+	{
+		clipboard = 1;
+		SetHudSize(640, 400, TRUE);
+		SetFont("STATREP");
+		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_UNTRANSLATED, 192.1, 144.1, 0.001);
+		SetFont("HUDNUM2");
+		
+		// KILLS
+		HudMessage(i: GetLevelInfo(LEVELINFO_KILLED_MONSTERS); HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 370.2, 207.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_MONSTERS); HUDMSG_PLAIN, 2, CR_UNTRANSLATED, 395.1, 207.1, 0.001);
+		
+		// SECRETS
+		HudMessage(i: GetLevelInfo(LEVELINFO_FOUND_SECRETS); HUDMSG_PLAIN, 3, CR_UNTRANSLATED, 370.2, 223.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_SECRETS); HUDMSG_PLAIN, 4, CR_UNTRANSLATED, 395.1, 223.1, 0.001);
+		
+		// TREASURE
+		HudMessage(i: GetLevelInfo(LEVELINFO_FOUND_ITEMS); HUDMSG_PLAIN, 5, CR_UNTRANSLATED, 370.2, 239.1, 0.001);
+		HudMessage(i: GetLevelInfo(LEVELINFO_TOTAL_ITEMS); HUDMSG_PLAIN, 6, CR_UNTRANSLATED, 395.1, 239.1, 0.001);
+		
+		//OBJECTIVES
+		HudMessage(i: completedObjectives; HUDMSG_PLAIN, 7, CR_UNTRANSLATED, 370.2, 255.1, 0.001);
+		HudMessage(i: totalObjectives; HUDMSG_PLAIN, 8, CR_UNTRANSLATED, 395.1, 255.1, 0.001);
+	}
+	
+	else if (clipboard == 1)
+	{
+		clipboard = 0;
+		SetHudSize(640, 400, 0);
+		SetFont("SMALLFNT");
+		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_GRAPHIC, CR_RED, 320.0, 200.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 2, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 3, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 4, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 5, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 6, CR_RED, 393.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 7, CR_RED, 329.0, 195.0, 0.001);
+		HudMessage(s: ""; HUDMSG_PLAIN, 8, CR_RED, 393.0, 195.0, 0.001);
+	}
+}

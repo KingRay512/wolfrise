@@ -1,0 +1,10 @@
+// #include "bloom.fp"
+
+Glow
+{
+	Flats
+	{
+		W_WATR1
+		ICYWATER
+	}
+}

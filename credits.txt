@@ -1,0 +1,80 @@
+CREDITS PAGE UNDER CONSTRUCTION
+
+Testing							DAR
+
+==SCRIPTS==
+Weapons/Enemies/Map Scripts:	Raees Kamaar
+Player Death/Respawn:			Raees Kamaar
+Get Phyched Intro:				Raees Kamaar
+Bonus Room:						Raees Kamaar
+Portable Health Kit:			Raees Kamaar
+Attach/Detach Silencer:			Raees Kamaar
+Boss Health Bar:				Rip and Tear
+Lean:							Josh771
+
+==SOUNDS==
+Doom 3							Id Software
+MOH - Allied Assault:			2015 Games
+Quake:							Id Software
+Quake 2:						Id Software
+Quake 4:						Raven Software
+Return to Castle Wolfenstein:	Grey Matter Studios / Nerve Software
+Wolfenstein 2009:				Raven Software
+Wolfenstein - The New Order:	Machinegames
+
+==GRAPHICS==
+HUD Base:						Raees Kamaar
+Menu Design:					Raees Kamaar
+Logo:							Raees Kamaar
+Intermission:					Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Intro:							Wolfenstein 3d / Edited by Raees Kamaar
+HUD Font: 						Wolfenstein 3d / Edited by Raees Kamaar
+RTCW-like Font:					Wolfenstein 3d (Id Software) / Inspiration - RTCW (Nerve Software) / Edited by Raees Kamaar
+Other Menu Font:				Machines of Death / Shadows of Destiny
+
+==WEAPON SPRITES==
+Knife:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Pistol:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Space Pistol:					Chiseled / Edited by Raees Kamaar
+MP50:							Chiseled / Edited by Raees Kamaar
+Marksman Rifle:					Chiseled / Edited by Raees Kamaar
+Rifle:							Wolfenstein - Machines of Death / Edited by Raees Kamaar
+Railgun:						Blake Stone (JAM Software) / Edited by Raees Kamaar
+FG42:							Resurrection of Heimzahlung / Edited by Raees Kamaar
+Tigerfaust:						Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
+Grenades:						Wolfenstein Missions (Executor)
+Pulse Cannon:					Spear - End of Destiny (AReyeP & MCS) / Edited by Raees Kamaar
+Venom Chaingun:					Chiseled / Edited by Raees Kamaar
+BFG1000:						Chiseled / Edited by Raees Kamaar
+Spear of Destiny				Kinnerokhn / Edited by Raees Kamaar
+Classic Weapons:				Wolfenstein 3D (Id Software)
+
+==STATIC SPRITES/EFFECTS==
+Flag Debris:					Realm667 (The_Funktasm)
+Rain:							Realm667 (Ghastly_dragon; Tormentor667)
+
+
+==TEXTURES/FLATS==
+Flats:							BAK_LEG
+Hexen/Heretic:					Raven Software
+Spear - End of Destiny:			MCS & AReyeP
+Realm667 (check specific artists)
+Duke Nukem 3D:					3D Realms
+CageTex - Check R667
+BTSX - Various Artists
+Labs:							WolfMissions (Woolie Wool)
+
+ENEMIES:
+Patrol Guard:					Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
+Kriegsland:						Gas Mask MG42 Soldier; Astro Machinegunner (REMOVE, ADD BETTER SPRITES)
+GyroPanzer:						Check Majik Monkee Image World / Edited by Raees Kamaar
+HK Tank:						Spear - Lost Missions / Duke Nukem 3d / Raees Kamaar
+Turret:							Duke Nukem 3d (3D Realms) / Edited by Raees Kamaar
+Ubersoldat:						Himmelfahrt (check MM image world) + Hans Grosse / Edited by Raees Kamaar
+Heavy SS:						Heimzahlung (check credits) / Edited by Raees Kamaar
+Ubermutant:						Wolfenstein 3D (Id Software) / Recoloured by Raees Kamaar
+
+
+==MUSIC==
+Davester2296
+Raees Kamaar (minor contribution)
