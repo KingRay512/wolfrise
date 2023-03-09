@@ -1,8 +1,0 @@
-Glow
-{
-	Flats
-	{
-		W_WATR1
-		ICYWATER
-	}
-}

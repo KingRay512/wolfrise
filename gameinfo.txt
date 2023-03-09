@@ -1,4 +1,0 @@
-IWAD = "DOOM2.WAD"
-STARTUPTITLE = "Wolfenstein Rising"
-STARTUPCOLORS = "802424", "242424"
-StartupType = "Hexen"
