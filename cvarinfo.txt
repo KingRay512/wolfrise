@@ -1,4 +1,4 @@
-user float cl_leanangle = 22.5;
+user float cl_leanangle = 48.0;
 user bool cl_strafelean = false;
 
 user bool classic_ep1_unlocked = false;
