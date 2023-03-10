@@ -19,20 +19,20 @@ script "HealthLow" ENTER
 	{
 		SetHudSize(640, 400, 1);
 		SetFont("BLUDHUD1");
-		HudMessage(s: "A"; HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
+		HudMessage(s: "A"; HUDMSG_PLAIN, 500, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
 		
 		if (CheckInventory("Health") <= 12)
 		{
 			SetHudSize(640, 400, 1);
 			SetFont("BLUDHUD2");
-			HudMessage(s: "A"; HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
+			HudMessage(s: "A"; HUDMSG_PLAIN, 500, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
 		}
 	}
 	
 	else
 	{
 		SetFont("");
-		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
+		HudMessage(s: ""; HUDMSG_PLAIN, 500, CR_UNTRANSLATED, 320.0, 200.0, 1.0);
 		ACS_NamedTerminate("HealthLow", 0);
 	}
 	

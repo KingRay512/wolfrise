@@ -10,6 +10,7 @@ class LightSwitch : SwitchableDecoration
 		Radius 20;
 		Height 32;
 		Activation THINGSPEC_Switch;
+		+USESPECIAL
 		+FLATSPRITE
 		+NOGRAVITY
 	}
@@ -29,12 +30,7 @@ class LightSwitch : SwitchableDecoration
 		Active:
 			TNT1 A 0 Thing_Activate(args[1]);
 			TNT1 A 0 A_PlaySound("movers/switch1");
-			SWTC A -1;
-			Stop;
-		Switch:
-			TNT1 A 0 A_JumpIf(args[0] == 0, "Active");
-			TNT1 A 0 A_JumpIf(args[0] == 1, "Inactive");
-			SWTC A -1;
+			SWTC B -1;
 			Stop;
 	}
 }
