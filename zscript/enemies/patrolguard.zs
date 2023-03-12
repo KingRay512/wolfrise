@@ -11,7 +11,7 @@ class PatrolGuard : WolfGuard
 		Speed 12;
 		dropitem "SmallAmmo";
 		Painchance 180;
-		Maxtargetrange 1024;
+		Maxtargetrange 2048;
 		MinMissileChance 2;
 		DeathSound "enemies/guard/die";
 		SeeSound "enemies/guard/see";
@@ -86,7 +86,17 @@ class PatrolGuard_Hard : PatrolGuard
 		Health 60;
 		Speed 18;
 		Painchance 130;
-		Maxtargetrange 2048;
+		Maxtargetrange 8192;
+	}
+
+	States
+	{
+		Missile:
+			WHIT F 12 A_FaceTarget;
+			WHIT G 2;
+			TNT1 A 0 A_PlaySound("weapons/luger/fire");
+			WHIT H 4 A_CustomBulletAttack(8,0,1,4);
+			Goto See;
 	}
 }
 

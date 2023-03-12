@@ -47,6 +47,7 @@ skill death
 	ReplaceActor = "Dog", "Dog_Hard"
 	ReplaceActor = "PatrolGuard", "PatrolGuard_Hard"
 	ReplaceActor = "SS1", "SS1_Hard"
+	ReplaceActor = "SS2", "SS2_Hard"
 	ReplaceActor = "Officer", "Officer_Hard"
 	ReplaceActor = "Machinegunner1", "Machinegunner1_Hard"
 	ReplaceActor = "BlackTurret", "BlackTurret_Hard"

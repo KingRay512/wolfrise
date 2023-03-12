@@ -11,6 +11,13 @@ PENDING
 ========
 Remove Railgun (Marksman Rifle 2ndary fire to become rail attack) --- Possibly to be moved to 'withdrawn'
 Remove WolfScore
+Remove "+10000 Bonus" messages from scripts:
+	FullKill
+	FullTreasure
+	FullSecret
+Remove any lines of code that include WolfBonus
+	Treasure Pickups
+	Enemy Kills
 After creating new M_DOOM graphic for menu, game's intro logo got messed up. To be fixed.
 Create crosshairs for:
 	Pistols

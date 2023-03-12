@@ -11,7 +11,7 @@ class Flameguard : Actor
 		radius 28;
 		height 104;
 		mass 1000;
-		speed 18;
+		speed 16;
 		scale 1.76;
 		MONSTER;
 		+NOINFIGHTING
@@ -82,7 +82,83 @@ class FlameGuard_Hard : FlameGuard
 	Default
 	{
 		ReactionTime 1;
-		health 450;
 		speed 24;
+	}
+
+	States
+	{
+		Missile:
+			FGRD E 8 A_FaceTarget;
+		Firing:
+			FGRD E 1
+			{
+				A_PlaySound("weapons/flame/fire");
+				A_SpawnProjectile("FlameBall", 48, 0, 0);
+			}
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 1);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 2);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 3);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 4);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 5);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 6);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 7);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 8);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 9);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 10);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 11);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 12);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 13);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 14);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 15);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 16);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 15);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 14);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 13);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 12);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 11);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 10);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 9);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 8);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 7);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 6);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 5);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 4);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 3);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 2);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 1);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 0);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -1);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -2);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -3);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -4);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -5);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -6);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -7);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -8);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -9);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -10);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -11);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -12);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -13);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -14);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -15);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -16);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -15);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -14);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -13);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -12);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -11);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -10);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -9);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -8);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -7);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -6);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -5);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -4);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -3);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -2);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, -1);
+			FGRD E 1 A_SpawnProjectile("FlameBall", 48, 0, 0);
+			Goto See;
 	}
 }

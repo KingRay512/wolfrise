@@ -43,7 +43,7 @@ class BulletPuff1 : KnifePuff1
 		AttackSound "RICOCHET";
 		Radius 2;
 		Height 2;
-		Scale 1.5;
+		Scale 0.64;
 		Gravity 1.2;
 		Speed 4;
 		VSpeed 4;
@@ -61,16 +61,16 @@ class BulletPuff1 : KnifePuff1
 	{
 		Spawn:
 			TNT1 A 0 A_PlaySound("RICOCHET");
-			PUFF ABCD 1 BRIGHT;
+			PUFF ABCDEFGH 1 BRIGHT;
 			Stop;
 		Melee:
-			PUFF ABCD 1 BRIGHT;
+			PUFF ABCDEFGH 1 BRIGHT;
 			Stop;
 		Death:
-			PUFF ABCD 1 BRIGHT;
+			PUFF ABCDEFGH 1 BRIGHT;
 			Stop;
 		XDeath:
-			PUFF ABCD 1 BRIGHT;
+			PUFF ABCDEFGH 1 BRIGHT;
 			Stop;
 	}
 }

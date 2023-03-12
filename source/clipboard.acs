@@ -51,9 +51,6 @@ script "MissionMapNum" (void)
 		case 101:
 			HudMessage(s: "Now that you've infiltrated the laboratory, it is imperative that you acquire documents relating to Operation: Mankind. It may give us some insight of what the Nazi's are up to.\n\nAcquiring them is of paramount importance.\n\nThe fate of the world lies in your hands, B.J.\n\nBest of luck, Agent Blazkowicz"; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
 			break;
-		case 2:
-			SetFont("M2_INFO");
-			break;
 		case 100:
 			HudMessage(s: "Where am I?, The Portal I entered has brought me to an unknown destination. As outlandish as it may seem, I believe I'm in the future...\n\nTime to find the portal that will return me to the present. Hang in there, twentieth century...\n\nI'll be back..."; HUDMSG_PLAIN, 1, CR_WHITE, 640.0, 220.3, 0.01);
 		default:
@@ -82,11 +79,6 @@ script "ViewJournal" (void)
 		SetHudSize(640, 400, TRUE);
 		SetFont("MISSBRF");
 		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 320.0, 200.0, 0.01);
-		
-// 		SetHudSize(640, 400, TRUE);
-// 		SetFont("MISSBR2");
-// 		HudMessage(s: "A"; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
-		
 		ACS_NamedExecute("MissionMapNum", 0);
 	}
 	
@@ -97,10 +89,6 @@ script "ViewJournal" (void)
 		SetHudSize(640, 400, TRUE);
 		SetFont("MISSBRF");
 		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF1, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
-		
-// 		SetHudSize(640, 400, TRUE);
-// 		SetFont("MISSBR2");
-// 		HudMessage(s: ""; HUDMSG_PLAIN, CLIPBOARD_MISSBRF2, CR_UNTRANSLATED, 0.0, 0.0, 0.01);
 		
 		HudMessage(s: ""; HUDMSG_PLAIN, 1, CR_UNTRANSLATED, 320.0, 80.0, 0.01);
 		

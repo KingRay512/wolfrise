@@ -99,7 +99,7 @@ class SS1_Hard : SS1
 	Default
 	{
 		Health 180;
-		Speed 30;
+		Speed 26;
 		Painchance 75;
 		ReactionTime 2;
 		MaxTargetRange 4096;

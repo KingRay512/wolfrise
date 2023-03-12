@@ -10,7 +10,7 @@ class Dog : Actor
 		Health 14;
 		mass 16;
 		painchance 0;
-		Speed 28;
+		Speed 25;
 		Scale 1.36;
 		MeleeRange 96;
 		MaxStepHeight 24;
@@ -52,7 +52,6 @@ class Dog_Hard : Dog
 	Default
 	{
 		ReactionTime 1;
-		health 40;
-		speed 32;
+		speed 35;
 	}
 }

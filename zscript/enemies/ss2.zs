@@ -94,14 +94,13 @@ class SS2 : WolfGuard
 	}
 }
 
-class SS2_Hard : SS1
+class SS2_Hard : SS2
 {
 	Default
 	{
-		Health 280;
 		Speed 30;
 		Painchance 75;
 		ReactionTime 2;
-		MaxTargetRange 4096;
+		MaxTargetRange 8192;
 	}
 }
