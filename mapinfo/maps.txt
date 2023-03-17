@@ -19,7 +19,7 @@ map TITLEMAP "Title Map"
 	levelnum = 0
 }
 
-episode MAP01
+episode NAFRICA1
 {
 	picname = M_PART1
 }
@@ -29,10 +29,10 @@ episode MAP02
 	picname = M_PART2
 }
 
-// episode MAP03
-// {
-// 	picname = M_PART3
-// }
+episode MAP03
+{
+	picname = M_PART3
+}
 
 episode OSAHUB
 {

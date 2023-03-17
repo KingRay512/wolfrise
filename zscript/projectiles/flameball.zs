@@ -1,4 +1,4 @@
-class FlameBall : FastProjectile
+class FlameBall : WolfFastProjectile
 {
 	Default
 	{
@@ -24,7 +24,7 @@ class FlameBall : FastProjectile
 	}
 }
 
-class FlameTrail : BulletTrail
+class FlameTrail : WolfFastProjectile
 { 
 	Default
 	{
@@ -121,5 +121,25 @@ class FlameImpact : Actor
 				A_FadeOut(0.048);
 			}
 			Stop;
+	}
+}
+
+class FlameTrap : FlameBall
+{
+	Default
+	{
+		MissileType "";
+		Height 48;
+		Radius 24;
+		Scale 1.6;
+		Damage 100;
+		DeathSound "";
+	}
+	
+	States
+	{
+		Spawn:
+			FBOL A 1 BRIGHT;
+			Loop;
 	}
 }

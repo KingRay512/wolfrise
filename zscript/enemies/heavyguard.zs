@@ -56,40 +56,24 @@ class HeavyGuard : Actor
 		HEAV F 24
 		{
 			A_PlaySound("weapons/warning");
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, -3);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, -2);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, -1);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, 0);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, 1);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, 2);
-			A_SpawnProjectile("NaziLaserTarget", 32, 24, 3);
+			A_SpawnProjectile("NaziLaserTarget", 48, 24, -4);
+			A_SpawnProjectile("NaziLaserTarget", 48, 24, 0);
+			A_SpawnProjectile("NaziLaserTarget", 48, 24, 4);
 			
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, -3);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, -2);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, -1);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, 0);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, 1);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, 2);
-			A_SpawnProjectile("NaziLaserTarget", 32, -24, 3);
+			A_SpawnProjectile("NaziLaserTarget", 48, -24, -4);
+			A_SpawnProjectile("NaziLaserTarget", 48, -24, 0);
+			A_SpawnProjectile("NaziLaserTarget", 48, -24, 4);
 		}
 		HEAV F 2
 		{
 			A_PlaySound("weapons/mp50/shotgun");
-			A_SpawnProjectile("NaziBullet", 32, 24, -3);
-			A_SpawnProjectile("NaziBullet", 32, 24, -2);
-			A_SpawnProjectile("NaziBullet", 32, 24, -1);
-			A_SpawnProjectile("NaziBullet", 32, 24, -0);
-			A_SpawnProjectile("NaziBullet", 32, 24, 1);
-			A_SpawnProjectile("NaziBullet", 32, 24, 2);
-			A_SpawnProjectile("NaziBullet", 32, 24, 3);
+			A_SpawnProjectile("NaziBullet", 48, 24, -4);
+			A_SpawnProjectile("NaziBullet", 48, 24, -0);
+			A_SpawnProjectile("NaziBullet", 48, 24, 4);
 			
-			A_SpawnProjectile("NaziBullet", 32, -24, -3);
-			A_SpawnProjectile("NaziBullet", 32, -24, -2);
-			A_SpawnProjectile("NaziBullet", 32, -24, -1);
-			A_SpawnProjectile("NaziBullet", 32, -24, -0);
-			A_SpawnProjectile("NaziBullet", 32, -24, 1);
-			A_SpawnProjectile("NaziBullet", 32, -24, 2);
-			A_SpawnProjectile("NaziBullet", 32, -24, 3);
+			A_SpawnProjectile("NaziBullet", 48, -24, -4);
+			A_SpawnProjectile("NaziBullet", 48, -24, -0);
+			A_SpawnProjectile("NaziBullet", 48, -24, 4);
 		}
 		Goto See;
 	Pain:

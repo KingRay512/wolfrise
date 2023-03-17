@@ -24,6 +24,7 @@ class SS1 : WolfGuard
 		+MISSILEMORE
 		+MISSILEEVENMORE
 		+CANUSEWALLS
+		+JUSTHIT
 	}
   
 	States
@@ -47,20 +48,20 @@ class SS1 : WolfGuard
 		ENFR L 18
 		{
 			A_PlaySound("weapons/warning");	
-			A_SpawnProjectile("NaziLaserTarget", 32, 0, -2);
-			A_SpawnProjectile("NaziLaserTarget", 32, 0, -1);
-			A_SpawnProjectile("NaziLaserTarget", 32, 0, 0);
-			A_SpawnProjectile("NaziLaserTarget", 32, 0, 1);
-			A_SpawnProjectile("NaziLaserTarget", 32, 0, 2);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, -2);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, -1);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 0);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 1);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 2);
 		}
 		ENFR M 3
 		{
 			A_PlaySound("weapons/mp50/shotgun");
-			A_SpawnProjectile("NaziBullet", 32, 0, -2);
-			A_SpawnProjectile("NaziBullet", 32, 0, -1);
-			A_SpawnProjectile("NaziBullet", 32, 0, 0);
-			A_SpawnProjectile("NaziBullet", 32, 0, 1);
-			A_SpawnProjectile("NaziBullet", 32, 0, 2);
+			A_SpawnProjectile("NaziBullet", 64, 0, -2);
+			A_SpawnProjectile("NaziBullet", 64, 0, -1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 0);
+			A_SpawnProjectile("NaziBullet", 64, 0, 1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 2);
 		}
 		Goto See;
 	Pain:
@@ -103,6 +104,59 @@ class SS1_Hard : SS1
 		Painchance 75;
 		ReactionTime 2;
 		MaxTargetRange 4096;
+	}
+
+	States
+	{
+		Missile:
+		ENFR L 18 A_FaceTarget;
+		TNT1 A 0 A_Jump(192, "AltFiring");
+	Firing:
+		ENFR M 2;
+		TNT1 A 0 A_PlaySound("weapons/mp50/fire");
+		ENFR N 2 A_CustomBulletAttack(8,0,1,2);
+		TNT1 A 0 A_CPosRefire;
+		Goto Firing;
+	AltFiring:
+		ENFR L 18
+		{
+			A_PlaySound("weapons/warning");	
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, -2);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, -1);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 0);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 1);
+			A_SpawnProjectile("NaziLaserTarget", 64, 0, 2);
+		}
+		ENFR M 4
+		{
+			A_PlaySound("weapons/mp50/shotgun");
+			A_SpawnProjectile("NaziBullet", 64, 0, -2);
+			A_SpawnProjectile("NaziBullet", 64, 0, -1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 0);
+			A_SpawnProjectile("NaziBullet", 64, 0, 1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 2);
+		}
+		ENFR N 4;
+		ENFR M 4
+		{
+			A_PlaySound("weapons/mp50/shotgun");
+			A_SpawnProjectile("NaziBullet", 64, 0, -2);
+			A_SpawnProjectile("NaziBullet", 64, 0, -1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 0);
+			A_SpawnProjectile("NaziBullet", 64, 0, 1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 2);
+		}
+		ENFR N 4;
+		ENFR M 4
+		{
+			A_PlaySound("weapons/mp50/shotgun");
+			A_SpawnProjectile("NaziBullet", 64, 0, -2);
+			A_SpawnProjectile("NaziBullet", 64, 0, -1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 0);
+			A_SpawnProjectile("NaziBullet", 64, 0, 1);
+			A_SpawnProjectile("NaziBullet", 64, 0, 2);
+		}
+		Goto See;
 	}
 }
 

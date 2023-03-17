@@ -33,8 +33,8 @@ class BJ : DoomPlayer
 		Player.WeaponSlot 0, "SpearOfDestiny";
 		Player.ForwardMove 0.64, 0.85;	// OLD SPEED 0.88, 1.0
 		Player.SideMove 0.64, 0.85;		// OLD SPEED 0.88, 1.0
-		Player.JumpZ 12;
-		Gravity 1.36;
+		Player.JumpZ 14;
+		Gravity 1.6;
 	}
 
 	States

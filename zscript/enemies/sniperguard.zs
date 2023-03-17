@@ -13,6 +13,7 @@ class SniperGuard : WolfGuard
 		Painchance 100;
 		Maxtargetrange 8192;
 		MinMissileChance 2;
+		ReactionTime 1;
 		DeathSound "enemies/death2";
 		SeeSound "enemies/swein";
 		PainSound "UBERPAIN";
@@ -34,12 +35,12 @@ class SniperGuard : WolfGuard
 		Missile:
 			GRD2 F 4 A_FaceTarget;
 			GRD2 G 4 A_PlaySound("weapons/warning");
-			GRD2 G 24 A_SpawnProjectile("NaziLaserTarget", 48, 0, 0);
+			GRD2 G 24 A_SpawnProjectile("NaziLaserTarget", 64, 0, 0);
 			TNT1 A 0 A_PlaySound("weapons/rifle/fire");
 			GRD2 H 4 A_CustomBulletAttack(0,0,1,15, "BulletPuff", 51200);
 			Goto See;
 		Pain:
-			GRD2 I 2 A_Pain;
+			GRD2 I 5 A_Pain;
 			Goto See;
 		Death:
 			TNT1 A 0 A_GiveInventory("WolfScore", 1250, AAPTR_PLAYER1);
@@ -49,20 +50,6 @@ class SniperGuard : WolfGuard
 			GRD2 M 4;
 			GRD2 N -1;
 			Stop;
-		Death.ExplosiveDamage:
-			TNT1 A 0
-			{
-				A_GiveInventory("WolfScore", 1250, AAPTR_PLAYER1);
-				A_NoBlocking();
-				A_Scream();
-				A_SpawnDebris("BloodPuff3", false, random(1.5, 2.0), random(1.5, 2.0));
-				A_SpawnDebris("BoneDebris", false, random(0.25, 0.5), random(0.25, 0.5));
-				A_SpawnDebris("BoneDebris2", false, random(0.75, 1.25), random(0.75, 1.25));
-				A_SpawnDebris("BoneDebris3", false, random(2.0, 4.0), random(2.0, 4.0));
-				A_SpawnDebris("BoneDebris4", false, random(1.0, 2.0), random(1.0, 2.0));
-				A_PlaySound("enemies/gibbed");
-			}
-			Stop;
 	}
 }
 
@@ -70,8 +57,23 @@ class SniperGuard_Hard : SniperGuard
 {
 	Default
 	{
-		Health 100;
-		Speed 18;
+		Speed 22;
 		Painchance 80;
+		Maxtargetrange 25600;
+		MinMissileChance 1;
+	}
+
+	States
+	{
+		Missile:
+			GRD2 F 3 A_FaceTarget;
+			GRD2 G 3 A_PlaySound("weapons/warning");
+			GRD2 G 21 A_SpawnProjectile("NaziLaserTarget", 64, 0, 0);
+			TNT1 A 0 A_PlaySound("weapons/rifle/fire");
+			GRD2 H 2 A_CustomBulletAttack(0,0,1,15, "BulletPuff", 51200);
+			Goto See;
+		Pain:
+			GRD2 I 2 A_Pain;
+			Goto See;
 	}
 }

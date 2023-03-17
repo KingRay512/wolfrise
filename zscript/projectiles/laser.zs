@@ -1,17 +1,20 @@
-class NaziLaserTarget : FastProjectile
+class NaziLaserTarget : WolfFastProjectile
 {
 	Default
 	{
 		RenderStyle "Add";
-		Radius 4;
-		Height 5;
+		Radius 0;
+		Height 0;
 		Speed 160;
 		Damage 0;
-		Scale 2.4;
+		Scale 0.32;	// Scale 2.4
 		MissileType "NaziLaserTrail";
-		//SeeSound "DSMG42";
+		SeeSound "weapons/warning";
 		Projectile;
 		+RANDOMIZE
+		+DONTSPLASH
+		+BOSS
+		-RIPPER
 	}
 	
 	States
@@ -25,19 +28,24 @@ class NaziLaserTarget : FastProjectile
 	}
 }
 
-class NaziLaserTrail : BulletTrail
+class NaziLaserTrail : WolfFastProjectile
 {
 	Default
 	{
 		Alpha 1.0; //.75
 		RenderStyle "Add";
-		Scale 2.4;
+		Scale 0.32;	// Scale 2.4
+		+DONTSPLASH
+		-RIPPER
 	}
 	
 	States
 	{
 		Spawn:
-		LASR AAAA 1 BRIGHT A_FadeOut(0.016);
+		LASR AAAAAAAAAAAA 1 BRIGHT
+		{
+			A_FadeOut(0.048);
+		}
 		Loop;
 	}
 }

@@ -1,4 +1,13 @@
-class Electrobolt : FastProjectile
+class WolfFastProjectile : FastProjectile
+{
+	Default
+	{
+		Projectile;
+		MissileHeight -8;
+	}
+}
+
+class Electrobolt : WolfFastProjectile
 {
 	Default
 	{
@@ -9,6 +18,7 @@ class Electrobolt : FastProjectile
 		Damage 4;
 		scale 1.25;
 		Projectile;
+		MissileHeight 0;
 		//SeeSound "BLASTER1";
 		DeathSound "BLASTHIT";
 		Obituary "$OB_MPROCKET";
@@ -49,7 +59,7 @@ class ElectroboltRed : Electrobolt
 // SPEAR BALL & TRAIL
 ////////////////////////
 
-class SpearBall : Electrobolt
+class SpearBall : WolfFastProjectile
 {
 	Default
 	{
@@ -71,7 +81,7 @@ class SpearBall : Electrobolt
 	}
 }
 
-class SpearBallTrail : PulseTrail
+class SpearBallTrail : WolfFastProjectile
 {
 	Default
 	{
@@ -92,7 +102,7 @@ class SpearBallTrail : PulseTrail
 // PULSE LASER & TRAIL
 ////////////////////////
 
-class PulseBall : Electrobolt
+class PulseBall : WolfFastProjectile
 {
 	Default
 	{
@@ -111,7 +121,6 @@ class PulseTrail : BulletTrail
 		Alpha 0.75; //.75
 		RenderStyle "Add";
 		Speed 0;
-		MissileType "PulseTrail";
 		+NOBLOCKMAP
 		+NOGRAVITY
 		+NOTELEPORT

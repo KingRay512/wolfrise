@@ -8,7 +8,7 @@ class BulletSister : Actor
 		Radius 48;
 		Height 120;
 		Mass 500;
-		Speed 48;
+		Speed 30;
 		DamageFactor "KnifeDamage", 0.048;
 		DamageFactor "ExplosiveDamage", 1.2;
 		dropitem "GatlingGun";
@@ -17,7 +17,7 @@ class BulletSister : Actor
 		SeeSound "bosses/trans/sight";
 		BloodType "BloodPuff1";
 		MinMissileChance 1;
-		Scale 1.92;	// 1.6
+		Scale 1.76;	// 1.6
 		Monster;
 		+BOSS
 		+MISSILEMORE
@@ -166,7 +166,7 @@ class PyroSister : BulletSister
 		Radius 48;
 		Height 120;
 		Mass 500;
-		Speed 48;
+		Speed 30;
 		DamageFactor "KnifeDamage", 0.048;
 		DamageFactor "ExplosiveDamage", 1.2;
 		DamageFactor "Flame", 0.4;
@@ -176,7 +176,6 @@ class PyroSister : BulletSister
 		SeeSound "bosses/trans/sight";
 		BloodType "BloodPuff1";
 		MinMissileChance 1;
-		Scale 1.92;	// 1.6
 		Monster;
 		+BOSS
 		+MISSILEMORE
@@ -271,8 +270,8 @@ class BulletSister_Hard : BulletSister
 	{
 		//$Category Enemies
 		Health 5000;
-		Speed 56;
-		Maxtargetrange 8196;
+		Speed 40;
+		Maxtargetrange 16384;
 	}
 }
 
@@ -282,7 +281,7 @@ class PyroSister_Hard : PyroSister
 	{
 		//$Category Enemies
 		Health 5000;
-		Speed 56;
-		Maxtargetrange 8196;
+		Speed 40;
+		Maxtargetrange 16384;
 	}
 }

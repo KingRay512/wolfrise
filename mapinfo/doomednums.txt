@@ -41,6 +41,7 @@ DoomEdNums
 	21016 = SS2
 	21017 = BulletSister
 	21018 = PyroSister
+	21019 = Commander1
 	21020 = TransGrosse
 	21021 = UberMutant
 	21060 = MechaHitler
@@ -121,16 +122,21 @@ DoomEdNums
 	22226 = CompScreen1
 	22227 = RailTrack1
 	22228 = EagleDecal_Black2
+	22229 = PotPlant2
 	28006 = SpearBeam
 	
 	// HAZARDS
 	26000 = Slime
+	26001 = Landmine
 	
 	//	CLASSIC STATICS
 	30000 = SteelColumn
 	30001 = ClassicColumn1
 	30002 = ClassicColumn2
 	30003 = ClassicLightBlue
+	30004 = ClassicTree
+	30005 = ClassicBush
+	30006 = FireTorch
 	
 	// EFFECTS
 	// Snow

@@ -46,15 +46,7 @@ class NaziRocket : WolfRocket
 {
 	Default
 	{
-		Speed 48;
-	}
-}
-
-class NaziRocket_Hard : NaziRocket
-{
-	Default
-	{
-		Speed 64;
+		Speed 44;
 	}
 }
 

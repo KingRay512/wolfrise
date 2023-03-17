@@ -37,13 +37,15 @@ LISTMENU "SkillMenu"
 	Position 32, 80
 	StaticPatch 0, 0, "M_BOX"
 	LineSpacing 16
+	
+	
 }
 
 LISTMENU "EpisodeMenu"
 {
 	Selector "M_SKULL1", 16, 3
 	StaticPatch 76, 32, "M_EPISOD"
-	Position 32, 88
+	Position 32, 80
 	StaticPatch 0, 0, "M_BOX"
 	LineSpacing 16
 }

@@ -54,11 +54,11 @@ skill death
 	ReplaceActor = "Robot1", "Robot1_Hard"
 	ReplaceActor = "Robot2", "Robot2_Hard"
 	ReplaceActor = "NaziBullet", "NaziBullet_Hard"
-	ReplaceActor = "NaziRocket", "NaziRocket_Hard"
 	ReplaceActor = "HeavyGuard", "HeavyGuard_Hard"
 	ReplaceActor = "FlameGuard", "FlameGuard_Hard"
 	ReplaceActor = "TransGrosse", "TransGrosse_Hard"
 	ReplaceActor = "BulletSister", "BulletSister_Hard"
 	ReplaceActor = "PyroSister", "PyroSister_Hard"
 	ReplaceActor = "Ubermutant", "Ubermutant_Hard"
+	ReplaceActor = "Commander1", "Commander1_Hard"
 }

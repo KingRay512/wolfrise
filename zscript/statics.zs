@@ -465,6 +465,16 @@ class PotPlant : Actor
 	}
 }
 
+class PotPlant2 : PotPlant
+{
+	States
+	{
+		Spawn:
+			PLN2 A -1;
+			Stop;
+	}
+}
+
 class TableAndChair1 : Actor
 {
 	Default
@@ -489,8 +499,8 @@ class Chair1 : Actor
 	Default
 	{
 		//$Category Decoration / Objects
-		Radius 25;
-		Height 60;
+		Radius 21;
+		Height 50;
 		Scale 1.6;
 		+SOLID
 		+PUSHABLE
@@ -829,6 +839,28 @@ class Slime : Actor
 			Loop;
 		Active:
 			SLIM A 2 BRIGHT A_Explode(8, 28);
+			Loop;
+	}
+}
+
+class Landmine : FastProjectile
+{
+	Default
+	{
+		Radius 28;
+		Height 64;
+		Speed 0;
+		Scale 2.4;
+	}
+	
+	States
+	{
+		Spawn:
+			MINE A 1 A_Jump(255, "Active");
+			//SLIM A 2 BRIGHT A_Explode(8, 28);
+			Loop;
+		Active:
+			MINE A 1 BRIGHT A_Explode(200, 48);
 			Loop;
 	}
 }

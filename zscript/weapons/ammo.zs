@@ -15,8 +15,8 @@ class SmallAmmo : Ammo
 	States
 	{
 		Spawn:
-			CLIP A -1;
-			stop;
+			WCLP ABCDEFEDCB 2;
+			Loop;
 	}
 }
 

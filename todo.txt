@@ -25,6 +25,9 @@ Create crosshairs for:
 	Sniper Rifle
 	FG42
 	Flamethrower
+Tidy up a lot (projectiles, weapons and effects are all over the place)
+	Redo projectiles
+
 
 
 
