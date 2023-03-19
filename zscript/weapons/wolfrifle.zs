@@ -180,7 +180,7 @@ class FG42 : WolfWeapon
 				A_PlaySound("weapons/fg42/fire");
 				A_AlertMonsters();
 				A_Recoil(1.44);
-				A_FireBullets(2.0, 2.0, -1, 24, "BulletPuff1");
+				A_FireBullets(2.0, 2.0, -1, 64, "BulletPuff1");
 			}
 			TNT1 AA 0 A_SetPitch(pitch - 1.5, SPF_INTERPOLATE);
 			FG42 DED 1 A_SetPitch(pitch + 1.0, SPF_INTERPOLATE);
@@ -194,7 +194,7 @@ class FG42 : WolfWeapon
 				A_PlaySound("weapons/fg42/fire");
 				A_AlertMonsters();
 				A_Recoil(1.0);
-				A_FireBullets(0.0, 0.0, -1, 32, "BulletPuff1");
+				A_FireBullets(0.0, 0.0, -1, 64, "BulletPuff1");
 			}
 			FG4Z I 2;
 			FG4Z G 2 A_ReFire();

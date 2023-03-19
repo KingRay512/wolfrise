@@ -25,8 +25,8 @@ class BossHealthBars : EventHandler {
       Vector2 hudScale = StatusBar.GetHUDScale();
       Vector2 barSize = (304, 8) * hudscale.x; // Size of the filled part of the bar
       Vector2 barOff = (8, 8) * hudscale.x; // Bar offset from the top-left of the graphic
-      Vector2 barPos = (screen.GetWidth() / 3, 160); // Where the first bar should be drawn
-      int barSpace = 32; // Spacing between bars = 10
+      Vector2 barPos = (screen.GetWidth() / 3, 80); // Where the first bar should be drawn
+      int barSpace = 12; // Spacing between bars = 10
       
       int barCount = 0;
       for (int i = 0; i < bosses.Size(); i++) {

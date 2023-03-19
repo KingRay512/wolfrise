@@ -4,7 +4,7 @@ class Commander1 : Actor
 	{
 		//$Category Enemies
 		ReactionTime 8;
-		obituary "%o was roasted by tracked down by a Commander";
+		obituary "%o was tracked down by a Commander";
 		DamageFactor "Flame", 0.075;
 		DamageFactor "KnifeDamage", 0.16;
 		health 2500;
@@ -32,17 +32,17 @@ class Commander1 : Actor
 			loop;
 		Missile:
 			COM1 E 16 A_FaceTarget;
-			TNT1 A 0 A_Jump(176, "AltFiring");
+			TNT1 A 0 A_Jump(128, "AltFiring");
 		Firing:
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 3 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 3 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 3 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 3 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			Goto See;
 		AltFiring:
 			COM1 E 16
@@ -86,23 +86,23 @@ class Commander1_Hard : Commander1
 			COM1 E 16 A_FaceTarget;
 			TNT1 A 0 A_Jump(176, "AltFiring");
 		Firing:
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			COM1 E 2 A_FaceTarget;
-			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-4, 4), 0, 0);
+			COM1 F 2 A_SpawnProjectile("NaziRocket", 64, 8, random(-6, 6), 0, 0);
 			Goto See;
 		AltFiring:
 			COM1 E 10

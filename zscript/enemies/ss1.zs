@@ -12,12 +12,13 @@ class SS1 : WolfGuard
 		dropitem "MP50";
 		Painchance 192;
 		Maxtargetrange 2048;
+		MinMissileChance 1;
 		DeathSound "enemies/ss/die";
 		SeeSound "enemies/ss/see";
 		PainSound "UBERPAIN";
 		BloodType "BloodPuff2";
 		Scale 1.76;
-		ReactionTime 6;
+		ReactionTime 1;
 		Monster;
 		+DONTHARMSPECIES
 		+NOINFIGHTING
@@ -25,6 +26,7 @@ class SS1 : WolfGuard
 		+MISSILEEVENMORE
 		+CANUSEWALLS
 		+JUSTHIT
+		+ALWAYSFAST
 	}
   
 	States
