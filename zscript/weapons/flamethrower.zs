@@ -7,17 +7,6 @@ class WolfFlameThrower : WolfWeapon
 		A_FireProjectile("PlayerFlameBall", 0, 1, 0, 12, 0, 0);
 	}
 	
-// 	action void A_PulseAltFire()
-// 	{
-// 		A_PlaySound("weapons/pulse/fire2");
-// 		A_Recoil(2.24);
-// 		A_FireProjectile("PulseBall", 6, 1, -6, 8, 0, 0);
-// 		A_FireProjectile("PulseBall", 3, 1, -3, 8, 0, 0);
-// 		A_FireProjectile("PulseBall", -3, 1, 3, 8, 0, 0);
-// 		A_FireProjectile("PulseBall", -6, 1, 6, 8, 0, 0);
-// 		A_SetPitch(pitch - 2.5, SPF_INTERPOLATE);
-// 	}
-	
 	Default
 	{
 		Weapon.AmmoUse 1;

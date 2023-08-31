@@ -42,6 +42,7 @@ class ElectroboltRed : Electrobolt
 	Default
 	{
 		SeeSound "FLAMFIRE";
+		MissileType "Electroboltred_Trail";
 	}
 	
 	States
@@ -52,6 +53,29 @@ class ElectroboltRed : Electrobolt
 		Death:
 			EBO2 CDE 5 Bright;
 			Stop;
+	}
+}
+
+class Electroboltred_Trail : BulletTrail
+{ 
+	Default
+	{
+		Alpha 0.75; //.75
+		RenderStyle "Add";
+		Speed 0;
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+NOTELEPORT
+		+CANNOTPUSH
+		+NODAMAGETHRUST
+		Scale 0.32;
+	}
+	
+	States
+	{
+	Spawn:
+		EBO2 A 1 BRIGHT A_FadeOut(0.05);
+		Loop;
 	}
 }
 

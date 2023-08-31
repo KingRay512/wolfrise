@@ -27,5 +27,5 @@ Lock 53
 	WolfElevatorKey
 	RemoteMessage "You need the Elevator Key!"
 	LockedSound "movers/door/locked"
-	Mapcolor 128 128 128
+	Mapcolor 64 128 255
 }

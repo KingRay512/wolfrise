@@ -475,25 +475,6 @@ class PotPlant2 : PotPlant
 	}
 }
 
-class TableAndChair1 : Actor
-{
-	Default
-	{
-		//$Category Decoration / Objects
-		Radius 24;
-		Height 36;
-		Scale 1.2;
-		+SOLID
-	}
-	
-	States
-	{
-		Spawn:
-			TAB2 A -1;
-			Stop;
-	}
-}
-
 class Chair1 : Actor
 {
 	Default

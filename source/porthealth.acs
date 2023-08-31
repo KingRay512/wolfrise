@@ -18,3 +18,29 @@ script "UsePortableHealth" (void)
 		}
 	}
 }
+
+// TEST
+
+script "RevivePlayer" ENTER
+{
+	if (CheckInventory("PortableFA") > 0)
+	{
+		SetPlayerProperty(0, 1, PROP_BUDDHA);
+		if (CheckInventory("Health") <= 10)
+		{
+			SetHudSize(640, 400, 0);
+			SetFont("SMALLFONT");
+			HudMessage(s: "\c[WolfWhite]EXTRA LIFE ACTIVATED"; HUDMSG_PLAIN, LOG_PORTABLEKIT, CR_WHITE, 320.0, 275.0, 1.0);
+			TakeInventory("PortableFA", 1);
+			GiveInventory("FirstAid1", 200);
+		}
+	}
+	
+	else if (CheckInventory("PortableFA") < 1)
+	{
+		SetPlayerProperty(0, 0, PROP_BUDDHA);
+	}
+	
+	delay(5);
+	Restart;
+}

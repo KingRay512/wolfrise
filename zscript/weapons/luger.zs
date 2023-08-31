@@ -26,12 +26,13 @@ class PistolSilenced : Inventory
 }
 
 class Luger : WolfWeapon
-{
+{ 
 	action void A_LugerFire()
 	{
-		A_AlertMonsters(2048);
+		A_AlertMonsters(20480);
 		A_PlaySound("weapons/luger/fire");
-		A_FireBullets(1, 1, -1, 14, "BulletPuff1");
+		//A_FireBullets(1, 1, -1, 14, "BulletPuff1");
+		A_FireProjectile("PlayerBullet", random(-2,2) , 1, 0, 0, 0);
 	}
 	
 	action void A_LugerSilencedFire()
@@ -76,10 +77,29 @@ class Luger : WolfWeapon
 		Fire:
 			TNT1 A 0 A_JumpIfInventory("PistolSilenced", 1, "FireSilenced");
 			LUG2 C 1 A_SetPitch(pitch - 0.4, SPF_INTERPOLATE);
-			LUG2 D 1 A_LugerFire();
+			LUG2 D 1
+			{
+				A_LugerFire();
+				A_GunFlash();
+			}
 			LUG2 EGH 1 A_SetPitch(pitch + 0.2, SPF_INTERPOLATE);
 			LUG2 A 1;
 			Goto Ready;
+		FireNoRecoil:
+			TNT1 A 0 A_JumpIfInventory("PistolSilenced", 1, "FireSilenced");
+			LUG2 C 1 A_SetPitch(pitch - 0.4, SPF_INTERPOLATE);
+			LUG2 D 1
+			{
+				A_LugerFire();
+				A_GunFlash();
+			}
+			LUG2 EGH 1 A_SetPitch(pitch + 0.2, SPF_INTERPOLATE);
+			LUG2 A 1;
+			Goto Ready;
+			Goto Ready;
+		Flash:
+			EJEC ABCDEF 1 BRIGHT;
+			Goto LightDone;
 		FireSilenced:
 			LUG3 BC 1;
 			LUG3 E 1 A_LugerSilencedFire();

@@ -1,3 +1,7 @@
+///////////////////
+// Secret Wall
+///////////////////
+
 :movingBlock
 	playuntildone movers/lift/loop
 end
@@ -6,6 +10,10 @@ end
 Door 1
 0 movingBlock
 ]
+
+///////////////////
+// Steel Door
+///////////////////
 
 :SteelDoorOpen
 	play		movers/door2/open
@@ -21,9 +29,11 @@ end
 Door 5
 0 SteelDoorOpen
 1 SteelDoorClose
-2 SteelDoorOpen
-3 SteelDoorClose
 ]
+
+///////////////////
+// Wooden Door
+///////////////////
 
 :WoodenDoorOpen
 	play		movers/door3/open
@@ -39,6 +49,37 @@ end
 Door 6
 0 WoodenDoorOpen
 1 WoodenDoorClose
-2 WoodenDoorOpen
-3 WoodenDoorClose
+]
+
+///////////////////
+// Classic Door
+///////////////////
+
+:ClassicDoorOpen
+	play	movers/classic/dooropn
+	nostopcutoff
+end
+
+:ClassicDoorClose
+	play	movers/classic/doorcls
+	nostopcutoff
+end
+
+[ClassicDoor
+Door 50
+0 ClassicDoorOpen
+1 ClassicDoorClose
+]
+
+//////////////////////////
+// Secret Wall Classic
+//////////////////////////
+
+:movingSecret
+	playuntildone movers/classic/secret
+end
+
+[ClassicSecret
+Door 51
+0 movingSecret
 ]

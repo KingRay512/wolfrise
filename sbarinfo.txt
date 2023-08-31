@@ -68,46 +68,47 @@ statusbar normal
 statusbar fullscreen, forcescaled
 {
 	//	NOTHING YET
-	drawimage "ALTHUD_2", 222, 365;
-	drawimage "ALTAMMO", 568, 378;
-	drawimage "ALTSCRE", 3, 378;
-	drawimage "ALTKEYS", 337, 368;
+	drawimage "ALTHUD_4", 0, 0;
+// 	drawimage "ALTHUD_2", 222, 365;
+// 	drawimage "ALTAMMO", 568, 378;
+// 	drawimage "ALTSCRE", 3, 378;
+// 	drawimage "ALTKEYS", 337, 368;
 	
-	drawnumber 3, HUDNUM1, white, health, alignment(right), 280, 385;
-	drawnumber 3, HUDNUM1, white, armor, alignment(left), 359, 385;
-	drawnumber 3, HUDNUM1, white, ammo1, alignment(right), 617, 385;
-	drawnumber 12, HUDNUM1, white, "WolfScore", alignment(left), 24, 385;
-	DrawMugshot 5, disablepain, disableouch, disablerampage, disablegrin, 307, 365;
+// 	drawnumber 3, HUDNUM1, white, health, alignment(right), 280, 385;
+// 	drawnumber 3, HUDNUM1, white, armor, alignment(left), 359, 385;
+// 	drawnumber 3, HUDNUM1, white, ammo1, alignment(right), 617, 385;
+// 	drawnumber 12, HUDNUM1, white, "WolfScore", alignment(left), 24, 385;
+// 	DrawMugshot 5, disablepain, disableouch, disablerampage, disablegrin, 307, 365;
 	
-	drawswitchableimage keyslot 10, "NKEYICON", "GKEYICON", 344, 370;
-	drawswitchableimage keyslot 11, "NKEYICON", "SKEYICON", 360, 370;
-	drawswitchableimage keyslot 12, "NKEYICON", "BKEYICON", 376, 370;
-	drawswitchableimage keyslot 13, "NKEYICON", "EKEYICON", 392, 370;
+// 	drawswitchableimage keyslot 10, "NKEYICON", "GKEYICON", 344, 370;
+// 	drawswitchableimage keyslot 11, "NKEYICON", "SKEYICON", 360, 370;
+// 	drawswitchableimage keyslot 12, "NKEYICON", "BKEYICON", 376, 370;
+// 	drawswitchableimage keyslot 13, "NKEYICON", "EKEYICON", 392, 370;
 	
-	drawimage "ALTPORT", 267, 368;
+// 	drawimage "ALTPORT", 267, 368;
 	
-	InInventory "PortableFA", 1
-	{
-		drawimage "ALTPOR2", 295, 369;
-	}
-	InInventory "PortableFA", 2
-	{
-		drawimage "ALTPOR2", 295, 369;
-		drawimage "ALTPOR2", 286, 369;
-	}
-	InInventory "PortableFA", 3
-	{
-		drawimage "ALTPOR2", 295, 369;
-		drawimage "ALTPOR2", 286, 369;
-		drawimage "ALTPOR2", 277, 369;
-	}
-	InInventory "PortableFA", 4
-	{
-		drawimage "ALTPOR2", 295, 369;
-		drawimage "ALTPOR2", 286, 369;
-		drawimage "ALTPOR2", 277, 369;
-		drawimage "ALTPOR2", 268, 369;
-	}
+// 	InInventory "PortableFA", 1
+// 	{
+// 		drawimage "ALTPOR2", 295, 369;
+// 	}
+// 	InInventory "PortableFA", 2
+// 	{
+// 		drawimage "ALTPOR2", 295, 369;
+// 		drawimage "ALTPOR2", 286, 369;
+// 	}
+// 	InInventory "PortableFA", 3
+// 	{
+// 		drawimage "ALTPOR2", 295, 369;
+// 		drawimage "ALTPOR2", 286, 369;
+// 		drawimage "ALTPOR2", 277, 369;
+// 	}
+// 	InInventory "PortableFA", 4
+// 	{
+// 		drawimage "ALTPOR2", 295, 369;
+// 		drawimage "ALTPOR2", 286, 369;
+// 		drawimage "ALTPOR2", 277, 369;
+// 		drawimage "ALTPOR2", 268, 369;
+// 	}
 	
 	IsSelected GatlingGun		{ drawbar "overht_f", "overht_e", VenomOverheat, horizontal, 256, 355; }
 }

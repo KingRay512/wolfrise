@@ -2,8 +2,8 @@ switch doom 3 ELEVUP on sound SWITCH1 pic ELEVDOWN tics 0
 switch doom 3 ELEVSW_1 on sound SWITCH1 pic ELEVSW_2 tics 0
 switch doom 3 STEELSW1 on sound SWITCH1 pic STEELSW2 tics 0
 switch doom 3 WLFELEV2 on sound SWITCH1 pic WLFELEV3 tics 0
-switch doom 3 WSTEELS1 on sound SWITCH1 pic WSTEELS2 tics 0
-switch doom 3 WSTEELS3 on sound SWITCH1 pic WSTEELS4 tics 0
+switch doom 3 WSTEELS1 on sound movers/classic/switch pic WSTEELS2 tics 0
+switch doom 3 WSTEELS3 on sound movers/classic/switch pic WSTEELS4 tics 0
 switch doom 3 BOARD1 on sound switches/paper pic BOARD0 tics 0
 
 texture COMP11

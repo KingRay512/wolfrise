@@ -11,11 +11,11 @@ class Tigerfaust : WolfWeapon
 	action void A_TigerFistAlt()
 	{
 		A_PlaySound("weapons/tiger/altfire");
-		A_FireProjectile("WolfRocketSuper", 0, 1, 0, 0, 0, 0);
-		A_FireProjectile("WolfRocketSuper", 0, 0, 0, 0, 0, -4);
-		A_FireProjectile("WolfRocketSuper", 0, 0, 0, 0, 0, 4);
-		A_FireProjectile("WolfRocketSuper", -4, 0, 0, 0, 0, 0);
-		A_FireProjectile("WolfRocketSuper", 4, 0, 0, 0, 0, 0);
+		A_FireProjectile("WolfRocket", 0, 1, 0, 0, 0, 0);
+		A_FireProjectile("WolfRocket", 0, 0, 0, 0, 0, -4);
+		A_FireProjectile("WolfRocket", 0, 0, 0, 0, 0, 4);
+		A_FireProjectile("WolfRocket", -4, 0, 0, 0, 0, 0);
+		A_FireProjectile("WolfRocket", 4, 0, 0, 0, 0, 0);
 		A_Recoil(24.0);
 	}
 	

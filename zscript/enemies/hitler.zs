@@ -141,7 +141,7 @@ class FakeHitler : Actor
 		//$Category Bosses
 		ReactionTime 8;
 		obituary "%o's was spooked by a Hitler ghost.";
-		health 300;
+		health 500;
 		radius 48;
 		height 100;
 		mass 100;
@@ -153,10 +153,12 @@ class FakeHitler : Actor
 		DeathSound "HAHAHAHA";
 		DropItem "BJSphere";
 		MONSTER;
-		Maxtargetrange 1024;
+		Maxtargetrange 102400;
 		+FLOAT
 		+NOGRAVITY
 		+NOINFIGHTING
+		+MISSILEMORE
+		+MISSILEEVENMORE
 	}
 	
 	states
@@ -169,6 +171,12 @@ class FakeHitler : Actor
 			loop;
 		Missile:
 			FAKE A 20 A_FaceTarget;
+			FAKE I 5 A_CustomMissile("ElectroboltRed",48,0,random(-5,0));
+			TNT1 A 0 A_CustomMissile("ElectroboltRed",48,0,0);
+			FAKE A 8 A_FaceTarget;
+			FAKE I 5 A_CustomMissile("ElectroboltRed",48,0,0);
+			TNT1 A 0 A_CustomMissile("ElectroboltRed",48,0,random(0,5));
+			FAKE A 5 A_FaceTarget;
 			FAKE I 5 A_CustomMissile("ElectroboltRed",48,0,random(-5,0));
 			TNT1 A 0 A_CustomMissile("ElectroboltRed",48,0,0);
 			FAKE A 8 A_FaceTarget;

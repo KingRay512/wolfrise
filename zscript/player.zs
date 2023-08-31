@@ -22,10 +22,10 @@ class BJ : DoomPlayer
 		Player.StartItem "SmallAmmo", 32;
 		Player.StartItem "SteelGrenades";
 		Player.WeaponSlot 1, "Knife";
-		Player.WeaponSlot 2, "Luger", "SpaceLuger";
-		Player.WeaponSlot 3, "MarksmanRifle", "MP50";
-		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle";
-		Player.WeaponSlot 5, "FG42";
+		Player.WeaponSlot 2, "Luger", "SpaceLuger", "ClassicLuger", "ClassicLuger2";
+		Player.WeaponSlot 3, "MarksmanRifle", "MP50", "ClassicMachinegun";
+		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle", "ClassicChaingun";
+		Player.WeaponSlot 5, "FG42", "ClassicRLauncher";
 		Player.WeaponSlot 6, "SteelGrenades";
 		Player.WeaponSlot 7, "Tigerfaust";
 		Player.WeaponSlot 8, "GatlingGun", "PulseCannon";

@@ -8,3 +8,263 @@ Glow
 		ICYWATER
 	}
 }
+
+material texture "WLFDOOR3"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFDOOR3.png"
+}
+
+material texture "WLFDOOR1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFDOOR1.png"
+}
+
+material texture "WLFELEV4"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFELEV5.png"
+}
+
+material texture "WLFELEV5"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFELEV5.png"
+}
+
+material texture "WIDE_EAG"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WIDE_EAG.png"
+}
+
+material texture "WFENCE3"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WFENCE3.png"
+}
+
+material texture "CYANWN1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/CYANWN1.png"
+}
+
+material texture "WLFBLU05"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFBLU05.png"
+}
+
+material texture "WLFBLU06"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFBLU05.png"
+}
+
+material texture "door2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/door2.png"
+}
+
+material texture "89"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/89.png"
+}
+
+material texture "WREATH"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WREATH.png"
+}
+
+material texture "WGREY1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WGREY1.png"
+}
+
+material texture "WGREY2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WGREY1.png"
+}
+
+material texture "WLFWOOD1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFWOOD1.png"
+}
+
+material texture "WLFWOOD2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFWOOD1.png"
+}
+
+material texture "WLFWOOD5"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFWOOD5.png"
+}
+
+material texture "WLFWOOD6"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFWOOD5.png"
+}
+
+material texture "WOOD32_1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WOOD32.png"
+}
+
+material texture "WOOD32_2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WOOD32.png"
+}
+
+material texture "WOOD16_1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WOOD16.png"
+}
+
+material texture "WOOD16_2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WOOD16.png"
+}
+
+material texture "WMOSS1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WMOSS1.png"
+}
+
+material texture "WMOSS2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WMOSS1.png"
+}
+
+material texture "WSTONE1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WSTONE1.png"
+}
+
+material texture "WSTONE2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WSTONE1.png"
+}
+
+material texture "WLFMARB3"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFMARB3.png"
+}
+
+material texture "WLFMARB4"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFMARB3.png"
+}
+
+material texture "WLFMARB5"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFMARB3.png"
+}
+
+material texture "WLFMARB6"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFMARB3.png"
+}
+
+material texture "DRKSTNA1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/DRKSTNA1.png"
+}
+
+material texture "DRKSTNA2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/DRKSTNA1.png"
+}
+
+material texture "DRKSTNB1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/DRKSTNB1.png"
+}
+
+material texture "DRKSTNB2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/DRKSTNB1.png"
+}
+
+material texture "pipe_2c"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/pipe_2c.png"
+}
+
+material texture "QTEX_17"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/QTEX_17.png"
+}
+
+material texture "FL_DIRT1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/FL_DIRT1.png"
+}
+
+material texture "WSTEEL1"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WSTEEL1.png"
+}
+
+material texture "WSTEEL2"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WSTEEL1.png"
+}
+
+material texture "WSTEELX"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WSTEELX.png"
+}
+
+material texture "WLFELEV7"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/WLFELEV7.png"
+}
+
+material texture "GRYWALL3"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/GRYWALL3.png"
+	ao "materials/ao/GRYWALL3.png"
+}
+
+material texture "GRYWALL4"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/GRYWALL3.png"
+	ao "materials/ao/GRYWALL3.png"
+}

@@ -166,6 +166,26 @@ map OSAHUB "O.S.A Headquarters"
 	levelnum = 200
 }
 
+map BONMAP02 "Bonus Map 02"
+{
+	next = BONUS03
+	sky1 = "SKYFOG3"
+	music = "DAR_SOLD"
+	nojump
+	nocrouch
+	levelnum = 68
+}
+
+map BONMAP07 "Bonus Map 07"
+{
+	sky1 = "SKYFOG4"
+	music = "DAR_OPER"
+	nojump
+	nocrouch
+	nofreelook
+	levelnum = 68
+}
+
 map MAP50 "The Village"
 {
 	music = "DAR_SOLD"

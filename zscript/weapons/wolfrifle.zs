@@ -81,10 +81,17 @@ class WolfRifle : WolfWeapon
 			SNIP G 8; //A_SetPitch(pitch + 0.96, SPF_INTERPOLATE);
 			TNT1 A 0 A_CheckReload();
 			SNIP HIJKLMNO 1 A_RifleLoad1();
-			SNIP P 4 A_PlaySound("weapons/rifle/bolt");
+			SNIP P 4
+			{
+				A_PlaySound("weapons/rifle/bolt");
+				A_GunFlash();
+			}
 			SNIP ONMLKJIHG 1 A_RifleLoad2();
 			SNIP A 4;
 			Goto Ready;
+		Flash:
+			EJC2 ABCDEF 1;
+			Goto LightDone;
 		FireZoomed:
 			RIF4 U 1
 			{

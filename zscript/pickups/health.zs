@@ -6,6 +6,7 @@ class DogFood : Health
 		Inventory.Amount 5;
 		Inventory.PickupMessage "You ate some dog food (+5 Health)";
 		Inventory.pickupsound "EATFOOD";
+		Scale 2.0;
 	}
 	
 	States

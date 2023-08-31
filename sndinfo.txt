@@ -21,6 +21,11 @@ movers/door3/open		door3opn
 movers/door3/close 		door3cls
 movers/door3/end		door3end
 
+movers/classic/dooropn	C_DROPN
+movers/classic/doorcls	C_DRCLS
+movers/classic/secret	C_SECRET
+movers/classic/switch	C_SWITCH
+
 switches/paper1			paper1
 switches/paper2			paper2
 switches/paper3			paper3
@@ -78,6 +83,7 @@ weapons/uber/fire		uberfire
 weapons/uber/altfire	lg_fire
 weapons/uber/equip		uberslct
 
+weapons/classic/pistol2		WPISTOL
 weapons/classic/pistol		CW_LUGER
 weapons/classic/colt		CW_COLT
 weapons/classic/machinegun	CW_MGUN
@@ -130,7 +136,7 @@ player/pain75		PAIN75
 player/pain50		PAIN50
 player/pain25		PAIN25
 
-player/usefail	DSNOWAY
+player/usefail	ALNOWAY
 player/grunt	ALNOITEM
 player/jump		JUMP1
 player/falling	DSFALL

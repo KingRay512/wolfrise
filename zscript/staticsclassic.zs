@@ -50,6 +50,16 @@ class ClassicBush : ClassicStatics
 	}
 }
 
+class ClassicFloorFlag : ClassicStaticsBlocking
+{
+	States
+	{
+		Spawn:
+			FFLG A -1;
+			Stop;
+	}
+}
+
 class FireTorch : ClassicStaticsBlocking
 {
 	States
@@ -57,5 +67,20 @@ class FireTorch : ClassicStaticsBlocking
 		Spawn:
 			FTOR ABCD 3;
 			Loop;
+	}
+}
+
+class TableAndChair1 : ClassicStaticsBlocking
+{
+	Default
+	{
+		//$Category Decoration / Objects
+	}
+	
+	States
+	{
+		Spawn:
+			TAB1 A -1;
+			Stop;
 	}
 }

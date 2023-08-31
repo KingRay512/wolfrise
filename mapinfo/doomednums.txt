@@ -137,6 +137,7 @@ DoomEdNums
 	30004 = ClassicTree
 	30005 = ClassicBush
 	30006 = FireTorch
+	30007 = ClassicFloorFlag
 	
 	// EFFECTS
 	// Snow

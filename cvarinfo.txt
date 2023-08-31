@@ -1,7 +1,9 @@
+server int weapon_classicstyle = 0;
+
 user float cl_leanangle = 48.0;
 user bool cl_strafelean = false;
 
-user bool classic_ep1_unlocked = false;
-user bool classic_ep2_unlocked = false;
-user bool classic_ep3_unlocked = false;
-user bool classic_ep4_unlocked = false;
+server bool classic_ep1_unlocked = false;
+server bool classic_ep2_unlocked = false;
+server bool classic_ep3_unlocked = false;
+server bool classic_ep4_unlocked = false;
