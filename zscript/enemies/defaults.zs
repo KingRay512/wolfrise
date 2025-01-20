@@ -5,9 +5,16 @@ class WolfGuard : Actor
 		//$Category Enemies
 		BloodType "BloodPuff1";
 		Monster;
+		DamageFactor "Flame", 4;
+		ReactionTime 1;
+		MinMissileChance 1;
 		+MISSILEMORE
 		+MISSILEEVENMORE
-		DamageFactor "Flame", 4;
+		+CANUSEWALLS
+		+DONTHARMSPECIES
+		+NOINFIGHTING
+		+JUSTHIT
+		-ALWAYSFAST
 	}
 	
 	States

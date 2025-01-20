@@ -1,9 +1,7 @@
-class Dog : Actor
+class Dog : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
-		ReactionTime 4;
 		obituary "%o was devoured by a dog.";
 		radius 25;
 		height 56;
@@ -16,11 +14,6 @@ class Dog : Actor
 		MaxStepHeight 24;
 		seesound "DOG1BARK";
 		deathsound "DOG1DETH";
-		MONSTER;
-		+MISSILEMORE
-		+MISSILEEVENMORE
-		+NOINFIGHTING
-		+DONTHARMSPECIES
 		-CANUSEWALLS
 	}
 	
@@ -44,14 +37,5 @@ class Dog : Actor
 			DOG1 G 7 A_NoBlocking;
 			DOG1 H -1;
 			Stop;
-	}
-}
-
-class Dog_Hard : Dog
-{
-	Default
-	{
-		ReactionTime 1;
-		speed 35;
 	}
 }

@@ -3,9 +3,9 @@ class SmallAmmo : Ammo
 	Default
 	{
 		//$Category Ammo
-		Radius 20;
-		Height 24;
-		Scale 1.92;
+		Radius 8;
+		Height 8;
+		Scale 1.0;
 		Inventory.Amount 12;
 		Inventory.MaxAmount 160;
 		Inventory.PickUpSound "PICKAMMO";
@@ -15,8 +15,8 @@ class SmallAmmo : Ammo
 	States
 	{
 		Spawn:
-			WCLP ABCDEFEDCB 2;
-			Loop;
+			WCLP A -1;
+			Stop;
 	}
 }
 

@@ -4,7 +4,7 @@
 graphic AMMOBAR2, 220, 68 { XScale 2.0 YScale 2.0 }
 graphic HLTHARMR, 258, 80 { XScale 2.0 YScale 2.0 }
 graphic KEYBAR, 32, 50 { XScale 2.0 YScale 2.0 }
-graphic PORTBOX, 166, 40 { XScale 2.0 YScale 2.0 }
+graphic PORTBOX, 124, 40 { XScale 2.0 YScale 2.0 }
 graphic RATIOS, 224, 70 { XScale 2.0 YScale 2.0 }
 graphic SCORE, 208, 35 { XScale 2.0 YScale 2.0 }
 graphic STATREP, 249, 138 { XScale 1.0 YScale 1.0 }
@@ -75,7 +75,6 @@ graphic MAINMENU, 640, 400 { XScale 2.0 YScale 2.0 }
 
 // GAME INTERFACE
 graphic M_PAUSE, 640, 82 { XScale 1.5 YScale 1.5 Offset 0, -112}
-graphic FAILED, 464, 51 { XScale 4.0 YScale 4.0 }
 graphic PSYCHED, 426, 71 { XScale 2.0 YScale 2.0 }
 graphic BOSSBAR, 320, 24 { XScale 1.0 YScale 1.0 }
 graphic STRIPES, 640, 98 { XScale 1.0 YScale 1.0 }

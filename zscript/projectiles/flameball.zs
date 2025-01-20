@@ -2,14 +2,15 @@ class FlameBall : WolfFastProjectile
 {
 	Default
 	{
+		Alpha 1.0;
 		Speed 56;
 		Damage 4;
-		Scale 0.64;
+		Scale 0.5;
 		Radius 3;
 		Height 6;
-		MissileType "FlameTrail";
+		//MissileType "FlameTrail";
+		RenderStyle "Add";
 		DamageType "Flame";
-		// SeeSound "FLAMFIRE";
 		DeathSound "projectiles/pulsedeath";
 	}
 	
@@ -28,7 +29,6 @@ class FlameTrail : WolfFastProjectile
 { 
 	Default
 	{
-		Alpha 0.32; //.75
 		RenderStyle "Add";
 		Speed 0;
 		MissileType "FlameTrail";
@@ -37,7 +37,7 @@ class FlameTrail : WolfFastProjectile
 		+NOTELEPORT
 		+CANNOTPUSH
 		+NODAMAGETHRUST
-		Scale 0.64;
+		Scale 0.5;
 	}
 	
 	States
@@ -60,7 +60,7 @@ class PlayerFlameBall : FlameBall
 		Scale 0.28;
 		Radius 6;
 		Height 12;
-		MissileType "PlayerFlameTrail";
+		//MissileType "PlayerFlameTrail";
 	}
 	
 	States
@@ -70,42 +70,42 @@ class PlayerFlameBall : FlameBall
 		Death:
 			//TNT1 A 0 A_DropItem("FlameImpact");
 			FLAM CFGH 2 Bright;
-			TNT1 A 0 A_SpawnItem("FlameImpact", 0, 0, false, 0);
+			// TNT1 A 0 A_SpawnItem("FlameImpact", 0, 0, false, 0);
 			Stop;
 	}
 }
 
-class PlayerFlameTrail : FlameTrail
-{ 
-	Default
-	{
-		MissileType "PlayerFlameTrail";
-		Scale 0.28;
-	}
+// class PlayerFlameTrail : FlameTrail
+// { 
+// 	Default
+// 	{
+// 		MissileType "PlayerFlameTrail";
+// 		Scale 0.28;
+// 	}
 	
-	States
-	{
-		Spawn:
-			FBOL A 3 BRIGHT A_FadeOut(0.32);
-			Loop;
-		Death:
-			FLAM CFGH 2 Bright;
-			Stop;
-	}
-}
+// 	States
+// 	{
+// 		Spawn:
+// 			FBOL A 3 BRIGHT A_FadeOut(0.32);
+// 			Loop;
+// 		Death:
+// 			FLAM CFGH 2 Bright;
+// 			Stop;
+// 	}
+// }
 
 class FlameImpact : Actor
 {
 	Default
 	{
+		Alpha 10;
 		Radius 32;
 		Height 32;
-		Alpha 1.0;
 		RenderStyle "Add";
-		Scale 0.88;
-		Gravity 0.2;
+		Scale 0.5;
+		Gravity 0.5; // 0.2
 		Obituary "Blazko got blazed.";
-		ExplosionRadius 640;
+		ExplosionRadius 480;
 	}
 	
 	States
@@ -113,33 +113,13 @@ class FlameImpact : Actor
 		Spawn:
 			FLBE ABCD 2 Bright A_Explode(8, 64);
 		See:
-			FLBE DEFGDEFGDEFG 2 Bright A_Explode(8, 64);
+			FLBE DEFG 2 Bright A_Explode(8, 64);
 		Death:
 			FLBE HIJK 2 Bright
 			{
 				A_Explode(8, 64);
-				A_FadeOut(0.048);
+				A_FadeOut(0.08);
 			}
 			Stop;
-	}
-}
-
-class FlameTrap : FlameBall
-{
-	Default
-	{
-		MissileType "";
-		Height 48;
-		Radius 24;
-		Scale 1.6;
-		Damage 100;
-		DeathSound "";
-	}
-	
-	States
-	{
-		Spawn:
-			FBOL A 1 BRIGHT;
-			Loop;
 	}
 }

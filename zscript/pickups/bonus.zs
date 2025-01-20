@@ -12,9 +12,9 @@ class WolfTreasure : CustomInventory
 	Default
 	{
 		//$Category Wolfenstein / Treasure
-		Radius 24;
-		Height 24;
-		Scale 2.0;
+		Radius 10;
+		Height 16;
+		Scale 1.0;
 		Inventory.Pickupsound "FINDGOLD";
 		+INVENTORY.ALWAYSPICKUP
 		+COUNTITEM

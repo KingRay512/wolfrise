@@ -244,9 +244,9 @@ class Bones1 : Actor
 	Default
 	{
 		//$Category Decoration / Objects
-		Radius 34;
-		Height 14;
-		Scale 1.28;
+		Radius 16;
+		Height 8;
+		Scale 1.0;
 	}
 		
 	States
@@ -451,9 +451,9 @@ class PotPlant : Actor
 	Default
 	{
 		//$Category Decoration / Objects
-		Radius 24;
-		Height 88;
-		Scale 1.76;
+		Radius 16;
+		Height 64;
+		Scale 1.0;
 		+SOLID
 	}
 	

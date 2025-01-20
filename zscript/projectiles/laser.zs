@@ -5,9 +5,9 @@ class NaziLaserTarget : WolfFastProjectile
 		RenderStyle "Add";
 		Radius 0;
 		Height 0;
-		Speed 160;
+		Speed 200;
 		Damage 0;
-		Scale 0.32;	// Scale 2.4
+		Scale 0.24;	// Scale 2.4
 		MissileType "NaziLaserTrail";
 		SeeSound "weapons/warning";
 		Projectile;
@@ -34,7 +34,7 @@ class NaziLaserTrail : WolfFastProjectile
 	{
 		Alpha 1.0; //.75
 		RenderStyle "Add";
-		Scale 0.32;	// Scale 2.4
+		Scale 0.24;	// Scale 2.4
 		+DONTSPLASH
 		-RIPPER
 	}
@@ -44,7 +44,7 @@ class NaziLaserTrail : WolfFastProjectile
 		Spawn:
 		LASR AAAAAAAAAAAA 1 BRIGHT
 		{
-			A_FadeOut(0.048);
+			A_FadeOut(0.025);
 		}
 		Loop;
 	}

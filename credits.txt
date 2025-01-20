@@ -35,9 +35,7 @@ Other Menu Font:				Machines of Death / Shadows of Destiny
 ==WEAPON SPRITES==
 Knife:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
 Pistol:							Wolfenstein 3d (Id Software) / Edited by Raees Kamaar
-Space Pistol:					Chiseled / Edited by Raees Kamaar
 MP50:							Chiseled / Edited by Raees Kamaar
-Marksman Rifle:					Chiseled / Edited by Raees Kamaar
 Rifle:							Wolfenstein - Machines of Death / Edited by Raees Kamaar
 Railgun:						Blake Stone (JAM Software) / Edited by Raees Kamaar
 FG42:							Resurrection of Heimzahlung / Edited by Raees Kamaar

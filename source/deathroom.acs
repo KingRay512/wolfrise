@@ -61,7 +61,7 @@ script "FullSecret" (void)
     {
         SetHudSize(1280, 800, 1);
 		SetFont("WOLFFONT");
-		HudMessage(s: "\c[WolfPurple]100% Secret Bonus\n\c[WolfWhite]10000 points"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_SECRETS, CR_UNTRANSLATED, 640.0, 250.0, 2.0);
+		HudMessage(s: "\c[WolfPurple]100% Secret Bonus\n\c[WolfWhite]10000 points"; HUDMSG_PLAIN | HUDMSG_LOG, LOG_SECRETS, CR_UNTRANSLATED, 640.0, 275.0, 2.0);
 		GiveInventory("WolfScore", 10000);
 		fullClear++;
 		Terminate;

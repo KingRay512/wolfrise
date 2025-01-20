@@ -52,6 +52,15 @@ map NAFRICA1 "North Africa - Outer Compound"
 	levelnum = 64
 }
 
+map MAP01 "Heart of the Cave"
+{
+	music = "DAR_HOLL"
+	sky1 = "SKYFOG2"
+	next = MAP03
+	par = 180 // My Best Time: 02:35 - Death Incarnate difficulty (Bonus Room included)
+	levelnum = 1
+}
+
 map MAP02 "North Africa - Inner Compound"
 {
 	music = "DAR_LNGR"

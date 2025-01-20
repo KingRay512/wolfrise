@@ -2,26 +2,19 @@ class SniperGuard : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
 		obituary "%o was caught in the sights by a sniper.";
 		Health 60;
 		Radius 21;
-		Height 72;
+		Height 56;
 		Mass 300;
 		Speed 12;
 		dropitem "WolfRifle";
 		Painchance 100;
 		Maxtargetrange 8192;
-		MinMissileChance 2;
-		ReactionTime 1;
 		DeathSound "enemies/death2";
 		SeeSound "enemies/swein";
 		PainSound "UBERPAIN";
-		BloodType "BloodPuff1";
-		Scale 1.5;
-		Monster;
-		+MISSILEMORE
-		+MISSILEEVENMORE
+		Scale 1.0;
 	}
 	
 	States
@@ -35,9 +28,9 @@ class SniperGuard : WolfGuard
 		Missile:
 			GRD2 F 4 A_FaceTarget;
 			GRD2 G 4 A_PlaySound("weapons/warning");
-			GRD2 G 24 A_SpawnProjectile("NaziLaserTarget", 64, 0, 0);
+			GRD2 G 24 A_SpawnProjectile("NaziLaserTarget", 40, 0, 0);
 			TNT1 A 0 A_PlaySound("weapons/rifle/fire");
-			GRD2 H 4 A_CustomBulletAttack(0,0,1,15, "BulletPuff", 51200);
+			GRD2 H 4 A_SpawnProjectile("NaziBullet2", 40, 0, 0);
 			Goto See;
 		Pain:
 			GRD2 I 5 A_Pain;

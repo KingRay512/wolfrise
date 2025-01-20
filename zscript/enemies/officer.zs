@@ -2,26 +2,21 @@ class Officer : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
 		obituary "%o was hunted by an officer";
-		Health 80;
+		Health 125;
 		Radius 21;
-		Height 88;
+		Height 56;
 		Mass 300;
-		Speed 16;
+		Speed 18;
 		dropitem "SmallAmmo";
 		Painchance 96;
-		Maxtargetrange 2048;
-		MinMissileChance 2;
+		Maxtargetrange 4096;
 		BloodType "BloodPuff1";
 		DeathSound "enemies/death2";
 		SeeSound "enemies/halt";
 		PainSound "UBERPAIN";
 		BloodType "BloodPuff1";
-		Scale 1.6;
-		Monster;
-		+MISSILEMORE
-		+MISSILEEVENMORE
+		Scale 1.0;
 	}
 	
 	States
@@ -38,20 +33,23 @@ class Officer : WolfGuard
 		Firing:
 			OFF1 H 2
 			{
+				A_FaceTarget();
 				A_PlaySound("weapons/luger/softfire");
-				A_CustomBulletAttack(0,0,1,2);
+				A_SpawnProjectile("NaziBullet", 48, 0, random(-4, 4));
 			}
 			OFF1 G 1;
 			OFF1 H 2
 			{
+				A_FaceTarget();
 				A_PlaySound("weapons/luger/softfire");
-				A_CustomBulletAttack(0,0,1,2);
+				A_SpawnProjectile("NaziBullet", 48, 0, random(-4, 4));
 			}
 			OFF1 G 1;
 			OFF1 H 2
 			{
+				A_FaceTarget();
 				A_PlaySound("weapons/luger/softfire");
-				A_CustomBulletAttack(0,0,1,2);
+				A_SpawnProjectile("NaziBullet", 48, 0, random(-4, 4));
 			}
 			OFF1 G 10 A_CPosRefire();
 			Goto Firing;

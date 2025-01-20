@@ -1,6 +1,6 @@
 server int weapon_classicstyle = 0;
 
-user float cl_leanangle = 48.0;
+user float cl_leanangle = 36.0;
 user bool cl_strafelean = false;
 
 server bool classic_ep1_unlocked = false;

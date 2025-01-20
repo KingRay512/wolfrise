@@ -4,11 +4,11 @@ class NaziBullet : FastProjectile
 	{
 		RenderStyle "Add";
 		Obituary "$OB_MPROCKET";
-		Radius 8;
-		Height 8;
+		Radius 6;
+		Height 6;
 		Speed 64;	// 32
 		Damage 2;
-		Scale 0.32;
+		Scale 0.125;
 		MissileType "BulletTrail";
 		Projectile;
 	}
@@ -33,11 +33,21 @@ class NaziBullet : FastProjectile
 	}
 }
 
+class NaziBullet2 : NaziBullet
+{
+	Default
+	{
+		Damage 12;
+		Speed 120;	// 32
+		MissileType "BulletTrail";
+	}
+}
+
 class NaziBullet_Hard : NaziBullet
 {
 	Default
 	{
-		Speed 96;	// 32
+		Speed 80;	// 32
 		MissileType "BulletTrail";
 	}
 }
@@ -46,10 +56,17 @@ class PlayerBullet : NaziBullet
 {
 	Default
 	{
-		Damage 4;
+		Damage 12;
 		Speed 192;
-		Scale 0.16;	// 0.32
-		//MissileType "PlayerBulletTrail";
+	}
+}
+
+class PlayerBullet2 : NaziBullet
+{
+	Default
+	{
+		Damage 64;
+		Speed 350;
 	}
 }
 
@@ -69,23 +86,22 @@ class BulletTrail : FastProjectile
 { 
 	Default
 	{
-		Alpha 0.88; //.75
+		Alpha 0.72; //.75
 		RenderStyle "Add";
 		Speed 0;	// 216
-		Height 4;
-		Radius 4;
-		+NOBLOCKMAP
+		Height 8;
+		Radius 0;
+		MissileHeight 0;
 		+NOGRAVITY
-		+NOTELEPORT
-		+CANNOTPUSH
-		+NODAMAGETHRUST
-		Scale 0.18; // 0.32
+		+NOINTERACTION
+		+FORCEXYBILLBOARD
+		Scale 0.15; // 0.32
 	}
 	
 	States
 	{
 	Spawn:
-		BULL A 1 BRIGHT A_FadeOut(0.088);
+		BULL A 1 BRIGHT A_FadeOut(0.25);
 		Loop;
 	}
 }

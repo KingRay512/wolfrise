@@ -1,149 +1,198 @@
-class BulletSister : Actor
+class BulletSister : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
 		obituary "%o was shown no mercy by the Sisters of Persecution";
-		Health 3500;
-		Radius 48;
-		Height 120;
+		Health 3000;
+		Radius 30;
+		Height 62;
 		Mass 500;
-		Speed 30;
+		Speed 22;
 		DamageFactor "KnifeDamage", 0.048;
 		DamageFactor "ExplosiveDamage", 1.2;
 		dropitem "GatlingGun";
+		dropitem "WolfGoldKey";
 		Maxtargetrange 4096;
 		DeathSound "bosses/trans/death";
 		SeeSound "bosses/trans/sight";
-		BloodType "BloodPuff1";
-		MinMissileChance 1;
-		Scale 1.76;	// 1.6
-		Monster;
+		Scale 1.033;	// 1.6
 		+BOSS
-		+MISSILEMORE
-		+MISSILEEVENMORE
-		+CANUSEWALLS
 	}
 	
 	States
 	{
 		Spawn:
-			FEMB A 10 A_Look;
+			FEMB A 3 A_Look;
 			Loop;
 		See:
-			FEMB ABCD 6 A_Chase;
+			FEMB AABBCCDD 3 A_Chase;
 			Loop;
 		Missile:
-			FEMB E 22
+			FEMB E 16
 			{
 				A_FaceTarget();
 				A_PlaySound("weapons/venom/spinup");
 			}
-		Firing: 
+		Firing:
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(12, 10));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(16, 14));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(10, 8));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(14, 12));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(8, 6));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(12, 10));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(6, 4));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(10, 8));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(4, 2));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(8, 6));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(2, 0));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(6, 4));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(0, -2));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(4, 2));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-2, -4));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(2, 0));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-4, -6));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(0, -2));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-6, -8));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-2, -4));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-8, -10));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-4, -6));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-10, -12));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-6, -8));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-10, -8));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-8, -10));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-8, -6));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-10, -12));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-6, -4));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-12, -14));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-4, -2));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-14, -16));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(-2, -0));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-16, -14));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(0, 2));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-14, -12));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(2, 4));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-12, -10));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(4, 6));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-10, -8));
 			}
 			FEMB FG 1
 			{
 				A_PlaySound("weapons/venom/fire");
-				A_SpawnProjectile("NaziBullet", 64, -32, random(6, 8));
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-8, -6));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-6, -4));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-4, -2));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(-2, -0));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(0, 2));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(2, 4));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(4, 6));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(6, 8));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(8, 10));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(10, 12));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(12, 14));
+			}
+			FEMB FG 1
+			{
+				A_PlaySound("weapons/venom/fire");
+				A_SpawnProjectile("NaziBullet", 48, -16, random(14, 16));
 			}
 			Goto See;
 		Death:
@@ -164,7 +213,7 @@ class PyroSister : BulletSister
 		obituary "%o was shown no mercy by the Sisters of Persecution";
 		Health 3500;
 		Radius 48;
-		Height 120;
+		Height 80;
 		Mass 500;
 		Speed 30;
 		DamageFactor "KnifeDamage", 0.048;
@@ -270,7 +319,6 @@ class BulletSister_Hard : BulletSister
 	{
 		//$Category Enemies
 		Health 5000;
-		Speed 40;
 		Maxtargetrange 16384;
 	}
 }
@@ -281,7 +329,6 @@ class PyroSister_Hard : PyroSister
 	{
 		//$Category Enemies
 		Health 5000;
-		Speed 40;
 		Maxtargetrange 16384;
 	}
 }

@@ -10,6 +10,16 @@ maps
 		
 		resources
 		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\Raees\\Desktop\\gzdoom-x64-g4.12pre-429-gef4c4ee50\\wolfrise";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
 		}
 		defaultfloortexture = "FL_GREY2";
 		defaultceiltexture = "SRFLAT24";
@@ -28,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -130.1793f;
-		viewpositiony = -207.5806f;
-		viewscale = 0.6499981f;
+		viewpositionx = 127.1013f;
+		viewpositiony = -459.1615f;
+		viewscale = 0.1346642f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid

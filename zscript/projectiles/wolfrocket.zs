@@ -35,7 +35,21 @@ class NaziRocket : WolfRocket
 {
 	Default
 	{
-		Speed 44;
+		Scale 0.88;
+		Speed 22;
+		Damage 64;
+	}
+
+	States
+	{
+		Spawn:
+			CRCK A 1 BRIGHT;
+			Loop;
+		Death:
+			//TNT1 A 0 A_SetScale(1.0);
+			BNG3 A 1 Bright A_Explode(80, 250);	// 64, 200
+			BNG3 BCDEFGH 1 Bright;
+			Stop;
 	}
 }
 
@@ -44,15 +58,15 @@ class WolfRocketTrail : BulletTrail
 	Default
 	{
 		RenderStyle "Normal";
-		Alpha 0.8; //.75
-		Scale 0.72;
+		Alpha 0.64; //.75
+		Scale 0.5;
 	}
 	
 	States
 	{
 	Spawn:
 		// EBO2 AB 2 BRIGHT A_FadeOut(0.088);
-		ROCK B 1 A_FadeOut(0.12);
+		ROCK B 1 A_FadeOut(0.25);
 		Loop;
 	}
 }

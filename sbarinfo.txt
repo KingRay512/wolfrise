@@ -10,9 +10,9 @@ statusbar normal
 	drawimage "HLTHARMR", 1, 359;
 	drawimage "AMMOBAR2", 529, 365;
 	drawimage "PORTBOX", 132, 379;
-	drawimage "SCORE", 535, 345;
+	//drawimage "SCORE", 535, 345;
 	
-	drawnumber 12, HUDNUM1, white, "WolfScore", alignment(right), 632, 350;
+	//drawnumber 12, HUDNUM1, white, "WolfScore", alignment(right), 632, 350;
 	
 	InInventory "PortableFA", 1
 	{
@@ -28,13 +28,6 @@ statusbar normal
 		drawimage "PORTHLTH", 134, 381;
 		drawimage "PORTHLTH", 155, 381;
 		drawimage "PORTHLTH", 176, 381;
-	}
-	InInventory "PortableFA", 4
-	{
-		drawimage "PORTHLTH", 134, 381;
-		drawimage "PORTHLTH", 155, 381;
-		drawimage "PORTHLTH", 176, 381;
-		drawimage "PORTHLTH", 197, 381;
 	}
 	
 	drawnumber 3, HUDNUM1, white, health, alignment(right), 64, 383;

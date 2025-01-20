@@ -1,8 +1,7 @@
-class GyroPanzer : Actor
+class GyroPanzer : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
 		obituary "%o was outmanuevered by a Gyro-Panzer.";
 		Health 800;
 		Radius 50;
@@ -17,7 +16,6 @@ class GyroPanzer : Actor
 		PainSound "UBERPAIN";
 		BloodType "BloodPuff1";
 		Scale 1.5;
-		Monster;
 		+FLOAT
 		+NOGRAVITY
 	}

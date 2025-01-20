@@ -11,9 +11,7 @@ DoomEdNums
 	
 	//	WEAPONS
 	20010 = Luger
-	20011 = SpaceLuger
 	20012 = MP50
-	20013 = MarksmanRifle
 	20014 = WolfRifle
 	20015 = WolfRailgun
 	20016 = FG42
@@ -23,10 +21,11 @@ DoomEdNums
 	20020 = GatlingGun
 	20021 = WolfFlameThrower
 	20022 = SpearOfDestiny
+	15003 = ClassicMachinegun
 	
 	//	ENEMIES
 	21000 = Dog
-	21001 = PatrolGuard
+	21001 = Guard
 	21002 = Machinegunner1
 	21004 = BlackTurret
 	21005 = Gyropanzer
@@ -44,7 +43,7 @@ DoomEdNums
 	21019 = Commander1
 	21020 = TransGrosse
 	21021 = UberMutant
-	21060 = MechaHitler
+	21035 = DeathKnight
 	21061 = FakeHitler
 	21099 = JackStone
 	

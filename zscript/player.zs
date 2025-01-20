@@ -5,35 +5,33 @@ class BJ : DoomPlayer
 		Speed 1;
 		Health 100;
 		Radius 16;
-		Height 80;	//64
+		Height 56;	// Changing from 80 back to more "normal" style (maybe 64 or 56)
 		Mass 100;
-		Scale 1.24;
+		Scale 1.125;
 		PainChance 255;
 		DamageFactor "PlayerZap", 0;
-		Player.ViewHeight 64;	// 56
+		Player.ViewHeight 40;	// 56
 		Player.Face "TWO";
 		BloodType "BloodPuff1";
 		Player.DisplayName "BJ Blazkowicz";
-		Player.SpawnClass "Fighter";
 		Player.StartItem "PlayerHasSilencer", 1;
-		Player.StartItem "Luger";
+		Player.StartItem "ClassicLuger";
 		Player.StartItem "Knife";
 		Player.StartItem "KnifeExtras", 5;
 		Player.StartItem "SmallAmmo", 32;
 		Player.StartItem "SteelGrenades";
 		Player.WeaponSlot 1, "Knife";
-		Player.WeaponSlot 2, "Luger", "SpaceLuger", "ClassicLuger", "ClassicLuger2";
-		Player.WeaponSlot 3, "MarksmanRifle", "MP50", "ClassicMachinegun";
-		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle", "ClassicChaingun";
-		Player.WeaponSlot 5, "FG42", "ClassicRLauncher";
+		Player.WeaponSlot 2, "ClassicLuger";
+		Player.WeaponSlot 3, "ClassicMachinegun";
+		Player.WeaponSlot 4, "WolfRailgun", "WolfRifle";
+		Player.WeaponSlot 5, "FG42";
 		Player.WeaponSlot 6, "SteelGrenades";
 		Player.WeaponSlot 7, "Tigerfaust";
-		Player.WeaponSlot 8, "GatlingGun", "PulseCannon";
+		Player.WeaponSlot 8, "GatlingGun";
 		Player.WeaponSlot 9, "SuperWeapon", "WolfFlameThrower";
-		Player.WeaponSlot 0, "SpearOfDestiny";
-		Player.ForwardMove 0.64, 0.85;	// OLD SPEED 0.88, 1.0
-		Player.SideMove 0.64, 0.85;		// OLD SPEED 0.88, 1.0
-		Player.JumpZ 14;
+		Player.ForwardMove 0.75, 0.9;	// OLD SPEED 0.88, 1.0
+		Player.SideMove 0.75, 0.9;		// OLD SPEED 0.88, 1.0
+		Player.JumpZ 12;
 		Gravity 1.6;
 	}
 

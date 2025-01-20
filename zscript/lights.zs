@@ -45,6 +45,7 @@ class CeilingLight1 : Actor
 		Height 51;
 		+NOGRAVITY
 		+SPAWNCEILING
+		-SOLID
 	}
 
 	States
@@ -60,10 +61,10 @@ class CeilingLight2 : Actor
 	Default
 	{
 		//$Category Decoration / Objects
-		Radius 14;
-		Height 24;
-		Scale 1.6;
-		+SOLID
+		Radius 8;
+		Height 1;
+		Scale 1.0;
+		-SOLID
 		+NOGRAVITY
 		+SPAWNCEILING
 	}
@@ -87,9 +88,9 @@ class CeilingLight3 : Actor
 	{
 		//$Category Decoration / Objects
 		Radius 16;
-		Height 20;
-		Scale 1.44;
-		+SOLID
+		Height 1;
+		Scale 1.0;
+		-SOLID
 		+NOGRAVITY
 		+SPAWNCEILING
 	}

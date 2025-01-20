@@ -3,8 +3,7 @@ class WolfFlameThrower : WolfWeapon
 	action void A_FlameFire()
 	{
 		A_PlaySound("weapons/flame/fire");
-		A_Recoil(0.048);
-		A_FireProjectile("PlayerFlameBall", 0, 1, 0, 12, 0, 0);
+		A_FireProjectile("PlayerFlameBall", 0, 1, 0, 4, 0, 0);
 	}
 	
 	Default
@@ -17,9 +16,6 @@ class WolfFlameThrower : WolfWeapon
 		Inventory.Pickupmessage "You got a Flamethrower";
 		Inventory.PickUpSound "pickups/weapongrab";
 		Tag "Flamethrower";
-		Weapon.BobRangeX 0.0;
-		Weapon.BobRangeY 0.75;
-		//Weapon.BobSpeed 1.5;
 	}
 	
 	States
@@ -38,14 +34,6 @@ class WolfFlameThrower : WolfWeapon
 		Fire:
 			FLMG BC 1 A_FlameFire();
 			Goto Ready;
-// 		AltFire:
-// 			TNT1 A 0 A_CheckReload;
-// 			RIPP B 1;
-// 			RIPP C 1;
-// 			RIPP D 1 A_PulseAltFire();
-// 			RIPP C 1;
-// 			RIPP B 2;
-// 			Goto Ready;
 		Spawn:
 			FLMG P -1;
 			Stop;

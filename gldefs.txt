@@ -9,6 +9,14 @@ Glow
 	}
 }
 
+material texture "steel1_d"
+{
+	normal "materials/steel/steel1_n.png"
+	metallic "materials/steel/steel1_m.png"
+	roughness "materials/steel/steel1_r.png"
+	ao "materials/steel/steel1_ao.png"
+}
+
 material texture "WLFDOOR3"
 {
 	shader "shaders/displacement.fp"

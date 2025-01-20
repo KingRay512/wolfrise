@@ -42,10 +42,6 @@ class GatlingGun : WolfWeapon
 		Weapon.AmmoType2 "HeavyAmmo";
 		Inventory.Pickupmessage "You got the Venom Chaingun!";
 		Inventory.PickUpSound "WEAPPICK";
-		Weapon.BobRangeX 0.0;
-		Weapon.BobRangeY 0.88;
-		Scale 1.5;
-		//Weapon.BobSpeed 0.48;
 		Tag "Venom";
 		+WEAPON.NOALERT;
 	}
@@ -93,7 +89,7 @@ class GatlingGun : WolfWeapon
 				A_Playsound("weapons/venom/fire");
 				A_AlertMonsters(2048);
 				A_Recoil(0.96);
-				A_SetPitch(pitch - 1.12, SPF_INTERPOLATE);
+				//A_SetPitch(pitch - 1.12, SPF_INTERPOLATE);
 				A_GiveInventory("VenomOverheat", 6);
 			}
 			TNT1 A 0 A_Refire;
@@ -109,7 +105,7 @@ class GatlingGun : WolfWeapon
 				A_Playsound("weapons/venom/fire");
 				A_AlertMonsters(2048);
 				A_Recoil(2.24);
-				A_SetPitch(pitch - 1.76, SPF_INTERPOLATE);
+				//A_SetPitch(pitch - 1.76, SPF_INTERPOLATE);
 				A_GiveInventory("VenomOverheat", 12);
 			}
 			TNT1 A 0 A_Refire;
@@ -120,9 +116,9 @@ class GatlingGun : WolfWeapon
 				A_PlaySound("weapons/venom/spindown");
 				A_JumpIfInventory("DualVenom", 1, "DualSpinDown");
 			}
-			VEN1 YAYAYA 1 A_SetPitch(pitch + 0.5, SPF_INTERPOLATE);
-			VEN1 YAYAYA 2 A_SetPitch(pitch + 0.25, SPF_INTERPOLATE);
-			VEN1 YAYA 3 A_SetPitch(pitch + 0.125, SPF_INTERPOLATE);
+			VEN1 YAYAYA 1;
+			VEN1 YAYAYA 2;
+			VEN1 YAYA 3;
 			Goto Ready;
 		DualSpinDown:
 			TNT1 A 0 A_PlaySound("weapons/venom/spindown");

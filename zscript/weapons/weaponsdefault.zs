@@ -7,8 +7,8 @@ class WolfWeapon : Weapon
 		Weapon.BobStyle "InverseAlpha"; //Inverse
 		Weapon.BobRangeX 0.72;
 		Weapon.BobRangeY 0.48;
-		Weapon.BobSpeed 1.76; //1.92
-		Scale 1.5;
+		Weapon.BobSpeed 1.5; //1.92
+		Scale 1.0;
 		+WEAPON.NOAUTOAIM;
 	}
 }

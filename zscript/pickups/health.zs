@@ -87,8 +87,8 @@ class PortableFA : Ammo
 		Radius 25;
 		Height 28;
 		Inventory.Amount 1;
-		Inventory.MaxAmount 4;
-		Inventory.PickupMessage "You picked up a Portable First Aid Kit (+25 Health)";
+		Inventory.MaxAmount 3;
+		Inventory.PickupMessage "You picked up an Emergency First Aid Kit";
 		Inventory.pickupsound "GRABHLTH";
 	}
 	

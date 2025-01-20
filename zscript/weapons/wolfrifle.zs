@@ -23,18 +23,7 @@ class WolfRifle : WolfWeapon
 		A_PlaySound("weapons/rifle/fire");
 		A_AlertMonsters();
 		A_Recoil(4.0);
-		A_SetPitch(pitch - 0.8, SPF_INTERPOLATE);
-		A_FireBullets(0.0, 0.0, -1, 112, "BulletPuff1");
-	}
-	
-	action void A_RifleLoad1()
-	{
-		A_SetPitch(pitch + 0.48, SPF_INTERPOLATE);
-	}
-	
-	action void A_RifleLoad2()
-	{
-		A_SetPitch(pitch - 0.48, SPF_INTERPOLATE);
+		A_FireProjectile("PlayerBullet2", 0, 1, 0, 0, 0);
 	}
 	
 	Default
@@ -77,36 +66,32 @@ class WolfRifle : WolfWeapon
 			TNT1 A 0 A_JumpIfInventory("WolfRifleZoomed", 1, "FireZoomed");
 			SNIP B 1;
 			SNIP C 1 A_FireRifle();
-			SNIP DEF 1; //A_SetPitch(pitch - 1.6, SPF_INTERPOLATE);
-			SNIP G 8; //A_SetPitch(pitch + 0.96, SPF_INTERPOLATE);
+			SNIP DEF 1;
+			SNIP G 8;
 			TNT1 A 0 A_CheckReload();
-			SNIP HIJKLMNO 1 A_RifleLoad1();
-			SNIP P 4
+			SNIP HIJKLMN 1;
+			SNIP O 4
 			{
 				A_PlaySound("weapons/rifle/bolt");
-				A_GunFlash();
 			}
-			SNIP ONMLKJIHG 1 A_RifleLoad2();
+			SNIP NMLKJIHG 1;
 			SNIP A 4;
 			Goto Ready;
-		Flash:
-			EJC2 ABCDEF 1;
-			Goto LightDone;
 		FireZoomed:
 			RIF4 U 1
 			{
 				A_PlaySound("weapons/rifle/fire");
 				A_AlertMonsters();
 				A_Recoil(1.0);
-				A_FireBullets(0.0, 0.0, -1, 100, "BulletPuff1");
+				A_FireProjectile("PlayerBullet2", 0, 1, 0, 0, 0);
 			}
 			RIF4 TU 1;
 			RIF4 Z 4;
 			SNIP AAA 1;
 			SNIP A 4;
-			SNIP HIJKLMNO 1 A_RifleLoad1();
-			SNIP P 1 A_PlaySound("weapons/rifle/bolt");
-			SNIP ONMLKJIHG 1 A_RifleLoad2();
+			SNIP HIJKLMN 1;
+			SNIP O 1 A_PlaySound("weapons/rifle/bolt");
+			SNIP NMLKJIHG 1;
 			SNIP A 4;
 			Goto ReadyZoomed;
 		AltFire:
@@ -187,10 +172,10 @@ class FG42 : WolfWeapon
 				A_PlaySound("weapons/fg42/fire");
 				A_AlertMonsters();
 				A_Recoil(1.44);
-				A_FireBullets(2.0, 2.0, -1, 64, "BulletPuff1");
+				//A_FireBullets(2.0, 2.0, -1, 64, "BulletPuff1");
+				A_FireProjectile("PlayerBullet2", random(-1,1) , 1, 0, 0, 0);
 			}
-			TNT1 AA 0 A_SetPitch(pitch - 1.5, SPF_INTERPOLATE);
-			FG42 DED 1 A_SetPitch(pitch + 1.0, SPF_INTERPOLATE);
+			FG42 DED 1;
 			FG42 C 1;
 			FG42 A 1 A_Refire();
 			Goto Ready;
@@ -201,7 +186,8 @@ class FG42 : WolfWeapon
 				A_PlaySound("weapons/fg42/fire");
 				A_AlertMonsters();
 				A_Recoil(1.0);
-				A_FireBullets(0.0, 0.0, -1, 64, "BulletPuff1");
+				//A_FireBullets(0.0, 0.0, -1, 64, "BulletPuff1");
+				A_FireProjectile("PlayerBullet2", 0 , 1, 0, 0, 0);
 			}
 			FG4Z I 2;
 			FG4Z G 2 A_ReFire();

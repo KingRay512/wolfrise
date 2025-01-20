@@ -26,15 +26,15 @@ class BlackArmour : WolfArmour
 	Default
 	{
 		//$Category Armour
-		Radius 48;
-		Height 48;
-		Scale 1.0;
+		Radius 20;
+		Height 20;
+		Scale 0.5;
 		DamageFactor "Flame", 0.2;
 		DamageFactor "ExplosiveDamage", 0.2;
-		Inventory.Pickupmessage "EISEN ARMOUR! (+200 Armour)";
+		Inventory.Pickupmessage "EISEN ARMOUR! (+250 Armour)";
 		Armor.Savepercent 100; //75
-		Armor.Saveamount 500;
-		Armor.Maxsaveamount 500;
+		Armor.Saveamount 250;
+		Armor.Maxsaveamount 250;
 		+FLOATBOB
 		+NOGRAVITY
 		-INVENTORY.ALWAYSPICKUP
@@ -78,14 +78,14 @@ class WolfSmallHelmet2 : WolfArmour
 	Default
 	{
 		//$Category Armour
-		Radius 16;
-		Height 16;
-		Inventory.Pickupmessage "You picked up a light helmet (+5 Armour)";
+		Radius 8;
+		Height 8;
+		Inventory.Pickupmessage "You picked up a light helmet (+10 Armour)";
 		Armor.Savepercent 50;
-		Armor.Saveamount 5;
+		Armor.Saveamount 10;
 		Armor.Maxsaveamount 100;
 		Inventory.PickupSound "pickups/armour";
-		Scale 2.4;
+		Scale 1.25;
 		+FLOATBOB
 		+NOGRAVITY
 	}

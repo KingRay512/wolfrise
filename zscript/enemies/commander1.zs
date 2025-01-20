@@ -1,9 +1,8 @@
-class Commander1 : Actor
+class Commander1 : WolfGuard
 {
 	Default
 	{
 		//$Category Enemies
-		ReactionTime 8;
 		obituary "%o was tracked down by a Commander";
 		DamageFactor "Flame", 0.075;
 		DamageFactor "KnifeDamage", 0.16;
@@ -14,12 +13,8 @@ class Commander1 : Actor
 		speed 18;
 		scale 1.6;
 		MaxTargetRange 16384;
-		MONSTER;
 		+BOSS
-		+NOINFIGHTING
 		+NORADIUSDMG
-		+MISSILEMORE
-		+MISSILEEVENMORE
 	}
 	
 	States

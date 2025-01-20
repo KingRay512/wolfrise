@@ -1,9 +1,7 @@
-class HeavyGuard : Actor
+class HeavyGuard : WolfGuard
 {
 	Default
 	{
-		//$Category Enemies
-		ReactionTime 1;
 		DamageFactor "KnifeDamage", 0.32;
 		obituary "%o was riddled by a Heavy SS";
 		Health 400;
@@ -19,11 +17,7 @@ class HeavyGuard : Actor
 		DeathSound "enemies/gibbed";
 		SeeSound "GUTENTAG";
 		PainSound "UBERPAIN";
-		BloodType "BloodPuff1";
-		+MISSILEMORE
-		+MISSILEEVENMORE
-		Scale 1.88;
-		Monster;
+		Scale 1.25;
 	}
   
 	States
@@ -94,14 +88,5 @@ class HeavyGuard : Actor
 		HEAV J 6;
 		HEAV K -1;
 		Stop;
-	}
-}
-
-class HeavyGuard_Hard : HeavyGuard
-{
-	Default
-	{
-		Health 600;
-		Speed 25;
 	}
 }

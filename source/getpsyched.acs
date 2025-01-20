@@ -17,7 +17,7 @@ script "DisplayMapname" OPEN
 	{
 		case 1:
 			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);
-			HudMessage(s: "Outer Compound"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
+			HudMessage(s: "Heart of the Cave"; HUDMSG_FADEOUT, LOG_MAPTITLE, CR_UNTRANSLATED, 640.0, 215.0, 1.75);
 			break;
 		case 2:
 			HudMessage(s: "\c[WolfMidRed]ENTERING"; HUDMSG_FADEOUT, LOG_ENTERING, CR_UNTRANSLATED, 640.0, 185.0, 1.75);

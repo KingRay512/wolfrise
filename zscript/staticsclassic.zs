@@ -3,9 +3,9 @@ class ClassicStaticsBlocking : Actor
 	Default
 	{
 		//$Category Decoration / Objects / Classic
-		Radius 48;
-		Height 128;
-		Scale 2.0;
+		Radius 32;
+		Height 32;
+		Scale 1.0;
 		+SOLID
 	}
 }

@@ -16,7 +16,7 @@ class Electrobolt : WolfFastProjectile
 		Speed 40;
 		FastSpeed 50;
 		Damage 4;
-		scale 1.25;
+		scale 0.8;
 		Projectile;
 		MissileHeight 0;
 		//SeeSound "BLASTER1";

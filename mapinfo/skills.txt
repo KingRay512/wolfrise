@@ -3,7 +3,7 @@ clearskills
 //	CAN I PLAY, DADDY?
 skill easy
 {
-	DamageFactor = 0.75
+	DamageFactor = 0.33
 	AmmoFactor = 2.0
 	Aggressiveness = 0.8
 	SpawnFilter = 1
@@ -15,7 +15,7 @@ skill easy
 //	DON'T HURT ME
 skill normal
 {
-	DamageFactor = 1.36
+	DamageFactor = 0.75
 	Aggressiveness = 0.5
 	SpawnFilter = 2
 	picname = "M_DHURTM"
@@ -26,7 +26,7 @@ skill normal
 //	BRING 'EM ON
 skill hard
 {
-	DamageFactor = 1.76
+	DamageFactor = 1.0
 	Aggressiveness = 0.25
 	SpawnFilter = 3
 	picname = "M_BRING"
@@ -44,18 +44,12 @@ skill death
 	NoInfighting
 	MustConfirm = "Sadistic difficulty for the masochist. The true Wolfenstein Rising experience. Continue?"
 	
-	ReplaceActor = "Dog", "Dog_Hard"
-	ReplaceActor = "PatrolGuard", "PatrolGuard_Hard"
-	ReplaceActor = "SS1", "SS1_Hard"
 	ReplaceActor = "SS2", "SS2_Hard"
 	ReplaceActor = "Officer", "Officer_Hard"
 	ReplaceActor = "Machinegunner1", "Machinegunner1_Hard"
 	ReplaceActor = "BlackTurret", "BlackTurret_Hard"
 	ReplaceActor = "Robot1", "Robot1_Hard"
 	ReplaceActor = "Robot2", "Robot2_Hard"
-	ReplaceActor = "NaziBullet", "NaziBullet_Hard"
-	ReplaceActor = "HeavyGuard", "HeavyGuard_Hard"
-	ReplaceActor = "FlameGuard", "FlameGuard_Hard"
 	ReplaceActor = "TransGrosse", "TransGrosse_Hard"
 	ReplaceActor = "BulletSister", "BulletSister_Hard"
 	ReplaceActor = "PyroSister", "PyroSister_Hard"
